@@ -1,0 +1,101 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+    #在执行lane前先跑一遍cocoapods
+  before_all do
+    cocoapods
+  end
+
+
+  desc "debug"
+  lane :debug_QA do
+
+    increment_build_number
+
+    package(
+      export_method:"development",
+      output_directory:"~/Desktop/Package/SDPlayground/Debug",
+      configuration:"Debug",
+      )
+    pgyer(
+      api_key:"905cdeeb2af308864d9e5c587c692cfd", 
+      user_key:"2f5a92290524717c65cb09fcf081b898", 
+      password: "tiny", 
+      update_description:"test fastlane")
+  end
+
+
+  desc "release"
+  lane :release_QA do
+
+    increment_build_number
+
+    package(
+
+      export_method:"ad-hoc",
+      output_directory:"~/Desktop/Package/SDPlayground/Release",
+      configuration:"Release",
+      )
+    pgyer(
+      api_key:"905cdeeb2af308864d9e5c587c692cfd", 
+      user_key:"2f5a92290524717c65cb09fcf081b898", 
+      password: "tiny", 
+      update_description:"test fastlane")
+  end
+
+
+  desc "appstore"
+  lane :release_appStore do
+
+    capture_screenshots
+
+    increment_build_number
+
+    package(
+
+      export_method:"app-store",
+      output_directory:"~/Desktop/Package/SDPlayground/Appstore",
+      configuration:"Release",
+    )
+
+    # upload_to_testflight
+    # upload_to_app_store
+
+  end
+
+
+  desc "打包函数-自定义函数"
+  lane :package do |option|
+
+    # add actions here: https://docs.fastlane.tools/actions
+    build_app(
+      workspace: "SDPlayground.xcworkspace",
+      scheme: "SDPlayground",
+      configuration: option[:configuration],
+      export_method: option[:export_method],
+      output_directory: option[:output_directory],
+      silent: true,
+      clean: true,
+      include_symbols: true,
+      include_bitcode: false,
+    )
+  end
+end
+
+

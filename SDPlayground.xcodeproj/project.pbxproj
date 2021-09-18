@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7761F7D7267C37BC00066CFF /* SDPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7CF267C37BC00066CFF /* SDPagerController.m */; };
+		7761F7D8267C37BC00066CFF /* RRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7D2267C37BC00066CFF /* RRWebViewController.m */; };
+		7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7D3267C37BC00066CFF /* RRTestViewController.m */; };
+		7761F7DA267C37BC00066CFF /* RRNewWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7D4267C37BC00066CFF /* RRNewWebViewController.m */; };
+		7761F7E2267C37D500066CFF /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7DC267C37D500066CFF /* CustomViewController.m */; };
+		7761F7E3267C37D500066CFF /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7DD267C37D500066CFF /* ListViewController.m */; };
+		7761F7E4267C37D500066CFF /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7E1267C37D500066CFF /* CollectionViewController.m */; };
+		7761F7E7267C380600066CFF /* SDSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7E6267C380600066CFF /* SDSideViewController.m */; };
+		7761F7EA267C38E200066CFF /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7E8267C38E200066CFF /* MenuViewController.m */; };
+		776E83182655135600A3CE78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E83172655135600A3CE78 /* AppDelegate.m */; };
+		776E83212655135600A3CE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E831F2655135600A3CE78 /* Main.storyboard */; };
+		776E83232655135800A3CE78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776E83222655135800A3CE78 /* Assets.xcassets */; };
+		776E83262655135800A3CE78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E83242655135800A3CE78 /* LaunchScreen.storyboard */; };
+		776E83292655135800A3CE78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E83282655135800A3CE78 /* main.m */; };
+		776E835E2655150700A3CE78 /* RRSlidableProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E835D2655150700A3CE78 /* RRSlidableProgressView.m */; };
+		776E836F265519A400A3CE78 /* SDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E836E265519A400A3CE78 /* SDTabBarController.m */; };
+		776E837526551E3500A3CE78 /* SDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E837426551E3500A3CE78 /* SDNavigationController.m */; };
+		77F47E3126F4497000FF1359 /* SDPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E2F26F4497000FF1359 /* SDPushViewController.m */; };
+		77F47E3226F4497000FF1359 /* SDPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F47E3026F4497000FF1359 /* SDPushViewController.xib */; };
+		77F47E3626F44A0D00FF1359 /* SDPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E3426F44A0D00FF1359 /* SDPopViewController.m */; };
+		77F47E3726F44A0D00FF1359 /* SDPopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F47E3526F44A0D00FF1359 /* SDPopViewController.xib */; };
+		77F47E3B26F58B8C00FF1359 /* SDSlideAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E3A26F58B8C00FF1359 /* SDSlideAnimationController.m */; };
+		77F47E3E26F58C6800FF1359 /* SDNavigationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E3D26F58C6800FF1359 /* SDNavigationDelegate.m */; };
+		77F47E4126F5BA1100FF1359 /* SDCardAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E4026F5BA1100FF1359 /* SDCardAnimationController.m */; };
+		77F47E4426F5C9C800FF1359 /* SDOverlayAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E4326F5C9C800FF1359 /* SDOverlayAnimationController.m */; };
+		77F47E4826F5D80200FF1359 /* SDPresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E4626F5D80200FF1359 /* SDPresentingViewController.m */; };
+		77F47E4926F5D80200FF1359 /* SDPresentingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F47E4726F5D80200FF1359 /* SDPresentingViewController.xib */; };
+		77F47E4D26F5D81200FF1359 /* SDPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E4B26F5D81200FF1359 /* SDPresentedViewController.m */; };
+		77F47E4E26F5D81200FF1359 /* SDPresentedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F47E4C26F5D81200FF1359 /* SDPresentedViewController.xib */; };
+		77F47E5126F5D94900FF1359 /* SDModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E5026F5D94900FF1359 /* SDModalTransitionDelegate.m */; };
+		77F47E5426F5F48600FF1359 /* SDOverlyPresentionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E5326F5F48600FF1359 /* SDOverlyPresentionController.m */; };
+		D3FBA7155F7D8D39AA380E43 /* Pods_SDPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		7761F7CE267C37BC00066CFF /* SDPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPagerController.h; sourceTree = "<group>"; };
+		7761F7CF267C37BC00066CFF /* SDPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPagerController.m; sourceTree = "<group>"; };
+		7761F7D1267C37BC00066CFF /* RRNewWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRNewWebViewController.h; sourceTree = "<group>"; };
+		7761F7D2267C37BC00066CFF /* RRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRWebViewController.m; sourceTree = "<group>"; };
+		7761F7D3267C37BC00066CFF /* RRTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRTestViewController.m; sourceTree = "<group>"; };
+		7761F7D4267C37BC00066CFF /* RRNewWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRNewWebViewController.m; sourceTree = "<group>"; };
+		7761F7D5267C37BC00066CFF /* RRTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRTestViewController.h; sourceTree = "<group>"; };
+		7761F7D6267C37BC00066CFF /* RRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRWebViewController.h; sourceTree = "<group>"; };
+		7761F7DC267C37D500066CFF /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		7761F7DD267C37D500066CFF /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		7761F7DE267C37D500066CFF /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		7761F7DF267C37D500066CFF /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		7761F7E0267C37D500066CFF /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		7761F7E1267C37D500066CFF /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		7761F7E5267C380600066CFF /* SDSideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDSideViewController.h; sourceTree = "<group>"; };
+		7761F7E6267C380600066CFF /* SDSideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSideViewController.m; sourceTree = "<group>"; };
+		7761F7E8267C38E200066CFF /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		7761F7E9267C38E200066CFF /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		776E83132655135600A3CE78 /* SDPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		776E83162655135600A3CE78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		776E83172655135600A3CE78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		776E83202655135600A3CE78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		776E83222655135800A3CE78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		776E83252655135800A3CE78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		776E83272655135800A3CE78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		776E83282655135800A3CE78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		776E835C2655150700A3CE78 /* RRSlidableProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRSlidableProgressView.h; sourceTree = "<group>"; };
+		776E835D2655150700A3CE78 /* RRSlidableProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRSlidableProgressView.m; sourceTree = "<group>"; };
+		776E83612655164100A3CE78 /* SDPlayground.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPlayground.pch; sourceTree = "<group>"; };
+		776E836D265519A400A3CE78 /* SDTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDTabBarController.h; sourceTree = "<group>"; };
+		776E836E265519A400A3CE78 /* SDTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarController.m; sourceTree = "<group>"; };
+		776E837326551E3500A3CE78 /* SDNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNavigationController.h; sourceTree = "<group>"; };
+		776E837426551E3500A3CE78 /* SDNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNavigationController.m; sourceTree = "<group>"; };
+		77F47E2E26F4497000FF1359 /* SDPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPushViewController.h; sourceTree = "<group>"; };
+		77F47E2F26F4497000FF1359 /* SDPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPushViewController.m; sourceTree = "<group>"; };
+		77F47E3026F4497000FF1359 /* SDPushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDPushViewController.xib; sourceTree = "<group>"; };
+		77F47E3326F44A0D00FF1359 /* SDPopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPopViewController.h; sourceTree = "<group>"; };
+		77F47E3426F44A0D00FF1359 /* SDPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPopViewController.m; sourceTree = "<group>"; };
+		77F47E3526F44A0D00FF1359 /* SDPopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDPopViewController.xib; sourceTree = "<group>"; };
+		77F47E3926F58B8C00FF1359 /* SDSlideAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDSlideAnimationController.h; sourceTree = "<group>"; };
+		77F47E3A26F58B8C00FF1359 /* SDSlideAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSlideAnimationController.m; sourceTree = "<group>"; };
+		77F47E3C26F58C6800FF1359 /* SDNavigationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNavigationDelegate.h; sourceTree = "<group>"; };
+		77F47E3D26F58C6800FF1359 /* SDNavigationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNavigationDelegate.m; sourceTree = "<group>"; };
+		77F47E3F26F5BA1100FF1359 /* SDCardAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCardAnimationController.h; sourceTree = "<group>"; };
+		77F47E4026F5BA1100FF1359 /* SDCardAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDCardAnimationController.m; sourceTree = "<group>"; };
+		77F47E4226F5C9C800FF1359 /* SDOverlayAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDOverlayAnimationController.h; sourceTree = "<group>"; };
+		77F47E4326F5C9C800FF1359 /* SDOverlayAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDOverlayAnimationController.m; sourceTree = "<group>"; };
+		77F47E4526F5D80200FF1359 /* SDPresentingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPresentingViewController.h; sourceTree = "<group>"; };
+		77F47E4626F5D80200FF1359 /* SDPresentingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPresentingViewController.m; sourceTree = "<group>"; };
+		77F47E4726F5D80200FF1359 /* SDPresentingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDPresentingViewController.xib; sourceTree = "<group>"; };
+		77F47E4A26F5D81200FF1359 /* SDPresentedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPresentedViewController.h; sourceTree = "<group>"; };
+		77F47E4B26F5D81200FF1359 /* SDPresentedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPresentedViewController.m; sourceTree = "<group>"; };
+		77F47E4C26F5D81200FF1359 /* SDPresentedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDPresentedViewController.xib; sourceTree = "<group>"; };
+		77F47E4F26F5D94900FF1359 /* SDModalTransitionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDModalTransitionDelegate.h; sourceTree = "<group>"; };
+		77F47E5026F5D94900FF1359 /* SDModalTransitionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDModalTransitionDelegate.m; sourceTree = "<group>"; };
+		77F47E5226F5F48600FF1359 /* SDOverlyPresentionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDOverlyPresentionController.h; sourceTree = "<group>"; };
+		77F47E5326F5F48600FF1359 /* SDOverlyPresentionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDOverlyPresentionController.m; sourceTree = "<group>"; };
+		79D60551F6E6B3230BB70B68 /* Pods-SDPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.release.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		776E83102655135600A3CE78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FBA7155F7D8D39AA380E43 /* Pods_SDPlayground.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7761F7CD267C37BC00066CFF /* ContainerVC */ = {
+			isa = PBXGroup;
+			children = (
+				7761F7CE267C37BC00066CFF /* SDPagerController.h */,
+				7761F7CF267C37BC00066CFF /* SDPagerController.m */,
+				7761F7E5267C380600066CFF /* SDSideViewController.h */,
+				7761F7E6267C380600066CFF /* SDSideViewController.m */,
+				7761F7DB267C37D500066CFF /* tempVC */,
+			);
+			path = ContainerVC;
+			sourceTree = "<group>";
+		};
+		7761F7D0267C37BC00066CFF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				7761F7D1267C37BC00066CFF /* RRNewWebViewController.h */,
+				7761F7D4267C37BC00066CFF /* RRNewWebViewController.m */,
+				7761F7D5267C37BC00066CFF /* RRTestViewController.h */,
+				7761F7D3267C37BC00066CFF /* RRTestViewController.m */,
+				7761F7D6267C37BC00066CFF /* RRWebViewController.h */,
+				7761F7D2267C37BC00066CFF /* RRWebViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		7761F7DB267C37D500066CFF /* tempVC */ = {
+			isa = PBXGroup;
+			children = (
+				7761F7E9267C38E200066CFF /* MenuViewController.h */,
+				7761F7E8267C38E200066CFF /* MenuViewController.m */,
+				7761F7DE267C37D500066CFF /* CollectionViewController.h */,
+				7761F7E1267C37D500066CFF /* CollectionViewController.m */,
+				7761F7E0267C37D500066CFF /* CustomViewController.h */,
+				7761F7DC267C37D500066CFF /* CustomViewController.m */,
+				7761F7DF267C37D500066CFF /* ListViewController.h */,
+				7761F7DD267C37D500066CFF /* ListViewController.m */,
+			);
+			path = tempVC;
+			sourceTree = "<group>";
+		};
+		776E830A2655135600A3CE78 = {
+			isa = PBXGroup;
+			children = (
+				776E83152655135600A3CE78 /* SDPlayground */,
+				776E83142655135600A3CE78 /* Products */,
+				AE4A0172ACA858B2722929A0 /* Pods */,
+				F876EA44AE1DC6989AAD6788 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		776E83142655135600A3CE78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				776E83132655135600A3CE78 /* SDPlayground.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		776E83152655135600A3CE78 /* SDPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				77F47E2A26F4455F00FF1359 /* TransitionVC */,
+				776E8366265518CF00A3CE78 /* App */,
+				776E8364265518B200A3CE78 /* RootVC */,
+				7761F7CD267C37BC00066CFF /* ContainerVC */,
+				7761F7D0267C37BC00066CFF /* VC */,
+				776E837726551E8F00A3CE78 /* CommonViews */,
+				776E83612655164100A3CE78 /* SDPlayground.pch */,
+				776E83272655135800A3CE78 /* Info.plist */,
+				776E83222655135800A3CE78 /* Assets.xcassets */,
+				776E83242655135800A3CE78 /* LaunchScreen.storyboard */,
+				776E831F2655135600A3CE78 /* Main.storyboard */,
+			);
+			path = SDPlayground;
+			sourceTree = "<group>";
+		};
+		776E835B2655150700A3CE78 /* RRSlidableProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				776E835C2655150700A3CE78 /* RRSlidableProgressView.h */,
+				776E835D2655150700A3CE78 /* RRSlidableProgressView.m */,
+			);
+			path = RRSlidableProgressView;
+			sourceTree = "<group>";
+		};
+		776E8364265518B200A3CE78 /* RootVC */ = {
+			isa = PBXGroup;
+			children = (
+				776E836D265519A400A3CE78 /* SDTabBarController.h */,
+				776E836E265519A400A3CE78 /* SDTabBarController.m */,
+				776E837326551E3500A3CE78 /* SDNavigationController.h */,
+				776E837426551E3500A3CE78 /* SDNavigationController.m */,
+				77F47E3826F58B3500FF1359 /* VCTransition */,
+			);
+			path = RootVC;
+			sourceTree = "<group>";
+		};
+		776E8366265518CF00A3CE78 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				776E83162655135600A3CE78 /* AppDelegate.h */,
+				776E83172655135600A3CE78 /* AppDelegate.m */,
+				776E83282655135800A3CE78 /* main.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		776E837726551E8F00A3CE78 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				776E835B2655150700A3CE78 /* RRSlidableProgressView */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		77F47E2A26F4455F00FF1359 /* TransitionVC */ = {
+			isa = PBXGroup;
+			children = (
+				77F47E2E26F4497000FF1359 /* SDPushViewController.h */,
+				77F47E2F26F4497000FF1359 /* SDPushViewController.m */,
+				77F47E3026F4497000FF1359 /* SDPushViewController.xib */,
+				77F47E3326F44A0D00FF1359 /* SDPopViewController.h */,
+				77F47E3426F44A0D00FF1359 /* SDPopViewController.m */,
+				77F47E3526F44A0D00FF1359 /* SDPopViewController.xib */,
+				77F47E4526F5D80200FF1359 /* SDPresentingViewController.h */,
+				77F47E4626F5D80200FF1359 /* SDPresentingViewController.m */,
+				77F47E4726F5D80200FF1359 /* SDPresentingViewController.xib */,
+				77F47E4A26F5D81200FF1359 /* SDPresentedViewController.h */,
+				77F47E4B26F5D81200FF1359 /* SDPresentedViewController.m */,
+				77F47E4C26F5D81200FF1359 /* SDPresentedViewController.xib */,
+			);
+			path = TransitionVC;
+			sourceTree = "<group>";
+		};
+		77F47E3826F58B3500FF1359 /* VCTransition */ = {
+			isa = PBXGroup;
+			children = (
+				77F47E3C26F58C6800FF1359 /* SDNavigationDelegate.h */,
+				77F47E3D26F58C6800FF1359 /* SDNavigationDelegate.m */,
+				77F47E4F26F5D94900FF1359 /* SDModalTransitionDelegate.h */,
+				77F47E5026F5D94900FF1359 /* SDModalTransitionDelegate.m */,
+				77F47E5226F5F48600FF1359 /* SDOverlyPresentionController.h */,
+				77F47E5326F5F48600FF1359 /* SDOverlyPresentionController.m */,
+				77F47E3926F58B8C00FF1359 /* SDSlideAnimationController.h */,
+				77F47E3A26F58B8C00FF1359 /* SDSlideAnimationController.m */,
+				77F47E3F26F5BA1100FF1359 /* SDCardAnimationController.h */,
+				77F47E4026F5BA1100FF1359 /* SDCardAnimationController.m */,
+				77F47E4226F5C9C800FF1359 /* SDOverlayAnimationController.h */,
+				77F47E4326F5C9C800FF1359 /* SDOverlayAnimationController.m */,
+			);
+			path = VCTransition;
+			sourceTree = "<group>";
+		};
+		AE4A0172ACA858B2722929A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */,
+				79D60551F6E6B3230BB70B68 /* Pods-SDPlayground.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F876EA44AE1DC6989AAD6788 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		776E83122655135600A3CE78 /* SDPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 776E832C2655135800A3CE78 /* Build configuration list for PBXNativeTarget "SDPlayground" */;
+			buildPhases = (
+				9BD53673C9A6A5FE5CFC903B /* [CP] Check Pods Manifest.lock */,
+				776E830F2655135600A3CE78 /* Sources */,
+				776E83102655135600A3CE78 /* Frameworks */,
+				776E83112655135600A3CE78 /* Resources */,
+				51714505C9F6B47F98CE1413 /* [CP] Embed Pods Frameworks */,
+				8A743027089ACFBE6F06BD90 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDPlayground;
+			productName = SDPlayground;
+			productReference = 776E83132655135600A3CE78 /* SDPlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		776E830B2655135600A3CE78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					776E83122655135600A3CE78 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 776E830E2655135600A3CE78 /* Build configuration list for PBXProject "SDPlayground" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 776E830A2655135600A3CE78;
+			productRefGroup = 776E83142655135600A3CE78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				776E83122655135600A3CE78 /* SDPlayground */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		776E83112655135600A3CE78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F47E3726F44A0D00FF1359 /* SDPopViewController.xib in Resources */,
+				776E83262655135800A3CE78 /* LaunchScreen.storyboard in Resources */,
+				776E83232655135800A3CE78 /* Assets.xcassets in Resources */,
+				776E83212655135600A3CE78 /* Main.storyboard in Resources */,
+				77F47E4E26F5D81200FF1359 /* SDPresentedViewController.xib in Resources */,
+				77F47E4926F5D80200FF1359 /* SDPresentingViewController.xib in Resources */,
+				77F47E3226F4497000FF1359 /* SDPushViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51714505C9F6B47F98CE1413 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDPlayground/Pods-SDPlayground-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDPlayground/Pods-SDPlayground-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDPlayground/Pods-SDPlayground-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A743027089ACFBE6F06BD90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDPlayground/Pods-SDPlayground-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDPlayground/Pods-SDPlayground-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDPlayground/Pods-SDPlayground-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD53673C9A6A5FE5CFC903B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDPlayground-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		776E830F2655135600A3CE78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7761F7D8267C37BC00066CFF /* RRWebViewController.m in Sources */,
+				77F47E4426F5C9C800FF1359 /* SDOverlayAnimationController.m in Sources */,
+				7761F7E2267C37D500066CFF /* CustomViewController.m in Sources */,
+				7761F7E3267C37D500066CFF /* ListViewController.m in Sources */,
+				77F47E4826F5D80200FF1359 /* SDPresentingViewController.m in Sources */,
+				77F47E3126F4497000FF1359 /* SDPushViewController.m in Sources */,
+				77F47E3B26F58B8C00FF1359 /* SDSlideAnimationController.m in Sources */,
+				776E837526551E3500A3CE78 /* SDNavigationController.m in Sources */,
+				776E835E2655150700A3CE78 /* RRSlidableProgressView.m in Sources */,
+				776E83182655135600A3CE78 /* AppDelegate.m in Sources */,
+				77F47E5126F5D94900FF1359 /* SDModalTransitionDelegate.m in Sources */,
+				7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */,
+				77F47E5426F5F48600FF1359 /* SDOverlyPresentionController.m in Sources */,
+				77F47E4126F5BA1100FF1359 /* SDCardAnimationController.m in Sources */,
+				77F47E3E26F58C6800FF1359 /* SDNavigationDelegate.m in Sources */,
+				776E83292655135800A3CE78 /* main.m in Sources */,
+				7761F7E4267C37D500066CFF /* CollectionViewController.m in Sources */,
+				77F47E3626F44A0D00FF1359 /* SDPopViewController.m in Sources */,
+				7761F7D7267C37BC00066CFF /* SDPagerController.m in Sources */,
+				776E836F265519A400A3CE78 /* SDTabBarController.m in Sources */,
+				77F47E4D26F5D81200FF1359 /* SDPresentedViewController.m in Sources */,
+				7761F7EA267C38E200066CFF /* MenuViewController.m in Sources */,
+				7761F7DA267C37BC00066CFF /* RRNewWebViewController.m in Sources */,
+				7761F7E7267C380600066CFF /* SDSideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		776E831F2655135600A3CE78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				776E83202655135600A3CE78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		776E83242655135800A3CE78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				776E83252655135800A3CE78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		776E832A2655135800A3CE78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		776E832B2655135800A3CE78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		776E832D2655135800A3CE78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDPlayground/SDPlayground.pch";
+				INFOPLIST_FILE = SDPlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Appsurdity.Play;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		776E832E2655135800A3CE78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79D60551F6E6B3230BB70B68 /* Pods-SDPlayground.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SDPlayground/SDPlayground.pch";
+				INFOPLIST_FILE = SDPlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Appsurdity.Play;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		776E830E2655135600A3CE78 /* Build configuration list for PBXProject "SDPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776E832A2655135800A3CE78 /* Debug */,
+				776E832B2655135800A3CE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		776E832C2655135800A3CE78 /* Build configuration list for PBXNativeTarget "SDPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				776E832D2655135800A3CE78 /* Debug */,
+				776E832E2655135800A3CE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 776E830B2655135600A3CE78 /* Project object */;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SDPopViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7S-3l-e9j">
+                    <rect key="frame" x="145" y="225" width="30" height="30"/>
+                    <state key="normal" title="Pop"/>
+                    <connections>
+                        <action selector="onTapPopButton:" destination="-1" eventType="touchUpInside" id="kSW-jK-Rlp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJ3-tU-6rx">
+                    <rect key="frame" x="143" y="275" width="34" height="30"/>
+                    <state key="normal" title="push"/>
+                    <connections>
+                        <action selector="onTapPushButton:" destination="-1" eventType="touchUpInside" id="q0G-SP-Oti"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YJ3-tU-6rx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TTU-pN-DCV"/>
+                <constraint firstItem="V7S-3l-e9j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Tb2-I9-6DT"/>
+                <constraint firstItem="V7S-3l-e9j" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cW1-C0-nCb"/>
+                <constraint firstItem="YJ3-tU-6rx" firstAttribute="top" secondItem="V7S-3l-e9j" secondAttribute="bottom" constant="20" id="fTZ-ro-u4E"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="106"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
