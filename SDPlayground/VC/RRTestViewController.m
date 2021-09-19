@@ -15,9 +15,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor systemGrayColor];
+    self.view.backgroundColor = [UIColor yellowColor];
 //    [self testURL];
-    [self testURL2];
+//    [self testURL2];
 }
 
 - (void)testURL2{

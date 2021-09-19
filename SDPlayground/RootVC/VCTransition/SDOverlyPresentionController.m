@@ -11,6 +11,8 @@
 
 @property (nonatomic, strong) UIView *dimmingView;
 
+@property(nonatomic,weak) UIViewController *presentedVc;
+
 @end
 
 /**
@@ -21,9 +23,15 @@
  */
 @implementation SDOverlyPresentionController
 
+- (void)onTapDimmingView:(UITapGestureRecognizer *)tap{
+    [self.presentedVc dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController{
     if (self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController]) {
         self.dimmingView = [UIView new];
+        [self.dimmingView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapDimmingView:)]];
+        self.presentedVc = presentedViewController;
     }
     return self;
 }

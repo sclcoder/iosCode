@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A83376526F73FB3007C5828 /* SDTabBarVCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83376426F73FB3007C5828 /* SDTabBarVCDelegate.m */; };
 		7761F7D7267C37BC00066CFF /* SDPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7CF267C37BC00066CFF /* SDPagerController.m */; };
 		7761F7D8267C37BC00066CFF /* RRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7D2267C37BC00066CFF /* RRWebViewController.m */; };
 		7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7D3267C37BC00066CFF /* RRTestViewController.m */; };
@@ -43,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		2A83376326F73FB3007C5828 /* SDTabBarVCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDTabBarVCDelegate.h; sourceTree = "<group>"; };
+		2A83376426F73FB3007C5828 /* SDTabBarVCDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarVCDelegate.m; sourceTree = "<group>"; };
 		7761F7CE267C37BC00066CFF /* SDPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPagerController.h; sourceTree = "<group>"; };
 		7761F7CF267C37BC00066CFF /* SDPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPagerController.m; sourceTree = "<group>"; };
 		7761F7D1267C37BC00066CFF /* RRNewWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRNewWebViewController.h; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 			children = (
 				77F47E3C26F58C6800FF1359 /* SDNavigationDelegate.h */,
 				77F47E3D26F58C6800FF1359 /* SDNavigationDelegate.m */,
+				2A83376326F73FB3007C5828 /* SDTabBarVCDelegate.h */,
+				2A83376426F73FB3007C5828 /* SDTabBarVCDelegate.m */,
 				77F47E4F26F5D94900FF1359 /* SDModalTransitionDelegate.h */,
 				77F47E5026F5D94900FF1359 /* SDModalTransitionDelegate.m */,
 				77F47E5226F5F48600FF1359 /* SDOverlyPresentionController.h */,
@@ -435,6 +440,7 @@
 				7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */,
 				77F47E5426F5F48600FF1359 /* SDOverlyPresentionController.m in Sources */,
 				77F47E4126F5BA1100FF1359 /* SDCardAnimationController.m in Sources */,
+				2A83376526F73FB3007C5828 /* SDTabBarVCDelegate.m in Sources */,
 				77F47E3E26F58C6800FF1359 /* SDNavigationDelegate.m in Sources */,
 				776E83292655135800A3CE78 /* main.m in Sources */,
 				7761F7E4267C37D500066CFF /* CollectionViewController.m in Sources */,

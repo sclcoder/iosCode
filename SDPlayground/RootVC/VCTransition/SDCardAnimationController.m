@@ -12,7 +12,7 @@
 #pragma mark - UIViewControllerAnimatedTransitioning
 // 转场时长
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.5;
+    return 0.25;
 }
 // 转场过程
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext {

@@ -8,16 +8,27 @@
 #import "SDModalTransitionDelegate.h"
 #import "SDOverlayAnimationController.h"
 #import "SDOverlyPresentionController.h"
+#import "SDSlideAnimationController.h"
 
 @implementation SDModalTransitionDelegate
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
                                                                             presentingController:(UIViewController *)presenting
                                                                                 sourceController:(UIViewController *)source{
+    
+//    SDSlideAnimationController *slidAC = [SDSlideAnimationController new];
+//    slidAC.transitionType = SDTransitionModalOperation;
+//    slidAC.modalOperation = SDModalOperationModal;
+//    return slidAC;
     return [SDOverlayAnimationController new];
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed{
+    
+//    SDSlideAnimationController *slidAC = [SDSlideAnimationController new];
+//    slidAC.transitionType = SDTransitionModalOperation;
+//    slidAC.modalOperation = SDModalOperationDismissal;
+//    return slidAC;
     return [SDOverlayAnimationController new];
 }
 

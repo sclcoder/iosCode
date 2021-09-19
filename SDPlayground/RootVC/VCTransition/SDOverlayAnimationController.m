@@ -10,7 +10,7 @@
 @implementation SDOverlayAnimationController
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext {
-    return 0.5;
+    return 0.25;
 }
 
 

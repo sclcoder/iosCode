@@ -20,8 +20,12 @@
 #import "SDPushViewController.h"
 #import "SDPresentingViewController.h"
 
+/// transition
+#import "SDTabBarVCDelegate.h"
+
 @interface SDTabBarController ()
 
+@property(nonatomic,strong) SDTabBarVCDelegate<UITabBarControllerDelegate> *strongReferenceDelegate;
 
 @end
 
@@ -30,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.strongReferenceDelegate = [[SDTabBarVCDelegate alloc] init];
+    self.delegate = self.strongReferenceDelegate;
     
     SDPushViewController *pushVC =  [SDPushViewController new];
     pushVC.title = @"push";
@@ -64,15 +70,5 @@
     
     [self setViewControllers:@[pushNav,modalNav,pageNav,sideVC,webNav]];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

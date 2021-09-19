@@ -9,6 +9,11 @@
 #import "SDPresentedViewController.h"
 #import "SDModalTransitionDelegate.h"
 
+/// 测试代码
+#import "SDNavigationController.h"
+#import "SDPushViewController.h"
+#import "SDTabBarController.h"
+
 @interface SDPresentingViewController ()
 @property (nonatomic, strong)  SDModalTransitionDelegate *strongReferanceDelegate;
 @end
@@ -31,6 +36,22 @@
     toVC.transitioningDelegate = self.strongReferanceDelegate;
     toVC.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:toVC animated:YES completion:nil];
+    
+    
+    /// Modal一个NavigationVC
+//    SDPushViewController *pushVC = [SDPushViewController new];
+//    SDNavigationController *toVC = [[SDNavigationController alloc] initWithRootViewController:pushVC];
+//
+//    toVC.transitioningDelegate = self.strongReferanceDelegate;
+//    toVC.modalPresentationStyle = UIModalPresentationCustom;
+//
+//    [self presentViewController:toVC animated:YES completion:nil];
+    
+    /// Modal一个TabVC
+//    SDTabBarController *toVC = [SDTabBarController new];
+//    toVC.transitioningDelegate = self.strongReferanceDelegate;
+//    toVC.modalPresentationStyle = UIModalPresentationCustom;
+//    [self presentViewController:toVC animated:YES completion:nil];
 }
 
 

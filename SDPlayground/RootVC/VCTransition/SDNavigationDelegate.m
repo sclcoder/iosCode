@@ -18,8 +18,9 @@
                                    animationControllerForOperation:(UINavigationControllerOperation)operation
                                                 fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC  API_AVAILABLE(ios(7.0)){
-//
+    
 //    SDSlideAnimationController *slideAC = [SDSlideAnimationController new];
+//    slideAC.trasitionType = SDTrasitionNavigationControllerOperation;
 //    slideAC.navOperation = operation;
 //    return slideAC;
     
