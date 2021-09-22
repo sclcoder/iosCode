@@ -18,12 +18,12 @@ target 'SDPlayground' do
   pod 'CWLateralSlide'
   
   # Tool
-  pod 'YTKNetwork'
-  pod 'MJRefresh'
-  pod 'LEEAlert'
+#  pod 'YTKNetwork'
+#  pod 'MJRefresh'
+#  pod 'LEEAlert'
   
   # 效果
-#  pod 'FDFullscreenPopGesture'
+  pod 'FDFullscreenPopGesture'
 
   
 #  pod 'YYKit'
@@ -41,21 +41,21 @@ target 'SDPlayground' do
 #YYAsyncLayer — iOS 异步绘制与显示的工具。
 #YYCategories — 功能丰富的 Category 类型工具库。
   
-  pod 'YYModel'
-  pod 'YYCache'
-  pod 'YYImage'
-  pod 'YYWebImage'
-  pod 'YYText'
-  pod 'YYKeyboardManager'
-  pod 'YYDispatchQueuePool'
-  pod 'YYAsyncLayer'
-  pod 'YYCategories'
-
-  pod 'NIMKit/Full'
-
-  pod 'QMUIKit'
-  
-  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] # 必选
+#  pod 'YYModel'
+#  pod 'YYCache'
+#  pod 'YYImage'
+#  pod 'YYWebImage'
+#  pod 'YYText'
+#  pod 'YYKeyboardManager'
+#  pod 'YYDispatchQueuePool'
+#  pod 'YYAsyncLayer'
+#  pod 'YYCategories'
+#
+#  pod 'NIMKit/Full'
+#
+#  pod 'QMUIKit'
+#
+#  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] # 必选
 #  pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] # 可选
 #  pod 'DoraemonKit/WithGPS', '~> 3.0.4', :configurations => ['Debug']  # 可选
 #  pod 'DoraemonKit/WithLoad', '~> 3.0.4', :configurations => ['Debug']  # 可选

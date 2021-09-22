@@ -13,8 +13,7 @@
 // https://github.com/seedante/iOS-Note/wiki/ViewController-Transition
 
 @interface SDNavigationController ()
-
-@property (nonatomic, strong) SDNavigationDelegate*strongReferenceDelegate;
+@property (nonatomic, strong) SDNavigationDelegate *strongReferenceDelegate;
 @end
 
 @implementation SDNavigationController
@@ -22,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    /// 设置代理后,系统的交互效果失效
     self.strongReferenceDelegate = [SDNavigationDelegate new];
     self.delegate = self.strongReferenceDelegate;
 }

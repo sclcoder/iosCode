@@ -37,7 +37,7 @@
     
     self.widthConstraint.constant = self.view.frame.size.width * 2 / 3;
     // 转场动画结束后的动画
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.dismissButton.alpha = 1;
         [self.view layoutIfNeeded];
         
@@ -53,7 +53,7 @@
 
     self.widthConstraint.constant = 0;
     /// 转场动画开始前的内部动画
-    [UIView animateWithDuration:0.4 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.dismissButton.transform = applyTransform;
         [self.view layoutIfNeeded];
         

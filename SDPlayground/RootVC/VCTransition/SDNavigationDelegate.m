@@ -9,10 +9,22 @@
 #import "SDSlideAnimationController.h"
 #import "SDCardAnimationController.h"
 
+@interface SDNavigationDelegate()
+
+@end
+
 @implementation SDNavigationDelegate
 
-#pragma mark - UINavigationControllerDelegate
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.interactionController = [[UIPercentDrivenInteractiveTransition alloc] init];
+    }
+    return self;
+}
 
+#pragma mark - UINavigationControllerDelegate
 // 转场动画
 - (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                    animationControllerForOperation:(UINavigationControllerOperation)operation
@@ -30,10 +42,11 @@
 }
 
 // 转场交互
-//- (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-//                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController API_AVAILABLE(ios(7.0)){
-//
-//}
+- (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController{
+    
+    return self.interactive ? self.interactionController : nil;
+}
 
 
 
