@@ -10,6 +10,16 @@
 
 @implementation SDTabBarVCDelegate
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.interactionController = [[UIPercentDrivenInteractiveTransition alloc] init];
+        self.interactive = NO;
+    }
+    return self;
+}
+
 
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController
@@ -26,10 +36,11 @@
 }
 
 
-//- (nullable id <UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController
-//                               interactionControllerForAnimationController: (id <UIViewControllerAnimatedTransitioning>)animationController{
-//
-//}
+- (nullable id <UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController
+                               interactionControllerForAnimationController: (id <UIViewControllerAnimatedTransitioning>)animationController{
+
+    return self.interactive? self.interactionController : nil;
+}
 
 
 

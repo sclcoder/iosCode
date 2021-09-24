@@ -20,10 +20,10 @@ target 'SDPlayground' do
   # Tool
 #  pod 'YTKNetwork'
 #  pod 'MJRefresh'
-#  pod 'LEEAlert'
+  pod 'LEEAlert'
   
   # 效果
-  pod 'FDFullscreenPopGesture'
+#  pod 'FDFullscreenPopGesture'
 
   
 #  pod 'YYKit'

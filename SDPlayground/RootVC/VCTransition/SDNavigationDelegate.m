@@ -31,14 +31,14 @@
                                                 fromViewController:(UIViewController *)fromVC
                                                            toViewController:(UIViewController *)toVC  API_AVAILABLE(ios(7.0)){
     
-//    SDSlideAnimationController *slideAC = [SDSlideAnimationController new];
-//    slideAC.trasitionType = SDTrasitionNavigationControllerOperation;
-//    slideAC.navOperation = operation;
-//    return slideAC;
+    SDSlideAnimationController *slideAC = [SDSlideAnimationController new];
+    slideAC.transitionType = SDTransitionNavigationControllerOperation;
+    slideAC.navOperation = operation;
+    return slideAC;
     
-    SDCardAnimationController *cardAC = [SDCardAnimationController new];
-    cardAC.navOperation = operation;
-    return cardAC;
+//    SDCardAnimationController *cardAC = [SDCardAnimationController new];
+//    cardAC.navOperation = operation;
+//    return cardAC;
 }
 
 // 转场交互
