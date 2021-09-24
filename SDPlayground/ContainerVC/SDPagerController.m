@@ -12,7 +12,7 @@
 #import "RRTestViewController.h"
 #import "RRWebViewController.h"
 #import "MenuViewController.h"
-
+#import "SDNavigationController.h"
 @interface SDPagerController ()<TYTabPagerControllerDataSource, TYTabPagerControllerDelegate>
 @property (nonatomic, strong) NSArray *datas;
 @property (nonatomic,strong) MenuViewController *leftVC; // 强引用，可以避免每次显示抽屉都去创建
@@ -37,7 +37,7 @@
 }
 
 - (void)setupNavBarItem {
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(defaultAnimationFromLeft)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize target:self action:@selector(defaultAnimationFromLeft)];
 }
 
 - (void)setupPageVc{
@@ -50,6 +50,8 @@
     self.tabBar.layout.adjustContentCellsCenter = YES;
     self.dataSource = self;
     self.delegate = self;
+    SDNavigationController *nav = (SDNavigationController *)self.navigationController;
+    [self.pagerController.scrollView.panGestureRecognizer requireGestureRecognizerToFail:nav.swipeGesture];
 }
 
 - (void)loadData {

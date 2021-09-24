@@ -71,4 +71,34 @@
     [self setViewControllers:@[pushNav,modalNav,pageNav,sideVC,webNav]];
 }
 
+#pragma mark - 旋转 、 status bar
+
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return self.selectedViewController;
+}
+
+- (UIViewController *)childViewControllerForStatusBarHidden {
+    return self.selectedViewController;
+}
+
+- (UIViewController *)childViewControllerForHomeIndicatorAutoHidden {
+    return self.selectedViewController;
+}
+
+- (UIViewController *)childViewControllerForScreenEdgesDeferringSystemGestures {
+    return self.selectedViewController;
+}
+
+- (BOOL)shouldAutorotate {
+    return self.selectedViewController.shouldAutorotate;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return self.selectedViewController.supportedInterfaceOrientations;
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return self.selectedViewController.preferredInterfaceOrientationForPresentation;
+}
+
 @end

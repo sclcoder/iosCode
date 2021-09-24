@@ -1,15 +1,15 @@
 PODS:
   - CWLateralSlide (1.6.5)
-  - FDFullscreenPopGesture (1.1)
   - FWSideMenu (2.1.1)
+  - LEEAlert (1.5.0)
   - Masonry (1.1.0)
   - Toast (3.1.0)
   - TYPagerController (2.1.2)
 
 DEPENDENCIES:
   - CWLateralSlide
-  - FDFullscreenPopGesture
   - FWSideMenu
+  - LEEAlert
   - Masonry
   - Toast
   - TYPagerController
@@ -17,20 +17,20 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CWLateralSlide
-    - FDFullscreenPopGesture
     - FWSideMenu
+    - LEEAlert
     - Masonry
     - Toast
     - TYPagerController
 
 SPEC CHECKSUMS:
   CWLateralSlide: 8939c8dea91a24e40d0793553118cb57cd67f64b
-  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FWSideMenu: 4e17ab517729e54b4462bb54747d5b0cd68263d8
+  LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
 
-PODFILE CHECKSUM: 9dc2686bb7a55efe8066b07408f1695018af9343
+PODFILE CHECKSUM: 93d8dcdbf17913db8342970c86a54c6401dc6928
 
 COCOAPODS: 1.10.2

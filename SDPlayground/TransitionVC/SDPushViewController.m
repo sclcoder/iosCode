@@ -7,6 +7,7 @@
 
 #import "SDPushViewController.h"
 #import "SDPopViewController.h"
+#import "SDPagerController.h"
 @interface SDPushViewController ()
 
 @end
@@ -21,6 +22,13 @@
 //    popVc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 //    [self presentViewController:popVc
 //                        animated:YES completion:nil];
+}
+
+- (IBAction)onTapPushToScrollViewButton:(id)sender {
+    
+    SDPagerController *pageVc = [SDPagerController new];
+    
+    [self.navigationController pushViewController:pageVc animated:YES];
 }
 
 - (void)viewDidLoad {

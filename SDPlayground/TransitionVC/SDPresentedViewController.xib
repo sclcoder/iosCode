@@ -46,7 +46,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Tg0-LL-LbL" secondAttribute="trailing" constant="20" id="jL3-lD-poK"/>
                 <constraint firstItem="Tg0-LL-LbL" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="kJm-Av-IeO"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="104"/>
+            <point key="canvasLocation" x="-195" y="-114"/>
         </view>
     </objects>
 </document>
