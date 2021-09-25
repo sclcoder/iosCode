@@ -36,11 +36,11 @@
 }
 
 
-- (nullable id <UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController
-                               interactionControllerForAnimationController: (id <UIViewControllerAnimatedTransitioning>)animationController{
-
-    return self.interactive? self.interactionController : nil;
-}
+//- (nullable id <UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController
+//                               interactionControllerForAnimationController: (id <UIViewControllerAnimatedTransitioning>)animationController{
+//
+//    return self.interactive? self.interactionController : nil;
+//}
 
 
 

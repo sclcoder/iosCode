@@ -23,7 +23,7 @@
 /// transition
 #import "SDTabBarVCDelegate.h"
 
-@interface SDTabBarController ()
+@interface SDTabBarController ()<UIGestureRecognizerDelegate>
 
 @property(nonatomic,strong) SDTabBarVCDelegate<UITabBarControllerDelegate> *strongReferenceDelegate;
 
@@ -38,7 +38,7 @@
     self.delegate = self.strongReferenceDelegate;
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onPanGesture:)];
-    
+    panGesture.delegate = self;
     [self.view addGestureRecognizer:panGesture];
     
     
@@ -141,8 +141,13 @@
 }
 
 
-#pragma mark - 旋转 、 status bar
+#pragma mark - UIGestureDelegate
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
+    return [otherGestureRecognizer isKindOfClass:[UIScreenEdgePanGestureRecognizer class]];
+}
 
+#pragma mark - 旋转 、 status bar
 - (UIViewController *)childViewControllerForStatusBarStyle {
     return self.selectedViewController;
 }
