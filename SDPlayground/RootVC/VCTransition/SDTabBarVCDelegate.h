@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SDTabBarVCDelegate : NSObject <UITabBarControllerDelegate>
+@property(nonatomic,strong) UIPercentDrivenInteractiveTransition *interactionController;
+@property(nonatomic,assign) BOOL interactive;
 
 @end
 

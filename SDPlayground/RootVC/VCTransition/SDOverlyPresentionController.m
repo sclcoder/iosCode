@@ -62,6 +62,7 @@
      */
 
     //使用 transitionCoordinator 与转场动画并行执行 dimmingView 的动画。
+    // transitionCoordinator 是UIViewController的属性
     [self.presentedViewController.transitionCoordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
         self.dimmingView.bounds = self.containerView.bounds;
     } completion:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {

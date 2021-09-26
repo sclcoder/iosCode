@@ -31,7 +31,59 @@
     swipeGesture.edges = UIRectEdgeLeft;
     self.swipeGesture = swipeGesture;
     [self.view addGestureRecognizer:swipeGesture];
+    
+//    self.transitionCoordinator;
 }
+
+/// 手势返回
+- (void)onSwipeGesture:(UIPanGestureRecognizer *)swipeGesture{
+    
+    UIView *targetView = swipeGesture.view;
+    CGPoint location = [swipeGesture translationInView:targetView];
+    CGFloat translationX = location.x;
+    NSLog(@"%f",location.x);
+    CGFloat percent   = translationX / targetView.bounds.size.width;
+    switch (swipeGesture.state) {
+        case UIGestureRecognizerStateBegan:{
+            self.strongReferenceDelegate.interactive = YES;
+            [self popViewControllerAnimated:YES];
+        }
+            break;
+        case UIGestureRecognizerStateChanged:{
+            [self.strongReferenceDelegate.interactionController updateInteractiveTransition:percent];
+        }
+            break;
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateEnded:{
+            /**
+             向非交互阶段的平滑过渡
+             假如你在屏幕上用手指移动一个视图，当你放手后，你希望视图应该以你放手的速度继续下去，这样看起来才自然。交互结束后，应该让剩余的转场动画以手指离开的速度继续。
+             UIViewControllerInteractiveTransitioning协议定义了两个属性用于这种情况：
+
+             completionCurve //交互结束后剩余动画的速率曲线
+             completionSpeed //交互结束后动画的开始速率由该参数与原来的速率相乘得到，实际上是个缩放参数
+             */
+            self.strongReferenceDelegate.interactionController.completionCurve = UIViewAnimationCurveLinear;
+            
+            // The velocity of the pan gesture, which is expressed in points per second. The velocity is broken into horizontal and vertical components.
+//            float speed = fabs([swipeGesture velocityInView:targetView].x);
+            if (percent > 0.3) {
+                /// 沿着结束交互时的速度完成动画
+//                self.strongReferenceDelegate.interactionController.completionSpeed = speed / ((1- percent) * targetView.bounds.size.width);
+                self.strongReferenceDelegate.interactionController.completionSpeed = 1;
+                [self.strongReferenceDelegate.interactionController finishInteractiveTransition];
+            } else{
+                self.strongReferenceDelegate.interactionController.completionSpeed = 1;
+                [self.strongReferenceDelegate.interactionController cancelInteractiveTransition];
+            }
+            self.strongReferenceDelegate.interactive = NO;
+        }
+            break;
+        default:
+            break;
+    };
+}
+
 
 
 #pragma mark - UIGestureRecognizerDelegate
@@ -69,38 +121,6 @@
 //- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceivePress:(UIPress *)press{
 //
 //}
-
-/// 手势返回
-- (void)onSwipeGesture:(UIPanGestureRecognizer *)swipeGesture{
-    UIView *targetView = swipeGesture.view;
-    CGPoint location = [swipeGesture translationInView:targetView];
-    CGFloat translationX = location.x;
-    NSLog(@"%f",location.x);
-    CGFloat percent   = translationX / targetView.bounds.size.width;
-    switch (swipeGesture.state) {
-        case UIGestureRecognizerStateBegan:{
-            self.strongReferenceDelegate.interactive = YES;
-            [self popViewControllerAnimated:YES];
-        }
-            break;
-        case UIGestureRecognizerStateChanged:{
-            [self.strongReferenceDelegate.interactionController updateInteractiveTransition:percent];
-        }
-            break;
-        case UIGestureRecognizerStateCancelled:
-        case UIGestureRecognizerStateEnded:{
-            if (percent > 0.3) {
-                [self.strongReferenceDelegate.interactionController finishInteractiveTransition];
-            } else{
-                [self.strongReferenceDelegate.interactionController cancelInteractiveTransition];
-            }
-            self.strongReferenceDelegate.interactive = NO;
-        }
-            break;
-        default:
-            break;
-    };
-}
 
 
 #pragma mark - overwrite

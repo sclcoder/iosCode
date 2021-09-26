@@ -20,7 +20,7 @@
     
     self.view.layer.cornerRadius = 10;
     self.dismissButton.alpha = 0;
-    
+
     NSArray *constraints = [self.inputTextField constraints];
     [constraints enumerateObjectsUsingBlock:^(NSLayoutConstraint*  _Nonnull constraint, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([constraint.identifier  isEqual: @"Width"]) { // 注意:需要在xib中设置identifer为Width
@@ -40,9 +40,9 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.dismissButton.alpha = 1;
         [self.view layoutIfNeeded];
-        
+
     } completion:^(BOOL finished) {
-        
+
     }];
 }
 
