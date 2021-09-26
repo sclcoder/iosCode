@@ -25,6 +25,8 @@
 		776E835E2655150700A3CE78 /* RRSlidableProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E835D2655150700A3CE78 /* RRSlidableProgressView.m */; };
 		776E836F265519A400A3CE78 /* SDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E836E265519A400A3CE78 /* SDTabBarController.m */; };
 		776E837526551E3500A3CE78 /* SDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E837426551E3500A3CE78 /* SDNavigationController.m */; };
+		77C728E226FDE6950072322D /* SDAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C728E026FDE6950072322D /* SDAlertViewController.m */; };
+		77C728E326FDE6950072322D /* SDAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C728E126FDE6950072322D /* SDAlertViewController.xib */; };
 		77F47E3126F4497000FF1359 /* SDPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E2F26F4497000FF1359 /* SDPushViewController.m */; };
 		77F47E3226F4497000FF1359 /* SDPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F47E3026F4497000FF1359 /* SDPushViewController.xib */; };
 		77F47E3626F44A0D00FF1359 /* SDPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E3426F44A0D00FF1359 /* SDPopViewController.m */; };
@@ -79,6 +81,9 @@
 		776E836E265519A400A3CE78 /* SDTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarController.m; sourceTree = "<group>"; };
 		776E837326551E3500A3CE78 /* SDNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNavigationController.h; sourceTree = "<group>"; };
 		776E837426551E3500A3CE78 /* SDNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNavigationController.m; sourceTree = "<group>"; };
+		77C728DF26FDE6950072322D /* SDAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAlertViewController.h; sourceTree = "<group>"; };
+		77C728E026FDE6950072322D /* SDAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAlertViewController.m; sourceTree = "<group>"; };
+		77C728E126FDE6950072322D /* SDAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDAlertViewController.xib; sourceTree = "<group>"; };
 		77F47E2E26F4497000FF1359 /* SDPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPushViewController.h; sourceTree = "<group>"; };
 		77F47E2F26F4497000FF1359 /* SDPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPushViewController.m; sourceTree = "<group>"; };
 		77F47E3026F4497000FF1359 /* SDPushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDPushViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +145,9 @@
 				7761F7D3267C37BC00066CFF /* RRTestViewController.m */,
 				7761F7D6267C37BC00066CFF /* RRWebViewController.h */,
 				7761F7D2267C37BC00066CFF /* RRWebViewController.m */,
+				77C728DF26FDE6950072322D /* SDAlertViewController.h */,
+				77C728E026FDE6950072322D /* SDAlertViewController.m */,
+				77C728E126FDE6950072322D /* SDAlertViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -349,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C728E326FDE6950072322D /* SDAlertViewController.xib in Resources */,
 				77F47E3726F44A0D00FF1359 /* SDPopViewController.xib in Resources */,
 				776E83262655135800A3CE78 /* LaunchScreen.storyboard in Resources */,
 				776E83232655135800A3CE78 /* Assets.xcassets in Resources */,
@@ -420,6 +429,7 @@
 				776E83182655135600A3CE78 /* AppDelegate.m in Sources */,
 				77F47E5126F5D94900FF1359 /* SDModalTransitionDelegate.m in Sources */,
 				7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */,
+				77C728E226FDE6950072322D /* SDAlertViewController.m in Sources */,
 				77F47E5426F5F48600FF1359 /* SDOverlyPresentionController.m in Sources */,
 				77F47E4126F5BA1100FF1359 /* SDCardAnimationController.m in Sources */,
 				2A83376526F73FB3007C5828 /* SDTabBarVCDelegate.m in Sources */,
