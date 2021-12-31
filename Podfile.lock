@@ -1,36 +1,119 @@
 PODS:
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
   - CWLateralSlide (1.6.5)
   - FWSideMenu (2.1.1)
   - LEEAlert (1.5.0)
   - Masonry (1.1.0)
+  - SJBaseVideoPlayer (3.6.7):
+    - Masonry
+    - SJBaseVideoPlayer/AVPlayer (= 3.6.7)
+    - SJBaseVideoPlayer/Common (= 3.6.7)
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/AVPlayer (3.6.7):
+    - Masonry
+    - SJBaseVideoPlayer/Common
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/Common (3.6.7):
+    - Masonry
+    - SJBaseVideoPlayer/ResourceLoader
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJBaseVideoPlayer/ResourceLoader (3.6.7):
+    - Masonry
+    - SJUIKit/AttributesFactory (>= 0.0.0.38)
+    - SJUIKit/ObserverHelper
+    - SJUIKit/Queues
+    - SJUIKit/SQLite3
+  - SJUIKit/AttributesFactory (0.0.0.58):
+    - SJUIKit/AttributesFactory/Deprecated (= 0.0.0.58)
+    - SJUIKit/AttributesFactory/UIKitText (= 0.0.0.58)
+  - SJUIKit/AttributesFactory/Deprecated (0.0.0.58)
+  - SJUIKit/AttributesFactory/UIKitText (0.0.0.58)
+  - SJUIKit/ObserverHelper (0.0.0.58)
+  - SJUIKit/Queues (0.0.0.58)
+  - SJUIKit/SQLite3 (0.0.0.58):
+    - SJUIKit/SQLite3/Core (= 0.0.0.58)
+    - SJUIKit/SQLite3/Protocol (= 0.0.0.58)
+    - YYModel
+  - SJUIKit/SQLite3/Core (0.0.0.58):
+    - SJUIKit/SQLite3/Protocol
+    - YYModel
+  - SJUIKit/SQLite3/Protocol (0.0.0.58):
+    - YYModel
+  - SJVideoPlayer (3.3.3):
+    - SJBaseVideoPlayer (>= 3.6.0)
+    - SJVideoPlayer/Common (= 3.3.3)
+    - SJVideoPlayer/ControlLayers (= 3.3.3)
+    - SJVideoPlayer/ResourceLoader (= 3.3.3)
+  - SJVideoPlayer/Common (3.3.3):
+    - Masonry
+    - SJBaseVideoPlayer (>= 3.6.0)
+    - SJUIKit/AttributesFactory
+    - SJVideoPlayer/ResourceLoader
+  - SJVideoPlayer/ControlLayers (3.3.3):
+    - SJBaseVideoPlayer (>= 3.6.0)
+    - SJVideoPlayer/Common
+  - SJVideoPlayer/ResourceLoader (3.3.3):
+    - SJBaseVideoPlayer (>= 3.6.0)
   - Toast (3.1.0)
   - TYPagerController (2.1.2)
+  - YTKNetwork (3.0.6):
+    - AFNetworking/NSURLSession (~> 4.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - CWLateralSlide
   - FWSideMenu
   - LEEAlert
   - Masonry
+  - SJVideoPlayer
   - Toast
   - TYPagerController
+  - YTKNetwork
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - CWLateralSlide
     - FWSideMenu
     - LEEAlert
     - Masonry
+    - SJBaseVideoPlayer
+    - SJUIKit
+    - SJVideoPlayer
     - Toast
     - TYPagerController
+    - YTKNetwork
+    - YYModel
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CWLateralSlide: 8939c8dea91a24e40d0793553118cb57cd67f64b
   FWSideMenu: 4e17ab517729e54b4462bb54747d5b0cd68263d8
   LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  SJBaseVideoPlayer: 52ab45c54521c9988cb5a4d9abad444152248800
+  SJUIKit: 86d5b16f8b8b17274ef8805acf965e4014629e15
+  SJVideoPlayer: bc8aa86a2922dc7416822f88bdb39d6baf4d9bd5
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
+  YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 93d8dcdbf17913db8342970c86a54c6401dc6928
+PODFILE CHECKSUM: 7f51392184a38b8800d48b69fae8e9f55520b30b
 
 COCOAPODS: 1.10.2

@@ -18,7 +18,28 @@
     self.view.backgroundColor = [UIColor yellowColor];
 //    [self testURL];
 //    [self testURL2];
+    
+    [self testNumberFormat];
+    
 }
+
+- (void)testNumberFormat{
+    
+    NSString *phone = @"cell phone number";
+    NSNumberFormatter *f1 = [[NSNumberFormatter alloc] init];
+    NSNumber *phoneNumber = [f1 numberFromString:phone];
+    
+    NSNumberFormatter *f2 = [[NSNumberFormatter alloc] init];
+    //设置分隔符
+    f2.groupingSeparator = @"-";
+    //设置分割格式
+    f2.positiveFormat = @"###,###";
+    NSString *formatPhone = [f2 stringFromNumber:phoneNumber];
+    
+    NSLog(@"%@",formatPhone);
+    
+}
+
 
 - (void)testURL2{
     // 截取URL参数

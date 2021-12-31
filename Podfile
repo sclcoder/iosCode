@@ -25,7 +25,8 @@ target 'SDPlayground' do
   # 效果
 #  pod 'FDFullscreenPopGesture'
 
- pod ''
+  pod 'SJVideoPlayer'
+
 
   
 #  pod 'YYKit'
