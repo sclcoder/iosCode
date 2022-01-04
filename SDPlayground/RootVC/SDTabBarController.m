@@ -12,6 +12,7 @@
 #import "RRTestViewController.h"
 #import "RRNewWebViewController.h"
 #import "SDAlertViewController.h"
+#import "SDSettingViewController.h"
 
 /// 侧滑测试
 #import <FWSideMenu/FWSideMenu-Swift.h>
@@ -107,6 +108,10 @@
 #pragma mark - private method
 - (void)setupChildrenVC{
     
+    SDSettingViewController *settingVC = [SDSettingViewController new];
+    settingVC.title = @"settingVC";
+    SDNavigationController *settingNav = [[SDNavigationController alloc] initWithRootViewController:settingVC];
+    
     SDAlertViewController *alertVC =  [SDAlertViewController new];
     alertVC.title = @"alertVC";
     SDNavigationController *alertVCNav = [[SDNavigationController alloc] initWithRootViewController:alertVC];
@@ -142,7 +147,7 @@
     sideVC.leftMenuWidth = UIScreen.mainScreen.bounds.size.width * 0.7;
     sideVC.title = @"side";
     
-    [self setViewControllers:@[alertVCNav,pushNav,modalNav,pageNav,sideVC,webNav]];
+    [self setViewControllers:@[settingNav,alertVCNav,pushNav,modalNav,pageNav,sideVC,webNav]];
 }
 
 

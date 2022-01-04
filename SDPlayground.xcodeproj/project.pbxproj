@@ -25,6 +25,7 @@
 		776E835E2655150700A3CE78 /* RRSlidableProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E835D2655150700A3CE78 /* RRSlidableProgressView.m */; };
 		776E836F265519A400A3CE78 /* SDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E836E265519A400A3CE78 /* SDTabBarController.m */; };
 		776E837526551E3500A3CE78 /* SDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E837426551E3500A3CE78 /* SDNavigationController.m */; };
+		7776F81B2754C77C00E3DF13 /* SDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7776F81A2754C77C00E3DF13 /* SDSettingViewController.m */; };
 		77C728E226FDE6950072322D /* SDAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C728E026FDE6950072322D /* SDAlertViewController.m */; };
 		77C728E326FDE6950072322D /* SDAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C728E126FDE6950072322D /* SDAlertViewController.xib */; };
 		77F47E3126F4497000FF1359 /* SDPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E2F26F4497000FF1359 /* SDPushViewController.m */; };
@@ -81,6 +82,8 @@
 		776E836E265519A400A3CE78 /* SDTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarController.m; sourceTree = "<group>"; };
 		776E837326551E3500A3CE78 /* SDNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNavigationController.h; sourceTree = "<group>"; };
 		776E837426551E3500A3CE78 /* SDNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNavigationController.m; sourceTree = "<group>"; };
+		7776F8192754C77C00E3DF13 /* SDSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDSettingViewController.h; sourceTree = "<group>"; };
+		7776F81A2754C77C00E3DF13 /* SDSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSettingViewController.m; sourceTree = "<group>"; };
 		77C728DF26FDE6950072322D /* SDAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAlertViewController.h; sourceTree = "<group>"; };
 		77C728E026FDE6950072322D /* SDAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAlertViewController.m; sourceTree = "<group>"; };
 		77C728E126FDE6950072322D /* SDAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDAlertViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 		776E83152655135600A3CE78 /* SDPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				7776F8182754C75600E3DF13 /* SettingVC */,
 				77F47E2A26F4455F00FF1359 /* TransitionVC */,
 				776E8366265518CF00A3CE78 /* App */,
 				776E8364265518B200A3CE78 /* RootVC */,
@@ -240,6 +244,15 @@
 				776E835B2655150700A3CE78 /* RRSlidableProgressView */,
 			);
 			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		7776F8182754C75600E3DF13 /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				7776F8192754C77C00E3DF13 /* SDSettingViewController.h */,
+				7776F81A2754C77C00E3DF13 /* SDSettingViewController.m */,
+			);
+			path = SettingVC;
 			sourceTree = "<group>";
 		};
 		77F47E2A26F4455F00FF1359 /* TransitionVC */ = {
@@ -426,6 +439,7 @@
 				77F47E3B26F58B8C00FF1359 /* SDSlideAnimationController.m in Sources */,
 				776E837526551E3500A3CE78 /* SDNavigationController.m in Sources */,
 				776E835E2655150700A3CE78 /* RRSlidableProgressView.m in Sources */,
+				7776F81B2754C77C00E3DF13 /* SDSettingViewController.m in Sources */,
 				776E83182655135600A3CE78 /* AppDelegate.m in Sources */,
 				77F47E5126F5D94900FF1359 /* SDModalTransitionDelegate.m in Sources */,
 				7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */,
@@ -588,6 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
@@ -613,6 +628,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;

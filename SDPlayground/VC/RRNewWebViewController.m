@@ -19,6 +19,7 @@
     [super viewDidLoad];
     [self.view addSubview:self.webView];
     self.urlString = @"https://newonline.chime.me/";
+    self.urlString = @"https://chime.me/admin/home#/referral?app=1";
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.urlString stringByRemovingPercentEncoding]]]];
     
     NSString *html_confirm = @"<!DOCTYPE html><html><head><meta charset='utf-8'><title>菜鸟教程(runoob.com)</title></head><body><script>confirm('Hello confirm')</script></body></html>";
