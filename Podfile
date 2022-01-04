@@ -18,12 +18,15 @@ target 'SDPlayground' do
   pod 'CWLateralSlide'
   
   # Tool
-#  pod 'YTKNetwork'
+  pod 'YTKNetwork'
 #  pod 'MJRefresh'
   pod 'LEEAlert'
   
   # 效果
 #  pod 'FDFullscreenPopGesture'
+
+  pod 'SJVideoPlayer'
+
 
   
 #  pod 'YYKit'

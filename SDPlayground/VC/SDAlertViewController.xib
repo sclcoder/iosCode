@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SDAlertViewController">
             <connections>
+                <outlet property="imageView" destination="Lpl-ei-a6c" id="a0m-Uc-9VV"/>
+                <outlet property="playerView" destination="uPb-aj-vnr" id="5IY-vd-QcU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,13 +35,32 @@
                         <action selector="showActionSheet:" destination="-1" eventType="touchUpInside" id="OZW-bl-kkk"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lpl-ei-a6c">
+                    <rect key="frame" x="67.5" y="173.5" width="240" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="3aO-GT-H13"/>
+                        <constraint firstAttribute="width" constant="240" id="nGi-JY-yqU"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPb-aj-vnr">
+                    <rect key="frame" x="67.5" y="448" width="240" height="128"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="7JL-pM-OdY"/>
+                        <constraint firstAttribute="height" constant="128" id="trp-TV-b2b"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="uPb-aj-vnr" secondAttribute="bottom" constant="91" id="1sv-RG-Jm3"/>
+                <constraint firstItem="Lpl-ei-a6c" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="4ZA-1M-oRe"/>
                 <constraint firstItem="NTW-hV-9Fi" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GeO-sj-yev"/>
                 <constraint firstItem="8K7-wR-WFv" firstAttribute="top" secondItem="NTW-hV-9Fi" secondAttribute="bottom" constant="20" id="Hfa-GD-6S0"/>
+                <constraint firstItem="uPb-aj-vnr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KnN-sm-KA9"/>
                 <constraint firstItem="NTW-hV-9Fi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YHO-sR-yZw"/>
+                <constraint firstItem="Lpl-ei-a6c" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="i8f-rP-zma"/>
                 <constraint firstItem="8K7-wR-WFv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vHP-nS-XXL"/>
             </constraints>
             <point key="canvasLocation" x="139" y="113"/>
@@ -47,6 +69,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
