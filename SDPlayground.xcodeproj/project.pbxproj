@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2A83376526F73FB3007C5828 /* SDTabBarVCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A83376426F73FB3007C5828 /* SDTabBarVCDelegate.m */; };
+		2ACE0B158418D9A08A95C0D5 /* Pods_RAC_Play.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */; };
+		77534D4B2783F3DD007DAC63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4A2783F3DD007DAC63 /* AppDelegate.m */; };
+		77534D4E2783F3DD007DAC63 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4D2783F3DD007DAC63 /* SceneDelegate.m */; };
+		77534D512783F3DD007DAC63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D502783F3DD007DAC63 /* ViewController.m */; };
+		77534D542783F3DD007DAC63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77534D522783F3DD007DAC63 /* Main.storyboard */; };
+		77534D562783F3DF007DAC63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77534D552783F3DF007DAC63 /* Assets.xcassets */; };
+		77534D592783F3DF007DAC63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77534D572783F3DF007DAC63 /* LaunchScreen.storyboard */; };
+		77534D5C2783F3DF007DAC63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D5B2783F3DF007DAC63 /* main.m */; };
 		7761F7D7267C37BC00066CFF /* SDPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7CF267C37BC00066CFF /* SDPagerController.m */; };
 		7761F7D8267C37BC00066CFF /* RRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7D2267C37BC00066CFF /* RRWebViewController.m */; };
 		7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7761F7D3267C37BC00066CFF /* RRTestViewController.m */; };
@@ -49,6 +57,20 @@
 		152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		2A83376326F73FB3007C5828 /* SDTabBarVCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDTabBarVCDelegate.h; sourceTree = "<group>"; };
 		2A83376426F73FB3007C5828 /* SDTabBarVCDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarVCDelegate.m; sourceTree = "<group>"; };
+		2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC_Play.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77534D472783F3DD007DAC63 /* RAC_Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77534D492783F3DD007DAC63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		77534D4A2783F3DD007DAC63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		77534D4C2783F3DD007DAC63 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		77534D4D2783F3DD007DAC63 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		77534D4F2783F3DD007DAC63 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		77534D502783F3DD007DAC63 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77534D532783F3DD007DAC63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77534D552783F3DF007DAC63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77534D582783F3DF007DAC63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77534D5A2783F3DF007DAC63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77534D5B2783F3DF007DAC63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77534D602783F4AC007DAC63 /* ReactiveObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ReactiveObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7761F7CE267C37BC00066CFF /* SDPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPagerController.h; sourceTree = "<group>"; };
 		7761F7CF267C37BC00066CFF /* SDPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPagerController.m; sourceTree = "<group>"; };
 		7761F7D1267C37BC00066CFF /* RRNewWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRNewWebViewController.h; sourceTree = "<group>"; };
@@ -112,10 +134,20 @@
 		77F47E5226F5F48600FF1359 /* SDOverlyPresentionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDOverlyPresentionController.h; sourceTree = "<group>"; };
 		77F47E5326F5F48600FF1359 /* SDOverlyPresentionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDOverlyPresentionController.m; sourceTree = "<group>"; };
 		79D60551F6E6B3230BB70B68 /* Pods-SDPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.release.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		9FD66984320A9A02276F27C6 /* Pods-RAC_Play.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Play.release.xcconfig"; path = "Target Support Files/Pods-RAC_Play/Pods-RAC_Play.release.xcconfig"; sourceTree = "<group>"; };
+		AD667EEFE85DB91C419CEE86 /* Pods-RAC_Play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Play.debug.xcconfig"; path = "Target Support Files/Pods-RAC_Play/Pods-RAC_Play.debug.xcconfig"; sourceTree = "<group>"; };
 		B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		77534D442783F3DD007DAC63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ACE0B158418D9A08A95C0D5 /* Pods_RAC_Play.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		776E83102655135600A3CE78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +159,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77534D482783F3DD007DAC63 /* RAC_Play */ = {
+			isa = PBXGroup;
+			children = (
+				77534D492783F3DD007DAC63 /* AppDelegate.h */,
+				77534D4A2783F3DD007DAC63 /* AppDelegate.m */,
+				77534D4C2783F3DD007DAC63 /* SceneDelegate.h */,
+				77534D4D2783F3DD007DAC63 /* SceneDelegate.m */,
+				77534D4F2783F3DD007DAC63 /* ViewController.h */,
+				77534D502783F3DD007DAC63 /* ViewController.m */,
+				77534D522783F3DD007DAC63 /* Main.storyboard */,
+				77534D552783F3DF007DAC63 /* Assets.xcassets */,
+				77534D572783F3DF007DAC63 /* LaunchScreen.storyboard */,
+				77534D5A2783F3DF007DAC63 /* Info.plist */,
+				77534D5B2783F3DF007DAC63 /* main.m */,
+			);
+			path = RAC_Play;
+			sourceTree = "<group>";
+		};
 		7761F7CD267C37BC00066CFF /* ContainerVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				776E83152655135600A3CE78 /* SDPlayground */,
+				77534D482783F3DD007DAC63 /* RAC_Play */,
 				776E83142655135600A3CE78 /* Products */,
 				AE4A0172ACA858B2722929A0 /* Pods */,
 				F876EA44AE1DC6989AAD6788 /* Frameworks */,
@@ -184,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				776E83132655135600A3CE78 /* SDPlayground.app */,
+				77534D472783F3DD007DAC63 /* RAC_Play.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -300,6 +352,8 @@
 			children = (
 				152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */,
 				79D60551F6E6B3230BB70B68 /* Pods-SDPlayground.release.xcconfig */,
+				AD667EEFE85DB91C419CEE86 /* Pods-RAC_Play.debug.xcconfig */,
+				9FD66984320A9A02276F27C6 /* Pods-RAC_Play.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -307,7 +361,9 @@
 		F876EA44AE1DC6989AAD6788 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77534D602783F4AC007DAC63 /* ReactiveObjC.framework */,
 				B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */,
+				2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -315,6 +371,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		77534D462783F3DD007DAC63 /* RAC_Play */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77534D5F2783F3DF007DAC63 /* Build configuration list for PBXNativeTarget "RAC_Play" */;
+			buildPhases = (
+				AAF1C14E00ABE77684E47215 /* [CP] Check Pods Manifest.lock */,
+				77534D432783F3DD007DAC63 /* Sources */,
+				77534D442783F3DD007DAC63 /* Frameworks */,
+				77534D452783F3DD007DAC63 /* Resources */,
+				C02800BC757EF80091672F72 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RAC_Play;
+			productName = RAC_Play;
+			productReference = 77534D472783F3DD007DAC63 /* RAC_Play.app */;
+			productType = "com.apple.product-type.application";
+		};
 		776E83122655135600A3CE78 /* SDPlayground */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 776E832C2655135800A3CE78 /* Build configuration list for PBXNativeTarget "SDPlayground" */;
@@ -342,6 +417,9 @@
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					77534D462783F3DD007DAC63 = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					776E83122655135600A3CE78 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -361,11 +439,22 @@
 			projectRoot = "";
 			targets = (
 				776E83122655135600A3CE78 /* SDPlayground */,
+				77534D462783F3DD007DAC63 /* RAC_Play */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		77534D452783F3DD007DAC63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77534D592783F3DF007DAC63 /* LaunchScreen.storyboard in Resources */,
+				77534D562783F3DF007DAC63 /* Assets.xcassets in Resources */,
+				77534D542783F3DD007DAC63 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		776E83112655135600A3CE78 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,9 +512,59 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AAF1C14E00ABE77684E47215 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RAC_Play-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C02800BC757EF80091672F72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RAC_Play/Pods-RAC_Play-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RAC_Play/Pods-RAC_Play-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RAC_Play/Pods-RAC_Play-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		77534D432783F3DD007DAC63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77534D512783F3DD007DAC63 /* ViewController.m in Sources */,
+				77534D4B2783F3DD007DAC63 /* AppDelegate.m in Sources */,
+				77534D5C2783F3DF007DAC63 /* main.m in Sources */,
+				77534D4E2783F3DD007DAC63 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		776E830F2655135600A3CE78 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,6 +602,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		77534D522783F3DD007DAC63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77534D532783F3DD007DAC63 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77534D572783F3DF007DAC63 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77534D582783F3DF007DAC63 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		776E831F2655135600A3CE78 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -482,6 +637,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		77534D5D2783F3DF007DAC63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD667EEFE85DB91C419CEE86 /* Pods-RAC_Play.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RAC_Play/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renren.RAC-Play";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77534D5E2783F3DF007DAC63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FD66984320A9A02276F27C6 /* Pods-RAC_Play.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RAC_Play/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.renren.RAC-Play";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		776E832A2655135800A3CE78 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -651,6 +866,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		77534D5F2783F3DF007DAC63 /* Build configuration list for PBXNativeTarget "RAC_Play" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77534D5D2783F3DF007DAC63 /* Debug */,
+				77534D5E2783F3DF007DAC63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		776E830E2655135600A3CE78 /* Build configuration list for PBXProject "SDPlayground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

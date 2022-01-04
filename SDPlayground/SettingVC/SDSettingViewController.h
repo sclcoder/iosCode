@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
