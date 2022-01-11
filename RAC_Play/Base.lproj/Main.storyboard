@@ -113,6 +113,10 @@
                     </view>
                     <connections>
                         <outlet property="redView" destination="iLP-iN-uja" id="vJu-t9-KwD"/>
+                        <outlet property="stackView1" destination="BiB-eb-tv3" id="fy8-RR-mb5"/>
+                        <outlet property="stackView2" destination="TBl-d6-SE7" id="sCL-zq-0qN"/>
+                        <outlet property="stackView3" destination="6xv-P9-FEg" id="Tci-fv-wPM"/>
+                        <outlet property="stackView4" destination="g6r-jc-6sf" id="WBq-IR-c9M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
