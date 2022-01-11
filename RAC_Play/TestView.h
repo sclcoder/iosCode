@@ -6,10 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TestView : UIView
+@property (nonatomic, strong) RACSubject *btnClickSignal;
 
 @end
 
