@@ -11,7 +11,6 @@ target 'SDPlayground' do
 	pod 'Masonry'
   # UI
   pod 'Toast'
-  pod 'ReactiveObjC'
   # container
   pod 'TYPagerController'
   pod 'FWSideMenu'
@@ -72,5 +71,5 @@ end
 target 'RAC_Play' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'ReactiveObjC'
+  pod 'ReactiveObjC', :path => './modify_pods/ReactiveObjC'
 end

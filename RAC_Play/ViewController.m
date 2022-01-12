@@ -8,6 +8,8 @@
 #import "ViewController.h"
 #import "TestView.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <ReactiveObjC/RACReturnSignal.h>
+
 #import "NSObject+RACKVOWrapper.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSObject<RACSubscriber> *subscriber;
@@ -54,6 +56,56 @@
 
 # pragma mark - 进阶
 
+- (IBAction)map:(id)sender {
+    
+    /// 1.创建信号
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        /// 4.发送信号
+        [subscriber sendNext:@"I'm a signal!!!"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"dispose");
+        }];
+    }];
+    
+    RACSignal *mapSignal = [signal map:^id _Nullable(id  _Nullable value) {
+        return [NSString stringWithFormat:@"%@ 6666",value];
+    }];
+    
+    [mapSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+
+- (IBAction)bind:(id)sender {
+    /// 1.创建信号
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        /// 4.发送信号
+        [subscriber sendNext:@"I'm a signal!!!"];
+        [subscriber sendCompleted];
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"dispose");
+        }];
+    }];
+    
+    /// 2.绑定源信号，生成绑定信号
+    /**
+     bind操作方法实质上就是生成新的绑定信号，利用returnSignal作为中间信号来改变源数据生成新的数据并执行新绑定信号的nextBlock代码块！
+     */
+    RACSignal *bindSignal = [signal bind:^RACSignalBindBlock{
+        return ^RACSignal *(id value, BOOL *stop){
+            NSLog(@"%@",value);
+            return [RACReturnSignal return:[NSString stringWithFormat:@"%@ - 12345",value]];
+        };
+    }];
+    
+    /// 3.订阅绑定信号 : 该信号被订阅后,会触发源信号被订阅
+    [bindSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"bindSignal : %@",x);
+    }];
+}
+
 - (IBAction)connect:(id)sender {
     
     RACSignal * signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -64,9 +116,10 @@
     
     /// RACMulticastConnection这个类了，RACMulticastConnection其实是一个连接类，
     /// 连接类的意思就是当一个信号被多次订阅，他可以帮我们避免多次调用创建信号中的block
-    ///
-    RACMulticastConnection *connect = [signal publish];
 
+    /// connect 会创建一个RACSubject信号设置给signal RACSignal设置给sourceSignal
+    RACMulticastConnection *connect = [signal publish];
+    /// 订阅是RACSubject信号
     [connect.signal subscribeNext:^(id x) {
         NSLog(@"1 - %@",x);
     }];
@@ -78,7 +131,8 @@
     [connect.signal subscribeNext:^(id x) {
         NSLog(@"3 - %@",x);
     }];
-
+    
+    /// sourceSignal(RACSignal)会被signal信号订阅,并且signal被直接作为subscriber传入(RACSubject可以作为订阅者).
     [connect connect];
 }
 
@@ -154,7 +208,7 @@
 # pragma mark - 信号的基本原理
 - (IBAction)test_signal{
     
-    RACSignal *singal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         
         [subscriber sendNext:@"I'm a signal - signal"];
         // 强引用一下
@@ -166,7 +220,7 @@
         return innerDisposable;
     }];
     
-    [singal subscribeNext:^(id  _Nullable x) {
+    [signal subscribeNext:^(id  _Nullable x) {
         NSLog(@"收到信号值:%@",x);
     }];
     

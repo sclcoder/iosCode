@@ -81,7 +81,7 @@ DEPENDENCIES:
   - FWSideMenu
   - LEEAlert
   - Masonry
-  - ReactiveObjC
+  - ReactiveObjC (from `./modify_pods/ReactiveObjC`)
   - SJVideoPlayer
   - Toast
   - TYPagerController
@@ -94,7 +94,6 @@ SPEC REPOS:
     - FWSideMenu
     - LEEAlert
     - Masonry
-    - ReactiveObjC
     - SJBaseVideoPlayer
     - SJUIKit
     - SJVideoPlayer
@@ -102,6 +101,10 @@ SPEC REPOS:
     - TYPagerController
     - YTKNetwork
     - YYModel
+
+EXTERNAL SOURCES:
+  ReactiveObjC:
+    :path: "./modify_pods/ReactiveObjC"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -118,6 +121,6 @@ SPEC CHECKSUMS:
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b4a9a68e1f138b76e03dc019b4b93369ca5482bc
+PODFILE CHECKSUM: 9cdb1943780231177b306b94637509cd3a0c6a2c
 
 COCOAPODS: 1.10.2
