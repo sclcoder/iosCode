@@ -53,6 +53,29 @@
 
 }
 
+# pragma mark - Command
+
+- (IBAction)onCommand:(id)sender {
+
+    RACCommand *command = [[RACCommand alloc] initWithEnabled:[RACReturnSignal return:@(YES)] signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            [subscriber sendNext:@"I'm a signal in command"];
+            [subscriber sendCompleted];
+            
+            return [RACDisposable disposableWithBlock:^{
+                NSLog(@"signal in command disposable");
+            }];
+        }];
+    }];
+    
+    
+    [command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"receive value %@",x);
+    }];
+    
+    [command execute:@"execute"];
+
+}
 
 # pragma mark - 进阶
 
@@ -246,8 +269,9 @@
     
     RACReplaySubject *replay = [RACReplaySubject subject];
     
-    [replay sendNext:@"I'm a signal - replay"];
-    
+    [replay sendNext:@"I'm a signal - replay1"];
+    [replay sendNext:@"I'm a signal - replay2"];
+
     [replay subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
     }];

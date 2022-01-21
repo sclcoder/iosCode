@@ -54,6 +54,7 @@
 	BOOL shouldConnect = OSAtomicCompareAndSwap32Barrier(0, 1, &_hasConnected);
 
 	if (shouldConnect) {
+        /// RACSubject作为subscriber订阅soruceSignal
 		self.serialDisposable.disposable = [self.sourceSignal subscribe:_signal];
 	}
 
