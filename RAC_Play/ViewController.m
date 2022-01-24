@@ -50,7 +50,76 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.textField resignFirstResponder];
     [self.textView resignFirstResponder];
+    
+    
+    [self test_signalOfSignal];
 
+    
+//    [self demo20];
+}
+
+/// https://juejin.cn/post/6844903574690856968 RAC使用总结
+///
+- (void)demo20{
+    RACSignal *takeSiganl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      //创建一个定时器信号,每一秒触发一次
+        RACSignal *siganl = [RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]];
+        [siganl subscribeNext:^(id x) {
+          //在这里定时发送next玻璃球
+            [subscriber sendNext:@"直到世界尽头"];
+        }];
+        return nil;
+    }];
+
+    //创建条件信号
+    RACSignal *conditionSiganl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      //设置5s后发生complete玻璃球
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"世界的今天到了,请下车");
+            [subscriber sendCompleted];
+        });
+        return nil;
+    }];
+   
+    //设置条件,takeSiganl信号在conditionSignal信号接收完成前,不断取值
+    [[takeSiganl takeUntil:conditionSiganl] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+
+
+# pragma 高阶信号操作
+- (void)test_signalOfSignal{
+     
+    RACSubject *signalofsignal = [RACSubject subject];
+    signalofsignal.name = @"signalofsignal";
+    RACSubject *signal1 = [RACSubject subject];
+    signal1.name  = @"signal1";
+    RACSubject *signal2 = [RACSubject subject];
+    RACSubject *signal3 = [RACSubject subject];
+    RACSubject *signal4 = [RACSubject subject];
+    
+//    [signalofsignal subscribeNext:^(id  _Nullable x) {
+//
+//        NSLog(@"%@",x);
+//
+//        [x subscribeNext:^(id  _Nullable x) {
+//            NSLog(@"%@",x);
+//        }];
+//    }];
+    
+    
+    [signalofsignal.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+
+    [signalofsignal sendNext:signal2];
+    [signal2 sendNext:@"2"];
+    
+    
+    [signalofsignal sendNext:signal1];
+    //    [signal1 sendNext:@"1"];
 }
 
 # pragma mark - Command
