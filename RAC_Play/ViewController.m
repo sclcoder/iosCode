@@ -45,6 +45,8 @@
 //    [self test_textSingal];
     
 //    [self test_selector];
+    
+    [self demo_flatten];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -53,28 +55,143 @@
 
 }
 
+- (void)demo_flatten{
+    RACSignal *signalA1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+         [subscriber sendNext:@1];
+         [subscriber sendNext:@2];
+         [subscriber sendNext:@3];
+         [subscriber sendNext:@4];
+
+        [RACScheduler.scheduler afterDelay:1 schedule:^{
+            [subscriber sendNext:@5];
+            [subscriber sendCompleted];
+        }];
+         return [RACDisposable disposableWithBlock:^{
+             NSLog(@"signalA1完成");
+         }];
+     }];
+    
+    signalA1.name = @"signalA1";
+
+     RACSignal *signalA2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+         [subscriber sendNext:@"a"];
+         [subscriber sendNext:@"b"];
+         [subscriber sendNext:@"c"];
+         [subscriber sendNext:@"d"];
+         
+         [RACScheduler.scheduler afterDelay:2 schedule:^{
+             [subscriber sendNext:@"e"];
+             [subscriber sendCompleted];
+         }];
+
+         return [RACDisposable disposableWithBlock:^{
+             NSLog(@"signalA2完成");
+         }];
+     }];
+    signalA2.name = @"signalA2";
+
+
+     RACSignal *signalB1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+         [subscriber sendNext:signalA1];
+         [subscriber sendNext:signalA2];
+         [subscriber sendCompleted];
+         return [RACDisposable disposableWithBlock:^{
+             NSLog(@"signalB1完成");
+         }];
+     }];
+    
+    signalB1.name = @"signalB1";
+
+    
+
+     RACSignal *signalD = [signalB1 flatten];
+    signalD.name = @"signalD";
+    // 该方法的作用时，同时最多同时执行2个信号，也就是可以解决最大并发量的问题。处理排队，重新添加。
+//       RACSignal *signalD = [signalB1 flatten:2];
+    
+    // 信号串行，信号1执行完之后，继续执行下一个信号。
+//       RACSignal *signalD = [signalB1 flatten:1];
+     [[signalD subscribeNext:^(id x) {
+         NSLog(@"subscribeNext:%@",x);
+     }] dispose];
+
+
+
+//   RACSignal *signalA2 = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+//     [subscriber sendNext:@"a"];
+//     [subscriber sendNext:@"b"];
+//     [subscriber sendNext:@"c"];
+//     [subscriber sendNext:@"d"];
+//     [subscriber sendNext:@"e"];
+//     [subscriber sendCompleted];
+//     return [RACDisposable disposableWithBlock:^{
+//         NSLog(@"signalA2完成");
+//     }];
+//   }] delay:0.5];
+   // 这样写会阻塞主线程、如果先dispose之后，则剩余的信号则不再执行。
+}
+
+
 # pragma mark - Command
 
 - (IBAction)onCommand:(id)sender {
 
-    RACCommand *command = [[RACCommand alloc] initWithEnabled:[RACReturnSignal return:@(YES)] signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-            [subscriber sendNext:@"I'm a signal in command"];
-            [subscriber sendCompleted];
-            
-            return [RACDisposable disposableWithBlock:^{
-                NSLog(@"signal in command disposable");
-            }];
-        }];
+//    RACCommand *command = [[RACCommand alloc] initWithEnabled:[RACReturnSignal return:@(YES)] signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+//
+//        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//            [subscriber sendNext:@"I'm a signal in command"];
+//            [subscriber sendCompleted];
+//
+//            return [RACDisposable disposableWithBlock:^{
+//                NSLog(@"signal in command disposable");
+//            }];
+//        }];
+//    }];
+//
+//
+////    [command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+////        NSLog(@"receive value %@",x);
+////    }];
+//
+//    [command.executionSignals subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"receive value:  %@",x);
+//    }];
+//
+//    [command execute:@"execute"];
+    
+//
+//    RACSubject *signalOfsignals = [RACSubject subject];
+//    [signalOfsignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+//
+//    RACSubject *signalA = [RACSubject subject];
+//
+//    [signalA subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+//
+//    [signalA sendNext:@"signalA"];
+//
+//    [signalOfsignals sendNext:signalA];
+    
+    
+    
+    RACSignal *signalA = @[@1, @2, @3].rac_sequence.signal;
+    RACSignal *signalB = @[@4, @6, @7].rac_sequence.signal;
+    
+    RACSignal *signalC = [signalA combineLatestWith:signalB];
+    
+    [signalC subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
     }];
     
     
-    [command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
-        NSLog(@"receive value %@",x);
-    }];
+    RACSignal *signalD = [signalA sample:signalB];
     
-    [command execute:@"execute"];
-
+    [signalD subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
 }
 
 # pragma mark - 进阶
