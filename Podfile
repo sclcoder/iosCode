@@ -73,3 +73,10 @@ target 'RAC_Play' do
   use_frameworks!
   pod 'ReactiveObjC', :path => './modify_pods/ReactiveObjC'
 end
+
+
+target 'CodeTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  pod 'YYCategories'
+end

@@ -221,7 +221,7 @@
 				RACTuple *tuple = RACTuplePack(selfValues[0], otherValues[0]);
 				[selfValues removeObjectAtIndex:0];
 				[otherValues removeObjectAtIndex:0];
-
+                /// 都有值的时候, 发送信号元组
 				[subscriber sendNext:tuple];
 				sendCompletedIfNecessary();
 			}
@@ -229,6 +229,7 @@
 
 		RACDisposable *selfDisposable = [self subscribeNext:^(id x) {
 			@synchronized (selfValues) {
+                /// 保存订阅信号的值
 				[selfValues addObject:x ?: RACTupleNil.tupleNil];
 				sendNext();
 			}
@@ -243,6 +244,7 @@
 
 		RACDisposable *otherDisposable = [signal subscribeNext:^(id x) {
 			@synchronized (selfValues) {
+                /// 保存订阅信号的值
 				[otherValues addObject:x ?: RACTupleNil.tupleNil];
 				sendNext();
 			}

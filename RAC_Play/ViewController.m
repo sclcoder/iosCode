@@ -49,10 +49,303 @@
     [self demo_flatten];
 }
 
+
+
+/// https://juejin.cn/post/6844903574690856968 RAC使用总结
+
+/// concat
+- (void)demo6{
+    
+    //创建一个信号管A
+    RACSignal *siganlA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"吃饭"];
+        RACSignal *siganl = [RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]];
+        [siganl subscribeNext:^(id x) {
+            [subscriber sendNext:@"1秒我就吃完了"];
+            [subscriber sendCompleted];
+        }];
+        return nil;
+        
+    }];
+    
+    //创建一个信号管B
+    RACSignal *siganlB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       
+        [subscriber sendNext:@"睡觉"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    //串联管A和管B
+    RACSignal *concatSiganl = [siganlA concat:siganlB];
+    //串联后的接收端处理 ,两个事件,走两次,第一个打印siggnalA的结果,第二次打印siganlB的结果
+    [concatSiganl subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+// merge
+- (void)demo7{
+  //创建信号A
+    RACSignal *siganlA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"烧水"];
+        RACSignal *intervalSignal = [RACSignal interval:1.5 onScheduler:RACScheduler.mainThreadScheduler];
+        [intervalSignal subscribeNext:^(id  _Nullable x) {
+            [subscriber sendNext:@"喝茶"];
+            [subscriber sendCompleted];
+
+        }];
+        return nil;
+    }];
+    
+    //创建信号B
+    RACSignal *siganlB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       
+        [subscriber sendNext:@"做饭"];
+        RACSignal *intervalSignal = [RACSignal interval:1 onScheduler:RACScheduler.mainThreadScheduler];
+        [intervalSignal subscribeNext:^(id  _Nullable x) {
+            [subscriber sendNext:@"吃饭"];
+            [subscriber sendCompleted];
+
+        }];
+        return nil;
+    }];
+    
+    //并联两个信号,根上面一样,分两次打印
+    RACSignal *mergeSiganl = [RACSignal merge:@[siganlA,siganlB]];
+    [mergeSiganl subscribeNext:^(id x) {
+       
+        NSLog(@"%@",x);
+        
+    }];
+    
+}
+
+/// combineLatest : 组合,只有两个信号都有值,才可以组合 ？？？？？
+- (void)demo8{
+    //定义2个自定义信号
+    RACSubject *letters = [RACSubject subject];
+    RACSubject *numbers = [RACSubject subject];
+    
+    //组合信号
+    [[RACSignal combineLatest:@[letters,numbers] reduce:^(NSString *letter, NSString *number){
+        
+        return [letter stringByAppendingString:number];
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        
+    }];
+
+    //自己控制发生信号值
+    [letters sendNext:@"A"];
+    [letters sendNext:@"B"];
+    [numbers sendNext:@"1"]; //打印B1
+    [letters sendNext:@"C"];//打印C1
+    [numbers sendNext:@"2"];//打印C2
+}
+
+/// 合流压缩
+- (void)demo9{
+    
+    //创建信号A
+    RACSignal *siganlA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       
+        [subscriber sendNext:@"红"];
+        RACSignal *intervalSignal = [RACSignal interval:1 onScheduler:RACScheduler.mainThreadScheduler];
+        [intervalSignal subscribeNext:^(id  _Nullable x) {
+            [subscriber sendNext:@"蓝"];
+            [subscriber sendNext:@"黑"];
+
+            [subscriber sendCompleted];
+        }];
+        return nil;
+    }];
+    
+    //创建信号B
+    RACSignal *siganlB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       
+        [subscriber sendNext:@"白"];
+        RACSignal *intervalSignal = [RACSignal interval:1.5 onScheduler:RACScheduler.mainThreadScheduler];
+        [intervalSignal subscribeNext:^(id  _Nullable x) {
+            [subscriber sendNext:@"绿"];
+            [subscriber sendCompleted];
+        }];
+
+        return nil;
+    }];
+    
+    //合流后处理的是压缩包,需要解压后才能取到里面的值
+    [[siganlA zipWith:siganlB] subscribeNext:^(id x) {
+       
+        //解压缩
+        RACTupleUnpack(NSString *stringA, NSString *stringB) = x;
+        NSLog(@"%@ %@",stringA, stringB);
+    }];
+    
+}
+
+/// map
+- (void)demo10{
+    RACSignal *siganl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"石"];
+        [subscriber sendNext:@"器"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    //对信号进行改造,改"石"成"金"
+    siganl = [siganl map:^id(NSString *value) {
+        if ([value isEqualToString:@"石"]) {
+            return @"金";
+        }
+        return value;
+        
+    }];
+    
+    //打印,不论信号发送的是什么,这一步都会走的
+    [siganl subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        
+    }];
+    
+}
+
+/// filter
+- (void)demo11{
+    RACSignal *singal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+       
+        [subscriber sendNext:@(15)];
+        [subscriber sendNext:@(17)];
+        [subscriber sendNext:@(21)];
+        [subscriber sendNext:@(14)];
+        [subscriber sendNext:@(30)];
+        
+        [subscriber sendCompleted];
+        
+        return nil;
+    }];
+    
+    //过滤信号,打印
+    [[singal filter:^BOOL(NSNumber *value) {
+        
+        //大于18岁的,才可以通过
+        return value.integerValue >= 18;//return为yes可以通过
+        
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        
+    }];
+    
+}
+
+-(void)demo12{
+    
+    RACSignal *siganl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"打蛋液");
+        [subscriber sendNext:@"蛋液"];
+        [subscriber sendCompleted];
+        return nil;
+        
+    }];
+    
+    //对信号进行秩序秩序的第一步
+    siganl = [siganl flattenMap:^RACSignal *(NSString *value) {
+        //处理上一步的RACSiganl的信号value.这里的value=@"蛋液"
+        NSLog(@"把%@倒进锅里面煎",value);
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"煎蛋"];
+            [subscriber sendCompleted];
+            return nil;
+            
+        }];
+        
+    }];
+    //对信号进行第二步处理
+    siganl = [siganl flattenMap:^RACSignal *(id value) {
+        NSLog(@"把%@装载盘里",value);
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@"上菜"];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+        
+    }];
+    
+    //最后打印 最后带有===上菜
+    [siganl subscribeNext:^(id x) {
+        NSLog(@"====%@",x);
+    }];
+    
+}
+
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.textField resignFirstResponder];
     [self.textView resignFirstResponder];
+    
+    [self demo12];
+}
 
+///
+- (void)demo20{
+    RACSignal *takeSiganl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      //创建一个定时器信号,每一秒触发一次
+        RACSignal *siganl = [RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]];
+        [siganl subscribeNext:^(id x) {
+          //在这里定时发送next玻璃球
+            [subscriber sendNext:@"直到世界尽头"];
+        }];
+        return nil;
+    }];
+
+    //创建条件信号
+    RACSignal *conditionSiganl = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      //设置5s后发生complete玻璃球
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"世界的今天到了,请下车");
+            [subscriber sendCompleted];
+        });
+        return nil;
+    }];
+   
+    //设置条件,takeSiganl信号在conditionSignal信号接收完成前,不断取值
+    [[takeSiganl takeUntil:conditionSiganl] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+
+
+# pragma 高阶信号操作
+- (void)test_signalOfSignal{
+     
+    RACSubject *signalofsignal = [RACSubject subject];
+    signalofsignal.name = @"signalofsignal";
+    RACSubject *signal1 = [RACSubject subject];
+    signal1.name  = @"signal1";
+    RACSubject *signal2 = [RACSubject subject];
+    RACSubject *signal3 = [RACSubject subject];
+    RACSubject *signal4 = [RACSubject subject];
+    
+//    [signalofsignal subscribeNext:^(id  _Nullable x) {
+//
+//        NSLog(@"%@",x);
+//
+//        [x subscribeNext:^(id  _Nullable x) {
+//            NSLog(@"%@",x);
+//        }];
+//    }];
+    
+    
+    [signalofsignal.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+
+    [signalofsignal sendNext:signal2];
+    [signal2 sendNext:@"2"];
+    
+    
+    [signalofsignal sendNext:signal1];
+    //    [signal1 sendNext:@"1"];
 }
 
 - (void)demo_flatten{
