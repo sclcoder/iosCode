@@ -37,6 +37,13 @@
 		7776F81B2754C77C00E3DF13 /* SDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7776F81A2754C77C00E3DF13 /* SDSettingViewController.m */; };
 		77C728E226FDE6950072322D /* SDAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C728E026FDE6950072322D /* SDAlertViewController.m */; };
 		77C728E326FDE6950072322D /* SDAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C728E126FDE6950072322D /* SDAlertViewController.xib */; };
+		77DFF81527BBAEC000C1E60E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFF81427BBAEC000C1E60E /* AppDelegate.m */; };
+		77DFF81827BBAEC000C1E60E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFF81727BBAEC000C1E60E /* SceneDelegate.m */; };
+		77DFF81B27BBAEC000C1E60E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFF81A27BBAEC000C1E60E /* ViewController.m */; };
+		77DFF81E27BBAEC000C1E60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DFF81C27BBAEC000C1E60E /* Main.storyboard */; };
+		77DFF82027BBAEC300C1E60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DFF81F27BBAEC300C1E60E /* Assets.xcassets */; };
+		77DFF82327BBAEC300C1E60E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DFF82127BBAEC300C1E60E /* LaunchScreen.storyboard */; };
+		77DFF82627BBAEC300C1E60E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFF82527BBAEC300C1E60E /* main.m */; };
 		77F47E3126F4497000FF1359 /* SDPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E2F26F4497000FF1359 /* SDPushViewController.m */; };
 		77F47E3226F4497000FF1359 /* SDPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F47E3026F4497000FF1359 /* SDPushViewController.xib */; };
 		77F47E3626F44A0D00FF1359 /* SDPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E3426F44A0D00FF1359 /* SDPopViewController.m */; };
@@ -51,6 +58,7 @@
 		77F47E4E26F5D81200FF1359 /* SDPresentedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77F47E4C26F5D81200FF1359 /* SDPresentedViewController.xib */; };
 		77F47E5126F5D94900FF1359 /* SDModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E5026F5D94900FF1359 /* SDModalTransitionDelegate.m */; };
 		77F47E5426F5F48600FF1359 /* SDOverlyPresentionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E5326F5F48600FF1359 /* SDOverlyPresentionController.m */; };
+		7C9945EEAE41CC94770F0239 /* Pods_CodeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */; };
 		D3FBA7155F7D8D39AA380E43 /* Pods_SDPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +66,9 @@
 		152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		2A83376326F73FB3007C5828 /* SDTabBarVCDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDTabBarVCDelegate.h; sourceTree = "<group>"; };
 		2A83376426F73FB3007C5828 /* SDTabBarVCDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarVCDelegate.m; sourceTree = "<group>"; };
+		2E5336FA597F17073BD773E3 /* Pods-CodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeTest.release.xcconfig"; path = "Target Support Files/Pods-CodeTest/Pods-CodeTest.release.xcconfig"; sourceTree = "<group>"; };
 		2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC_Play.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77534D472783F3DD007DAC63 /* RAC_Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77534D492783F3DD007DAC63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77534D4A2783F3DD007DAC63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +122,18 @@
 		77C728DF26FDE6950072322D /* SDAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAlertViewController.h; sourceTree = "<group>"; };
 		77C728E026FDE6950072322D /* SDAlertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAlertViewController.m; sourceTree = "<group>"; };
 		77C728E126FDE6950072322D /* SDAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDAlertViewController.xib; sourceTree = "<group>"; };
+		77DFF81127BBAEC000C1E60E /* CodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DFF81327BBAEC000C1E60E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		77DFF81427BBAEC000C1E60E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		77DFF81627BBAEC000C1E60E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		77DFF81727BBAEC000C1E60E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		77DFF81927BBAEC000C1E60E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		77DFF81A27BBAEC000C1E60E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		77DFF81D27BBAEC000C1E60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77DFF81F27BBAEC300C1E60E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77DFF82227BBAEC300C1E60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77DFF82427BBAEC300C1E60E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77DFF82527BBAEC300C1E60E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		77F47E2E26F4497000FF1359 /* SDPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDPushViewController.h; sourceTree = "<group>"; };
 		77F47E2F26F4497000FF1359 /* SDPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDPushViewController.m; sourceTree = "<group>"; };
 		77F47E3026F4497000FF1359 /* SDPushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SDPushViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +162,7 @@
 		9FD66984320A9A02276F27C6 /* Pods-RAC_Play.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Play.release.xcconfig"; path = "Target Support Files/Pods-RAC_Play/Pods-RAC_Play.release.xcconfig"; sourceTree = "<group>"; };
 		AD667EEFE85DB91C419CEE86 /* Pods-RAC_Play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Play.debug.xcconfig"; path = "Target Support Files/Pods-RAC_Play/Pods-RAC_Play.debug.xcconfig"; sourceTree = "<group>"; };
 		B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04B0486FB92B69A29228010 /* Pods-CodeTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeTest.debug.xcconfig"; path = "Target Support Files/Pods-CodeTest/Pods-CodeTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +179,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3FBA7155F7D8D39AA380E43 /* Pods_SDPlayground.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DFF80E27BBAEC000C1E60E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C9945EEAE41CC94770F0239 /* Pods_CodeTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +261,7 @@
 			children = (
 				776E83152655135600A3CE78 /* SDPlayground */,
 				77534D482783F3DD007DAC63 /* RAC_Play */,
+				77DFF81227BBAEC000C1E60E /* CodeTest */,
 				776E83142655135600A3CE78 /* Products */,
 				AE4A0172ACA858B2722929A0 /* Pods */,
 				F876EA44AE1DC6989AAD6788 /* Frameworks */,
@@ -241,6 +273,7 @@
 			children = (
 				776E83132655135600A3CE78 /* SDPlayground.app */,
 				77534D472783F3DD007DAC63 /* RAC_Play.app */,
+				77DFF81127BBAEC000C1E60E /* CodeTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +345,24 @@
 			path = SettingVC;
 			sourceTree = "<group>";
 		};
+		77DFF81227BBAEC000C1E60E /* CodeTest */ = {
+			isa = PBXGroup;
+			children = (
+				77DFF81327BBAEC000C1E60E /* AppDelegate.h */,
+				77DFF81427BBAEC000C1E60E /* AppDelegate.m */,
+				77DFF81627BBAEC000C1E60E /* SceneDelegate.h */,
+				77DFF81727BBAEC000C1E60E /* SceneDelegate.m */,
+				77DFF81927BBAEC000C1E60E /* ViewController.h */,
+				77DFF81A27BBAEC000C1E60E /* ViewController.m */,
+				77DFF81C27BBAEC000C1E60E /* Main.storyboard */,
+				77DFF81F27BBAEC300C1E60E /* Assets.xcassets */,
+				77DFF82127BBAEC300C1E60E /* LaunchScreen.storyboard */,
+				77DFF82427BBAEC300C1E60E /* Info.plist */,
+				77DFF82527BBAEC300C1E60E /* main.m */,
+			);
+			path = CodeTest;
+			sourceTree = "<group>";
+		};
 		77F47E2A26F4455F00FF1359 /* TransitionVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +410,8 @@
 				79D60551F6E6B3230BB70B68 /* Pods-SDPlayground.release.xcconfig */,
 				AD667EEFE85DB91C419CEE86 /* Pods-RAC_Play.debug.xcconfig */,
 				9FD66984320A9A02276F27C6 /* Pods-RAC_Play.release.xcconfig */,
+				D04B0486FB92B69A29228010 /* Pods-CodeTest.debug.xcconfig */,
+				2E5336FA597F17073BD773E3 /* Pods-CodeTest.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -369,6 +422,7 @@
 				77534D602783F4AC007DAC63 /* ReactiveObjC.framework */,
 				B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */,
 				2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */,
+				331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -414,6 +468,25 @@
 			productReference = 776E83132655135600A3CE78 /* SDPlayground.app */;
 			productType = "com.apple.product-type.application";
 		};
+		77DFF81027BBAEC000C1E60E /* CodeTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DFF82927BBAEC300C1E60E /* Build configuration list for PBXNativeTarget "CodeTest" */;
+			buildPhases = (
+				4248C751059FC8308EBCF8BE /* [CP] Check Pods Manifest.lock */,
+				77DFF80D27BBAEC000C1E60E /* Sources */,
+				77DFF80E27BBAEC000C1E60E /* Frameworks */,
+				77DFF80F27BBAEC000C1E60E /* Resources */,
+				C7B5A27FAA8187C74CDBA2D5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeTest;
+			productName = CodeTest;
+			productReference = 77DFF81127BBAEC000C1E60E /* CodeTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -427,6 +500,9 @@
 					};
 					776E83122655135600A3CE78 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					77DFF81027BBAEC000C1E60E = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
@@ -445,6 +521,7 @@
 			targets = (
 				776E83122655135600A3CE78 /* SDPlayground */,
 				77534D462783F3DD007DAC63 /* RAC_Play */,
+				77DFF81027BBAEC000C1E60E /* CodeTest */,
 			);
 		};
 /* End PBXProject section */
@@ -475,9 +552,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77DFF80F27BBAEC000C1E60E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DFF82327BBAEC300C1E60E /* LaunchScreen.storyboard in Resources */,
+				77DFF82027BBAEC300C1E60E /* Assets.xcassets in Resources */,
+				77DFF81E27BBAEC000C1E60E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4248C751059FC8308EBCF8BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodeTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		51714505C9F6B47F98CE1413 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -556,6 +665,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RAC_Play/Pods-RAC_Play-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7B5A27FAA8187C74CDBA2D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodeTest/Pods-CodeTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodeTest/Pods-CodeTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeTest/Pods-CodeTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -605,6 +731,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77DFF80D27BBAEC000C1E60E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DFF81B27BBAEC000C1E60E /* ViewController.m in Sources */,
+				77DFF81527BBAEC000C1E60E /* AppDelegate.m in Sources */,
+				77DFF82627BBAEC300C1E60E /* main.m in Sources */,
+				77DFF81827BBAEC000C1E60E /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -636,6 +773,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				776E83252655135800A3CE78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		77DFF81C27BBAEC000C1E60E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77DFF81D27BBAEC000C1E60E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77DFF82127BBAEC300C1E60E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77DFF82227BBAEC300C1E60E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -869,6 +1022,66 @@
 			};
 			name = Release;
 		};
+		77DFF82727BBAEC300C1E60E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D04B0486FB92B69A29228010 /* Pods-CodeTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodeTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renren.CodeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77DFF82827BBAEC300C1E60E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E5336FA597F17073BD773E3 /* Pods-CodeTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CodeTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renren.CodeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -895,6 +1108,15 @@
 			buildConfigurations = (
 				776E832D2655135800A3CE78 /* Debug */,
 				776E832E2655135800A3CE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DFF82927BBAEC300C1E60E /* Build configuration list for PBXNativeTarget "CodeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DFF82727BBAEC300C1E60E /* Debug */,
+				77DFF82827BBAEC300C1E60E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
