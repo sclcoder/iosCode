@@ -37,7 +37,7 @@
     return self;
 }
 
-/// 采用UIStackView进行布局
+/// 采用UIStackView进行布局: 模块的StackView可以封装为单独的View,重写intrinsicContentSize
 - (void)setup{
     /// 消息来源不同UI布局方式不同
 

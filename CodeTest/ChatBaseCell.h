@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)registerIdentifer;
 + (NSString *)registerClassName;
 + (NSString *)registerNameForNib;
+
 @end
 
 NS_ASSUME_NONNULL_END

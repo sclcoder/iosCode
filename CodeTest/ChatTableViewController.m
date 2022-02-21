@@ -11,12 +11,13 @@
 #import "ChatBaseCell.h"
 
 #import <Masonry/Masonry.h>
-
+#import "YYFPSLabel.h"
 
 
 @interface ChatTableViewController ()<UITableViewDelegate , UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *chatTableView;
+@property(nonatomic,strong) YYFPSLabel *fpsLabel;
 
 @end
 
@@ -26,6 +27,15 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.chatTableView];
+    
+    [self.view addSubview:self.fpsLabel];
+
+    [self.fpsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.view);
+        make.width.mas_equalTo(60);
+        make.height.mas_equalTo(30);
+        make.left.equalTo(self.view);
+    }];
     
     [self.chatTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -126,5 +136,16 @@
 //- (void)updateFocusIfNeeded {
 //    <#code#>
 //}
+
+
+#pragma mark - lazyadd
+- (YYFPSLabel *)fpsLabel{
+    
+    if (_fpsLabel == nil) {
+        _fpsLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(0,0,60,30)];
+    }
+    
+    return _fpsLabel;
+}
 
 @end
