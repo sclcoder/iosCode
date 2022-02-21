@@ -9,6 +9,7 @@
 
 #import "ChatBaseTableViewCell.h"
 #import "ChatBaseCell.h"
+#import "ChatTextCell.h"
 
 #import <Masonry/Masonry.h>
 #import "YYFPSLabel.h"
@@ -55,6 +56,9 @@
         
         [_chatTableView registerClass:[ChatBaseCell class] forCellReuseIdentifier:[ChatBaseCell registerIdentifer]];
         
+        [_chatTableView registerClass:[ChatTextCell class] forCellReuseIdentifier:[ChatTextCell registerIdentifer]];
+
+        
         _chatTableView.estimatedRowHeight = UITableViewAutomaticDimension;
     }
     return _chatTableView;
@@ -74,26 +78,28 @@
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:[ChatBaseCell registerIdentifer]];
-    if (cell == nil) {
-        cell = [[ChatBaseCell alloc] init];
-    }
-
-//    if (indexPath.row % 2) {
-//        cell = [tableView dequeueReusableCellWithIdentifier:[ChatBaseTableViewCell registerIdentifer]];
-//        if (cell == nil) {
-//            cell = [[ChatBaseTableViewCell alloc] init];
-//        }
-//    } else {
-//        cell = [tableView dequeueReusableCellWithIdentifier:[ChatBaseCell registerIdentifer]];
-//        if (cell == nil) {
-//            cell = [[ChatBaseCell alloc] init];
-//        }
+    ChatBaseCell *cell = nil;
+//    cell = [tableView dequeueReusableCellWithIdentifier:[ChatBaseCell registerIdentifer]];
+//    if (cell == nil) {
+//        cell = [[ChatBaseCell alloc] init];
 //    }
+
+    if (indexPath.row % 2) {
+        cell = [tableView dequeueReusableCellWithIdentifier:[ChatTextCell registerIdentifer]];
+        if (cell == nil) {
+            cell = [[ChatTextCell alloc] init];
+        }
+        ChatTextCell *textCell = (ChatTextCell *)cell;
+        [textCell updateText:[self randomString]];
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:[ChatBaseCell registerIdentifer]];
+        if (cell == nil) {
+            cell = [[ChatBaseCell alloc] init];
+        }
+    }
     
-//    cell.stateView.hidden  = indexPath.row % 2;
-//    cell.userInfoView.hidden = indexPath.row % 3;
+    cell.leftView.hidden  = indexPath.row % 5;
+    cell.rightView.hidden = indexPath.row % 3;
 //    cell.customView.hidden = indexPath.row % 4;
     return cell;
 }
@@ -137,6 +143,22 @@
 //    <#code#>
 //}
 
+
+
+- (NSString *)randomString{
+
+    NSString *strAll = @"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    NSInteger len = arc4random() % 200;
+    NSString *result = [[NSMutableString alloc]initWithCapacity:len];
+    for (int i = 0; i < len; i++)
+    {
+      NSInteger index = arc4random() % (strAll.length-1);
+      char tempStr = [strAll characterAtIndex:index];
+      result = (NSMutableString *)[result stringByAppendingString:[NSString stringWithFormat:@"%c",tempStr]];
+    }
+      
+    return result;
+}
 
 #pragma mark - lazyadd
 - (YYFPSLabel *)fpsLabel{
