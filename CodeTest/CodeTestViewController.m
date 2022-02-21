@@ -1,19 +1,19 @@
 //
-//  ViewController.m
+//  CodeTestViewController.m
 //  CodeTest
 //
 //  Created by chunlei.sun on 2022/2/15.
 
-#import "ViewController.h"
+#import "CodeTestViewController.h"
 
 
-@interface ViewController ()
+@interface CodeTestViewController ()
 @property (assign, nonatomic) int ticketsCount;
 @property (assign, nonatomic) int money;
 @end
 
 
-@implementation ViewController
+@implementation CodeTestViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

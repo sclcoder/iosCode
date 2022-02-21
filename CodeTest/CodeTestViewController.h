@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CodeTestViewController.h
 //  CodeTest
 //
 //  Created by chunlei.sun on 2022/2/15.
@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CodeTestViewController : UIViewController
 
 
 @end
