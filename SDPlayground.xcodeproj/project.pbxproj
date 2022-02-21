@@ -11,6 +11,7 @@
 		2ACE0B158418D9A08A95C0D5 /* Pods_RAC_Play.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */; };
 		2AF9164127C3E3F400C31734 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9164027C3E3F400C31734 /* YYFPSLabel.m */; };
 		2AF9164427C3E48F00C31734 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9164227C3E48F00C31734 /* YYWeakProxy.m */; };
+		2AF9164727C3E9F500C31734 /* ChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9164627C3E9F500C31734 /* ChatTextCell.m */; };
 		77534D4B2783F3DD007DAC63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4A2783F3DD007DAC63 /* AppDelegate.m */; };
 		77534D4E2783F3DD007DAC63 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4D2783F3DD007DAC63 /* SceneDelegate.m */; };
 		77534D512783F3DD007DAC63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D502783F3DD007DAC63 /* ViewController.m */; };
@@ -82,6 +83,8 @@
 		2AF9164027C3E3F400C31734 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		2AF9164227C3E48F00C31734 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		2AF9164327C3E48F00C31734 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		2AF9164527C3E9F500C31734 /* ChatTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextCell.h; sourceTree = "<group>"; };
+		2AF9164627C3E9F500C31734 /* ChatTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextCell.m; sourceTree = "<group>"; };
 		2E5336FA597F17073BD773E3 /* Pods-CodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeTest.release.xcconfig"; path = "Target Support Files/Pods-CodeTest/Pods-CodeTest.release.xcconfig"; sourceTree = "<group>"; };
 		2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC_Play.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -413,6 +416,8 @@
 				77DFF87127C37FCA00C1E60E /* ChatBaseTableViewCell.xib */,
 				77DFF87627C3ABF900C1E60E /* ChatBaseCell.h */,
 				77DFF87727C3ABF900C1E60E /* ChatBaseCell.m */,
+				2AF9164527C3E9F500C31734 /* ChatTextCell.h */,
+				2AF9164627C3E9F500C31734 /* ChatTextCell.m */,
 				77DFF81C27BBAEC000C1E60E /* Main.storyboard */,
 				77DFF81F27BBAEC300C1E60E /* Assets.xcassets */,
 				77DFF82127BBAEC300C1E60E /* LaunchScreen.storyboard */,
@@ -845,6 +850,7 @@
 				77DFF87827C3ABF900C1E60E /* ChatBaseCell.m in Sources */,
 				2AF9164127C3E3F400C31734 /* YYFPSLabel.m in Sources */,
 				77DFF81B27BBAEC000C1E60E /* CodeTestViewController.m in Sources */,
+				2AF9164727C3E9F500C31734 /* ChatTextCell.m in Sources */,
 				77DFF86E27C37E5C00C1E60E /* ChatTableViewController.m in Sources */,
 				2AF9164427C3E48F00C31734 /* YYWeakProxy.m in Sources */,
 				77DFF81527BBAEC000C1E60E /* AppDelegate.m in Sources */,

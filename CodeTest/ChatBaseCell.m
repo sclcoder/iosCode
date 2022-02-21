@@ -10,12 +10,12 @@
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1]
 
 
-@interface RRChatBubbleView : UIView
-@end
 
 @interface ChatBaseCell ()
+@property (nonatomic, strong, readwrite) RRChatBubbleView *bubbleView;
 
-@property (nonatomic, strong) RRChatBubbleView *bubbleView;
+
+
 
 @end
 
@@ -42,66 +42,108 @@
     /// 消息来源不同UI布局方式不同
 
     
-    UIButton *btnAdd = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    indicatorView.hidesWhenStopped = NO;
+        UIButton *btnAdd = [UIButton buttonWithType:UIButtonTypeContactAdd];
+        UIButton *btnSys = [UIButton buttonWithType:UIButtonTypeSystem];
 
     /// 最外层的操作布局 如全选等
-    UIStackView *stateStackV  = [[UIStackView alloc] initWithArrangedSubviews:@[btnAdd,indicatorView]];
-    stateStackV.axis = UILayoutConstraintAxisVertical;
-    stateStackV.alignment = UIStackViewAlignmentCenter;
-    stateStackV.distribution = UIStackViewDistributionEqualSpacing;
-    stateStackV.spacing = 5;
-    stateStackV.backgroundColor =  [UIColor redColor];
-    [stateStackV mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIStackView *actionStack  = [[UIStackView alloc] initWithArrangedSubviews:@[btnAdd,btnSys]];
+    actionStack.axis = UILayoutConstraintAxisVertical;
+    actionStack.alignment = UIStackViewAlignmentCenter;
+    actionStack.distribution = UIStackViewDistributionEqualSpacing;
+    actionStack.spacing = 5;
+    actionStack.backgroundColor =  [UIColor redColor];
+    [actionStack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(40);
     }];
+    self.leftView = actionStack;
    
     
+        
+                UISwitch *switcher = [[UISwitch alloc] init];
+
+                UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+                indicatorView.hidesWhenStopped = NO;
+        
+            UIStackView *statusStackView = [[UIStackView alloc] initWithArrangedSubviews:@[switcher,indicatorView]];
+            statusStackView.axis = UILayoutConstraintAxisVertical;
+            statusStackView.alignment = UIStackViewAlignmentTrailing;
+            statusStackView.distribution = UIStackViewDistributionEqualSpacing;
+            statusStackView.spacing = 5;
+            statusStackView.backgroundColor =  [UIColor orangeColor];
+
+        
+            RRChatBubbleView *bubbleView = [[RRChatBubbleView alloc] init];
+            self.bubbleView = bubbleView;
+        
+        UIStackView *bubbleStackView = [[UIStackView alloc] initWithArrangedSubviews:@[statusStackView,bubbleView]];
+        bubbleStackView.axis = UILayoutConstraintAxisHorizontal;
+        bubbleStackView.alignment = UIStackViewAlignmentCenter;
+        bubbleStackView.distribution = UIStackViewDistributionEqualSpacing;
+        bubbleStackView.spacing = 5;
+        bubbleStackView.backgroundColor =  [UIColor whiteColor];
+
+        
+            
+            UILabel *tips = [[UILabel alloc] init];
+            tips.textAlignment = NSTextAlignmentCenter;
+            tips.numberOfLines = 1;
+            tips.text = @"-----------tips-------------";
+            tips.textColor =  [UIColor systemGrayColor];
+
+            UILabel *unread = [[UILabel alloc] init];
+            unread.textAlignment = NSTextAlignmentCenter;
+            unread.numberOfLines = 1;
+            unread.text = @"unread";
+            unread.textColor =  [UIColor systemGrayColor];
+
+        UIStackView *tipStackView = [[UIStackView alloc] initWithArrangedSubviews:@[unread,tips]];
+        tipStackView.axis = UILayoutConstraintAxisVertical;
+        tipStackView.alignment = UIStackViewAlignmentTrailing;
+        tipStackView.distribution = UIStackViewDistributionEqualSpacing;
+        tipStackView.spacing = 5;
+        tipStackView.backgroundColor =  [UIColor whiteColor];
     
-    UISwitch *switcher = [[UISwitch alloc] init];
-    RRChatBubbleView *bubbleView = [[RRChatBubbleView alloc] init];
     /// 内部应该再添加StackView 区分状态 如 指示器、失败、重发等操作
-    UIStackView *contentStackV  = [[UIStackView alloc] initWithArrangedSubviews:@[switcher,bubbleView]];
-    contentStackV.axis = UILayoutConstraintAxisVertical;
-    contentStackV.alignment = UIStackViewAlignmentTrailing;
-    contentStackV.distribution = UIStackViewDistributionEqualSpacing;
-    contentStackV.spacing = 5;
-    contentStackV.backgroundColor =  [UIColor yellowColor];
+    UIStackView *contentStack  = [[UIStackView alloc] initWithArrangedSubviews:@[bubbleStackView,tipStackView]];
+    contentStack.axis = UILayoutConstraintAxisVertical;
+    contentStack.alignment = UIStackViewAlignmentTrailing;
+    contentStack.distribution = UIStackViewDistributionEqualSpacing;
+    contentStack.spacing = 5;
+    contentStack.backgroundColor =  [UIColor yellowColor];
     
-    [contentStackV addSubview:self.bubbleView];
 
     
     
     
-    UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    UIImageView *avatar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chat_person_avatar"]];
-    UILabel *nameLabel = [[UILabel alloc] init];
-    nameLabel.text = @"user_name";
-    nameLabel.numberOfLines = 2;
-    nameLabel.font = [UIFont systemFontOfSize:12];
+        UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeContactAdd];
+        UIImageView *avatar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chat_person_avatar"]];
+        UILabel *nameLabel = [[UILabel alloc] init];
+        nameLabel.text = @"user_name";
+        nameLabel.numberOfLines = 2;
+        nameLabel.font = [UIFont systemFontOfSize:12];
     
-    UIStackView *userStackV  = [[UIStackView alloc] initWithArrangedSubviews:@[btn1,avatar,nameLabel]];
-    userStackV.axis = UILayoutConstraintAxisVertical;
-    userStackV.alignment = UIStackViewAlignmentCenter;
-    userStackV.distribution = UIStackViewDistributionEqualSpacing;
-    userStackV.spacing = 5;
-    userStackV.backgroundColor =  [UIColor greenColor];
+    UIStackView *userStack  = [[UIStackView alloc] initWithArrangedSubviews:@[btn1,avatar,nameLabel]];
+    userStack.axis = UILayoutConstraintAxisVertical;
+    userStack.alignment = UIStackViewAlignmentCenter;
+    userStack.distribution = UIStackViewDistributionEqualSpacing;
+    userStack.spacing = 5;
+    userStack.backgroundColor =  [UIColor greenColor];
     
-    [userStackV mas_makeConstraints:^(MASConstraintMaker *make) {
+    [userStack mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(60);
     }];
+    self.rightView = userStack;
     
     /// 1.外层Stack-H
-    UIStackView *backStackViewH  = [[UIStackView alloc] initWithArrangedSubviews:@[stateStackV,contentStackV,userStackV]];
-    backStackViewH.axis = UILayoutConstraintAxisHorizontal;
-    backStackViewH.alignment = UIStackViewAlignmentTop;
-    backStackViewH.distribution = UIStackViewDistributionFillProportionally;
-    backStackViewH.spacing = 10;
-    backStackViewH.backgroundColor =  RandomColor;
+    UIStackView *backStackView  = [[UIStackView alloc] initWithArrangedSubviews:@[actionStack,contentStack,userStack]];
+    backStackView.axis = UILayoutConstraintAxisHorizontal;
+    backStackView.alignment = UIStackViewAlignmentTop;
+    backStackView.distribution = UIStackViewDistributionFillProportionally;
+    backStackView.spacing = 10;
+    backStackView.backgroundColor =  RandomColor;
     
-    [self.contentView addSubview:backStackViewH];
-    [backStackViewH mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.contentView addSubview:backStackView];
+    [backStackView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.contentView);
     }];
     
@@ -133,7 +175,9 @@
 @end
 
 
-
+@interface RRChatBubbleView ()
+@property(nonatomic,strong,readwrite) UIImageView *bubbleImageView;
+@end
 
 @implementation RRChatBubbleView
 
@@ -145,22 +189,10 @@
 
         bubbleImageView.contentMode = UIViewContentModeScaleToFill;
         bubbleImageView.userInteractionEnabled = YES;
-        
+        self.bubbleImageView = bubbleImageView;
         [self addSubview:bubbleImageView];
         [bubbleImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self);
-        }];
-        
-        UILabel *textLabel = [[UILabel alloc] init];
-        textLabel.textAlignment = NSTextAlignmentRight;
-        textLabel.numberOfLines = 0;
-        textLabel.font = [UIFont systemFontOfSize:13];
-        textLabel.text = @"xxxxxxxxxxxxxxxxxxxxxxxxxxx------------------------------content------------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxx";
-        [self addSubview:textLabel];
-        [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(bubbleImageView).insets(UIEdgeInsetsMake(5, 5, 5, 5));
-            CGFloat maxWidth =  ([UIScreen mainScreen].bounds.size.width - 100) * 0.85;
-            make.width.lessThanOrEqualTo(@(maxWidth));
         }];
     }
     return self;
