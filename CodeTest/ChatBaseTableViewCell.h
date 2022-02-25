@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property (weak, nonatomic) IBOutlet UIStackView *stateView;
+
 @property (weak, nonatomic) IBOutlet UIStackView *midContentView;
 
 @property (weak, nonatomic) IBOutlet UIStackView *userInfoView;
