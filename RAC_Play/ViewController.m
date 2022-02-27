@@ -36,6 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self test_subject];
+    
 //    [self test_kvo];
 //
 //    [self test_event];
@@ -46,7 +48,7 @@
     
 //    [self test_selector];
     
-    [self demo_flatten];
+//    [self demo_flatten];
 }
 
 
@@ -657,6 +659,10 @@
         NSLog(@"收到信号值:%@",x);
     }];
     
+    [signal subscribeError:^(NSError * _Nullable error) {
+        NSLog(@"收到error:%@",error);
+    }];
+
 //    NSLog(@"disposable: %@",disposable);
     
 //    [disposable dispose];

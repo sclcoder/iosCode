@@ -29,6 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong) UIStackView *rightView;
 
+@property(nonatomic,strong) UIStackView *midView;
+
+@property (nonatomic, strong) UIStackView *backStackView;
+
+
+- (void)updateLayout:(BOOL)leftToRight;
+
 @end
 
 NS_ASSUME_NONNULL_END
