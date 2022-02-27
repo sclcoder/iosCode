@@ -14,8 +14,7 @@
 @interface ChatBaseCell ()
 @property (nonatomic, strong, readwrite) RRChatBubbleView *bubbleView;
 
-
-
+@property (nonatomic, assign) BOOL layoutForRight;
 
 @end
 
@@ -32,9 +31,29 @@
     
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.layoutForRight = YES;
         [self setup];
     }
     return self;
+}
+
+
+- (void)updateLayout:(BOOL)layoutForLeft
+{
+    if (layoutForLeft) {
+        if (self.layoutForRight == YES) {
+            self.layoutForRight = NO;
+
+            for (UIView *view  in self.backStackView.arrangedSubviews) {
+                [self.backStackView insertArrangedSubview:view atIndex:0];
+            }
+        }
+    } else if (self.layoutForRight == NO){
+        
+        for (UIView *view  in self.backStackView.arrangedSubviews) {
+            [self.backStackView insertArrangedSubview:view atIndex:0];
+        }
+    }
 }
 
 /// 采用UIStackView进行布局: 模块的StackView可以封装为单独的View,重写intrinsicContentSize
@@ -82,7 +101,6 @@
         bubbleStackView.distribution = UIStackViewDistributionEqualSpacing;
         bubbleStackView.spacing = 5;
         bubbleStackView.backgroundColor =  [UIColor whiteColor];
-
         
             
             UILabel *tips = [[UILabel alloc] init];
@@ -111,11 +129,9 @@
     contentStack.distribution = UIStackViewDistributionEqualSpacing;
     contentStack.spacing = 5;
     contentStack.backgroundColor =  [UIColor yellowColor];
-    
+    self.midView = contentStack;
 
-    
-    
-    
+
         UIButton *btn1 = [UIButton buttonWithType:UIButtonTypeContactAdd];
         UIImageView *avatar = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"chat_person_avatar"]];
         UILabel *nameLabel = [[UILabel alloc] init];
@@ -148,14 +164,14 @@
         make.edges.equalTo(self.contentView);
     }];
     
-    
+    self.backStackView = backStackView;
+
 //    /// 拉伸优先级
 //    [stateStackV setContentHuggingPriority:252 forAxis:UILayoutConstraintAxisHorizontal];
 //
 //    [contentStackV setContentHuggingPriority:250 forAxis:UILayoutConstraintAxisHorizontal];
 //
 //    [userStackV setContentHuggingPriority:252 forAxis:UILayoutConstraintAxisHorizontal];
-
 }
 
 

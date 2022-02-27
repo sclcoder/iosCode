@@ -105,9 +105,10 @@
             cell = [[ChatBaseCell alloc] init];
         }
     }
-    
-    cell.leftView.hidden  = indexPath.row % 5;
-    cell.rightView.hidden = indexPath.row % 3;
+//
+//    cell.leftView.hidden  = indexPath.row % 5;
+//    cell.rightView.hidden = indexPath.row % 3;
+    [cell updateLayout: indexPath.row % 2];
 //    cell.customView.hidden = indexPath.row % 4;
     return cell;
 }
