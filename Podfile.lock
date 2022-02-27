@@ -1,4 +1,10 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
   - AFNetworking/NSURLSession (4.0.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -6,9 +12,35 @@ PODS:
   - AFNetworking/Reachability (4.0.1)
   - AFNetworking/Security (4.0.1)
   - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - CWLateralSlide (1.6.5)
+  - DoraemonKit/Core (3.1.0):
+    - AFNetworking
+    - FMDB
+    - GCDWebServer
+    - GCDWebServer/WebDAV
+    - GCDWebServer/WebUploader
+  - DoraemonKit/WithGPS (3.1.0):
+    - DoraemonKit/Core
+  - DoraemonKit/WithLoad (3.1.0):
+    - DoraemonKit/Core
+  - DoraemonKit/WithMLeaksFinder (3.1.0):
+    - DoraemonKit/Core
+    - FBRetainCycleDetector
+  - FBRetainCycleDetector (0.1.4)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - FWSideMenu (2.1.1)
-  - LEEAlert (1.5.0)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - GCDWebServer/WebDAV (3.5.4):
+    - GCDWebServer/Core
+  - GCDWebServer/WebUploader (3.5.4):
+    - GCDWebServer/Core
+  - LEEAlert (1.5.2)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
   - SJBaseVideoPlayer (3.6.7):
@@ -70,7 +102,7 @@ PODS:
     - SJVideoPlayer/Common
   - SJVideoPlayer/ResourceLoader (3.3.3):
     - SJBaseVideoPlayer (>= 3.6.0)
-  - Toast (3.1.0)
+  - Toast (4.0.0)
   - TYPagerController (2.1.2)
   - YTKNetwork (3.0.6):
     - AFNetworking/NSURLSession (~> 4.0)
@@ -82,6 +114,10 @@ PODS:
 
 DEPENDENCIES:
   - CWLateralSlide
+  - DoraemonKit/Core (~> 3.1.0)
+  - DoraemonKit/WithGPS (~> 3.1.0)
+  - DoraemonKit/WithLoad (~> 3.1.0)
+  - DoraemonKit/WithMLeaksFinder (= 3.1.0)
   - FWSideMenu
   - LEEAlert
   - Masonry
@@ -97,7 +133,11 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - CWLateralSlide
+    - DoraemonKit
+    - FBRetainCycleDetector
+    - FMDB
     - FWSideMenu
+    - GCDWebServer
     - LEEAlert
     - Masonry
     - SJBaseVideoPlayer
@@ -117,20 +157,24 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CWLateralSlide: 8939c8dea91a24e40d0793553118cb57cd67f64b
+  DoraemonKit: 6db7868ed839ad6752c2e4ac074f958aab211af2
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   FWSideMenu: 4e17ab517729e54b4462bb54747d5b0cd68263d8
-  LEEAlert: 0f5157d83ddb6515fa5b9c99b29b4fb1ccf9c38e
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  LEEAlert: 7b37640c01d8ba582b45c423ca475329c935e1db
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SJBaseVideoPlayer: 52ab45c54521c9988cb5a4d9abad444152248800
   SJUIKit: 86d5b16f8b8b17274ef8805acf965e4014629e15
   SJVideoPlayer: bc8aa86a2922dc7416822f88bdb39d6baf4d9bd5
-  Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: dd70339f8d2b6196778d1c0aae6f068d0a54e57b
+PODFILE CHECKSUM: 7c238501fc8b9450ca748c6a85ce1f2608cdd79f
 
 COCOAPODS: 1.10.2

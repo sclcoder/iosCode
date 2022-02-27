@@ -54,7 +54,6 @@
 		77C728E226FDE6950072322D /* SDAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C728E026FDE6950072322D /* SDAlertViewController.m */; };
 		77C728E326FDE6950072322D /* SDAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C728E126FDE6950072322D /* SDAlertViewController.xib */; };
 		77DFF81527BBAEC000C1E60E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFF81427BBAEC000C1E60E /* AppDelegate.m */; };
-		77DFF81827BBAEC000C1E60E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFF81727BBAEC000C1E60E /* SceneDelegate.m */; };
 		77DFF81B27BBAEC000C1E60E /* CodeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DFF81A27BBAEC000C1E60E /* CodeTestViewController.m */; };
 		77DFF81E27BBAEC000C1E60E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77DFF81C27BBAEC000C1E60E /* Main.storyboard */; };
 		77DFF82027BBAEC300C1E60E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77DFF81F27BBAEC300C1E60E /* Assets.xcassets */; };
@@ -181,8 +180,6 @@
 		77DFF81127BBAEC000C1E60E /* CodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DFF81327BBAEC000C1E60E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77DFF81427BBAEC000C1E60E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		77DFF81627BBAEC000C1E60E /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		77DFF81727BBAEC000C1E60E /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		77DFF81927BBAEC000C1E60E /* CodeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeTestViewController.h; sourceTree = "<group>"; };
 		77DFF81A27BBAEC000C1E60E /* CodeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeTestViewController.m; sourceTree = "<group>"; };
 		77DFF81D27BBAEC000C1E60E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -497,8 +494,6 @@
 				2AF9163E27C3E3DA00C31734 /* Tools */,
 				77DFF81327BBAEC000C1E60E /* AppDelegate.h */,
 				77DFF81427BBAEC000C1E60E /* AppDelegate.m */,
-				77DFF81627BBAEC000C1E60E /* SceneDelegate.h */,
-				77DFF81727BBAEC000C1E60E /* SceneDelegate.m */,
 				77DFF81927BBAEC000C1E60E /* CodeTestViewController.h */,
 				77DFF81A27BBAEC000C1E60E /* CodeTestViewController.m */,
 				77DFF86C27C37E5C00C1E60E /* ChatTableViewController.h */,
@@ -995,7 +990,6 @@
 				2AF9164427C3E48F00C31734 /* YYWeakProxy.m in Sources */,
 				77DFF81527BBAEC000C1E60E /* AppDelegate.m in Sources */,
 				77DFF82627BBAEC300C1E60E /* main.m in Sources */,
-				77DFF81827BBAEC000C1E60E /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

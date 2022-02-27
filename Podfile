@@ -56,14 +56,15 @@ target 'SDPlayground' do
 #  pod 'NIMKit/Full'
 #
 #  pod 'QMUIKit'
-#
-#  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] # 必选
+
+pod 'DoraemonKit/Core', '~> 3.1.0', :configurations => ['Debug'] # 必选
 #  pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] # 可选
-#  pod 'DoraemonKit/WithGPS', '~> 3.0.4', :configurations => ['Debug']  # 可选
-#  pod 'DoraemonKit/WithLoad', '~> 3.0.4', :configurations => ['Debug']  # 可选
+pod 'DoraemonKit/WithGPS', '~> 3.1.0', :configurations => ['Debug']  # 可选
+pod 'DoraemonKit/WithLoad', '~> 3.1.0', :configurations => ['Debug']  # 可选
 #  pod 'DoraemonKit/WithWeex', '~> 3.0.4', :configurations => ['Debug']  # 可选
 #  pod 'DoraemonKit/WithDatabase', '~> 3.0.4', :configurations => ['Debug']  # 可选
-#  pod 'DoraemonKit/WithMLeaksFinder', '3.0.4', :configurations => ['Debug']  # 可选
+pod 'DoraemonKit/WithMLeaksFinder', '3.1.0', :configurations => ['Debug']  # 可选
+
 
 end
   
@@ -81,5 +82,13 @@ target 'CodeTest' do
   pod 'YYText'
   pod 'YYCategories'
   pod 'Masonry'
+  
+  pod 'DoraemonKit/Core', '~> 3.1.0', :configurations => ['Debug'] # 必选
+#  pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] # 可选
+  pod 'DoraemonKit/WithGPS', '~> 3.1.0', :configurations => ['Debug']  # 可选
+  pod 'DoraemonKit/WithLoad', '~> 3.1.0', :configurations => ['Debug']  # 可选
+#  pod 'DoraemonKit/WithWeex', '~> 3.0.4', :configurations => ['Debug']  # 可选
+#  pod 'DoraemonKit/WithDatabase', '~> 3.0.4', :configurations => ['Debug']  # 可选
+  pod 'DoraemonKit/WithMLeaksFinder', '3.1.0', :configurations => ['Debug']  # 可选
 
 end
