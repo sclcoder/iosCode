@@ -74,24 +74,41 @@ PODS:
   - TYPagerController (2.1.2)
   - YTKNetwork (3.0.6):
     - AFNetworking/NSURLSession (~> 4.0)
+  - YYAsyncLayer (1.0.1)
+  - YYCache (1.0.4)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
+  - YYDispatchQueuePool (1.0)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYKeyboardManager (1.0.1)
   - YYModel (1.0.4)
   - YYText (1.0.7)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - CWLateralSlide
   - FWSideMenu
   - LEEAlert
   - Masonry
-  - ReactiveObjC (from `./modify_pods/ReactiveObjC`)
+  - ReactiveObjC (from `./read_pods/ReactiveObjC`)
   - SJVideoPlayer
   - Toast
   - TYPagerController
   - YTKNetwork
-  - YYCategories
-  - YYText
+  - YYAsyncLayer (from `./read_pods/YYAsyncLayer`)
+  - YYCache (from `./read_pods/YYCache`)
+  - YYCategories (from `./read_pods/YYCategories`)
+  - YYDispatchQueuePool (from `./read_pods/YYDispatchQueuePool`)
+  - YYImage (from `./read_pods/YYImage`)
+  - YYKeyboardManager (from `./read_pods/YYKeyboardManager`)
+  - YYModel (from `./read_pods/YYModel`)
+  - YYText (from `./read_pods/YYText`)
+  - YYWebImage (from `./read_pods/YYWebImage`)
 
 SPEC REPOS:
   trunk:
@@ -106,13 +123,28 @@ SPEC REPOS:
     - Toast
     - TYPagerController
     - YTKNetwork
-    - YYCategories
-    - YYModel
-    - YYText
 
 EXTERNAL SOURCES:
   ReactiveObjC:
-    :path: "./modify_pods/ReactiveObjC"
+    :path: "./read_pods/ReactiveObjC"
+  YYAsyncLayer:
+    :path: "./read_pods/YYAsyncLayer"
+  YYCache:
+    :path: "./read_pods/YYCache"
+  YYCategories:
+    :path: "./read_pods/YYCategories"
+  YYDispatchQueuePool:
+    :path: "./read_pods/YYDispatchQueuePool"
+  YYImage:
+    :path: "./read_pods/YYImage"
+  YYKeyboardManager:
+    :path: "./read_pods/YYKeyboardManager"
+  YYModel:
+    :path: "./read_pods/YYModel"
+  YYText:
+    :path: "./read_pods/YYText"
+  YYWebImage:
+    :path: "./read_pods/YYWebImage"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -127,10 +159,16 @@ SPEC CHECKSUMS:
   Toast: 14a93686d6c8bfe2727afd342414e35660a8a1f3
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
+  YYAsyncLayer: 8dc02fe6f93c3927a8d30e23129c03b74ec7ba04
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYDispatchQueuePool: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
+  YYImage: 6db68da66f20d9f169ceb94dfb9947c3867b9665
+  YYKeyboardManager: ff53d2e80d1808567a7f004028bd200d9469a89f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: dd70339f8d2b6196778d1c0aae6f068d0a54e57b
+PODFILE CHECKSUM: 15f132bde17fbe9519d64b2a1fd24f52bf2cf8d0
 
 COCOAPODS: 1.10.2

@@ -71,15 +71,22 @@ end
 target 'RAC_Play' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'ReactiveObjC', :path => './modify_pods/ReactiveObjC'
+  pod 'ReactiveObjC', :path => './read_pods/ReactiveObjC'
 end
 
 
 target 'CodeTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'YYText'
-  pod 'YYCategories'
+  pod 'YYCategories', :path => './read_pods/YYCategories'
+  pod 'YYModel', :path => './read_pods/YYModel'
+  pod 'YYCache', :path => './read_pods/YYCache'
+  pod 'YYImage', :path => './read_pods/YYImage'
+  pod 'YYWebImage', :path => './read_pods/YYWebImage'
+  pod 'YYText', :path => './read_pods/YYText'
+  pod 'YYKeyboardManager', :path => './read_pods/YYKeyboardManager'
+  pod 'YYDispatchQueuePool', :path => './read_pods/YYDispatchQueuePool'
+  pod 'YYAsyncLayer', :path => './read_pods/YYAsyncLayer'
   pod 'Masonry'
 
 end
