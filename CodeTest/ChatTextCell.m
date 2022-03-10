@@ -32,7 +32,7 @@
             textLabel.text = @"";
             [self.bubbleView addSubview:textLabel];
             [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.edges.equalTo(self.bubbleView.bubbleImageView).insets(UIEdgeInsetsMake(5, 5, 5, 5));
+                make.edges.equalTo(self.bubbleView.bubbleImageView).insets(UIEdgeInsetsMake(10, 10, 10, 10));
                 CGFloat maxWidth =  ([UIScreen mainScreen].bounds.size.width - 100) * 0.85;
                 make.width.lessThanOrEqualTo(@(maxWidth));
             }];

@@ -24,9 +24,13 @@
 
 @implementation ChatTableViewController
 
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+
     [self.view addSubview:self.chatTableView];
     
     [self.view addSubview:self.fpsLabel];
@@ -41,6 +45,10 @@
     [self.chatTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"------------");
+    });
     
 }
 

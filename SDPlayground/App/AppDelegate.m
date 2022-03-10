@@ -9,6 +9,7 @@
 #import "SDTabBarController.h"
 #import <FWSideMenu/FWSideMenu-Swift.h>
 #import "MenuViewController.h"
+#import <DoraemonKit/DoraemonManager.h>
 
 @interface AppDelegate ()
 
@@ -19,7 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [[DoraemonManager shareInstance] install];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     SDTabBarController *tabVc = [[SDTabBarController alloc] init];
 
