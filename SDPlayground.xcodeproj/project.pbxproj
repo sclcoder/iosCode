@@ -398,6 +398,7 @@
 		776E830A2655135600A3CE78 = {
 			isa = PBXGroup;
 			children = (
+				77B4C74227E1AD2000AAF57F /* codeSnippets */,
 				776E83152655135600A3CE78 /* SDPlayground */,
 				77534D482783F3DD007DAC63 /* RAC_Play */,
 				77DFF81227BBAEC000C1E60E /* CodeTest */,
@@ -486,6 +487,13 @@
 				7776F81A2754C77C00E3DF13 /* SDSettingViewController.m */,
 			);
 			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		77B4C74227E1AD2000AAF57F /* codeSnippets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = codeSnippets;
 			sourceTree = "<group>";
 		};
 		77DFF81227BBAEC000C1E60E /* CodeTest */ = {

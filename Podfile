@@ -96,6 +96,6 @@ target 'CodeTest' do
   pod 'DoraemonKit/WithLoad', '~> 3.1.0', :configurations => ['Debug']  # 可选
 #  pod 'DoraemonKit/WithWeex', '~> 3.0.4', :configurations => ['Debug']  # 可选
 #  pod 'DoraemonKit/WithDatabase', '~> 3.0.4', :configurations => ['Debug']  # 可选
-  pod 'DoraemonKit/WithMLeaksFinder', '3.1.0', :configurations => ['Debug']  # 可选
+#  pod 'DoraemonKit/WithMLeaksFinder', '3.1.0', :configurations => ['Debug']  # 可选
 
 end
