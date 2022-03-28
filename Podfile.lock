@@ -15,20 +15,16 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - CWLateralSlide (1.6.5)
-  - DoraemonKit/Core (3.1.0):
+  - DoraemonKit/Core (3.1.2):
     - AFNetworking
     - FMDB
     - GCDWebServer
     - GCDWebServer/WebDAV
     - GCDWebServer/WebUploader
-  - DoraemonKit/WithGPS (3.1.0):
+  - DoraemonKit/WithGPS (3.1.2):
     - DoraemonKit/Core
-  - DoraemonKit/WithLoad (3.1.0):
+  - DoraemonKit/WithLoad (3.1.2):
     - DoraemonKit/Core
-  - DoraemonKit/WithMLeaksFinder (3.1.0):
-    - DoraemonKit/Core
-    - FBRetainCycleDetector
-  - FBRetainCycleDetector (0.1.4)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -127,7 +123,6 @@ DEPENDENCIES:
   - DoraemonKit/Core (~> 3.1.0)
   - DoraemonKit/WithGPS (~> 3.1.0)
   - DoraemonKit/WithLoad (~> 3.1.0)
-  - DoraemonKit/WithMLeaksFinder (= 3.1.0)
   - FWSideMenu
   - LEEAlert
   - Masonry
@@ -151,7 +146,6 @@ SPEC REPOS:
     - AFNetworking
     - CWLateralSlide
     - DoraemonKit
-    - FBRetainCycleDetector
     - FMDB
     - FWSideMenu
     - GCDWebServer
@@ -189,8 +183,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CWLateralSlide: 8939c8dea91a24e40d0793553118cb57cd67f64b
-  DoraemonKit: 6db7868ed839ad6752c2e4ac074f958aab211af2
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  DoraemonKit: 0a040ae24386654e2a2d2c8d029f5ff5837de3c3
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   FWSideMenu: 4e17ab517729e54b4462bb54747d5b0cd68263d8
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
@@ -213,6 +206,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 60e5c763ce133410e46a36cd40f9e697541619a1
+PODFILE CHECKSUM: 83d036848400f672228b222e4ea71e1495c19e4b
 
 COCOAPODS: 1.10.2
