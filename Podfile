@@ -82,6 +82,7 @@ target 'CodeTest' do
   pod 'YYText'
   pod 'YYCategories'
   pod 'Masonry'
+  pod 'WCDB'
   
   pod 'DoraemonKit/Core', '~> 3.1.0', :configurations => ['Debug'] # 必选
 #  pod 'DoraemonKit/WithLogger', '~> 3.0.4', :configurations => ['Debug'] # 可选
@@ -92,3 +93,14 @@ target 'CodeTest' do
   pod 'DoraemonKit/WithMLeaksFinder', '3.1.0', :configurations => ['Debug']  # 可选
 
 end
+
+
+target 'Switf_Play' do
+  
+  pod 'moya'
+  
+  
+end
+
+
+

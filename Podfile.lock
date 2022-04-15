@@ -102,8 +102,14 @@ PODS:
     - SJVideoPlayer/Common
   - SJVideoPlayer/ResourceLoader (3.3.3):
     - SJBaseVideoPlayer (>= 3.6.0)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
   - Toast (4.0.0)
   - TYPagerController (2.1.2)
+  - WCDB (1.0.7.5):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
   - YTKNetwork (3.0.6):
     - AFNetworking/NSURLSession (~> 4.0)
   - YYCategories (1.0.4):
@@ -125,6 +131,7 @@ DEPENDENCIES:
   - SJVideoPlayer
   - Toast
   - TYPagerController
+  - WCDB
   - YTKNetwork
   - YYCategories
   - YYText
@@ -143,8 +150,11 @@ SPEC REPOS:
     - SJBaseVideoPlayer
     - SJUIKit
     - SJVideoPlayer
+    - SQLiteRepairKit
     - Toast
     - TYPagerController
+    - WCDB
+    - WCDBOptimizedSQLCipher
     - YTKNetwork
     - YYCategories
     - YYModel
@@ -168,13 +178,16 @@ SPEC CHECKSUMS:
   SJBaseVideoPlayer: 52ab45c54521c9988cb5a4d9abad444152248800
   SJUIKit: 86d5b16f8b8b17274ef8805acf965e4014629e15
   SJVideoPlayer: bc8aa86a2922dc7416822f88bdb39d6baf4d9bd5
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TYPagerController: 262556ecef99986d26ed77fb1288a198ed42f4af
+  WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
   YTKNetwork: c16be90b06be003de9e9cd0d3b187cc8eaf35c04
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 7c238501fc8b9450ca748c6a85ce1f2608cdd79f
+PODFILE CHECKSUM: 205183692c2c0aa18da66099f91949a1439ef81f
 
 COCOAPODS: 1.10.2
