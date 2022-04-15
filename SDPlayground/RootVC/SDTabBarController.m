@@ -147,7 +147,7 @@
     sideVC.leftMenuWidth = UIScreen.mainScreen.bounds.size.width * 0.7;
     sideVC.title = @"side";
     
-    [self setViewControllers:@[alertVCNav,pushNav,modalNav,pageNav,sideVC,webNav,settingNav]];
+    [self setViewControllers:@[modalNav,alertVCNav,pushNav,pageNav,sideVC]];
 }
 
 
