@@ -11,6 +11,9 @@
 #import <ReactiveObjC/RACReturnSignal.h>
 
 #import "NSObject+RACKVOWrapper.h"
+
+#import "NSObject+Calculator.h"
+
 @interface ViewController ()
 @property (nonatomic, strong) NSObject<RACSubscriber> *subscriber;
 @property (weak, nonatomic) IBOutlet UIStackView *stackView1;
@@ -35,8 +38,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self testChianPR];
 
-    [self test_subject];
+//    [self test_subject];
     
 //    [self test_kvo];
 //
@@ -49,6 +54,15 @@
 //    [self test_selector];
     
 //    [self demo_flatten];
+}
+
+- (void)testChianPR{
+    
+    int result = [NSObject makeCalculate:^(CalculateMaker * _Nonnull make) {
+        make.add(10).sub(20).muilt(100).divide(4);
+    }];
+    
+    NSLog(@"%d",result);
 }
 
 

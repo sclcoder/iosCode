@@ -102,10 +102,7 @@ target 'CodeTest' do
 end
 
 
-target 'Switf_Play' do
-  
-  pod 'moya'
-  
+target 'Swift_Play' do
   
 end
 
