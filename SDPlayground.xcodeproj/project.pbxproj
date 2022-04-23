@@ -28,6 +28,7 @@
 		2AF9164727C3E9F500C31734 /* ChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9164627C3E9F500C31734 /* ChatTextCell.m */; };
 		60C597482812F7220058D45B /* CalculateMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C597472812F7220058D45B /* CalculateMaker.m */; };
 		60C5974B2812F73A0058D45B /* NSObject+Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C5974A2812F73A0058D45B /* NSObject+Calculator.m */; };
+		60C5974F281398CC0058D45B /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C5974E281398CC0058D45B /* Calculator.m */; };
 		77534D4B2783F3DD007DAC63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4A2783F3DD007DAC63 /* AppDelegate.m */; };
 		77534D4E2783F3DD007DAC63 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4D2783F3DD007DAC63 /* SceneDelegate.m */; };
 		77534D512783F3DD007DAC63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D502783F3DD007DAC63 /* ViewController.m */; };
@@ -136,6 +137,8 @@
 		60C597472812F7220058D45B /* CalculateMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateMaker.m; sourceTree = "<group>"; };
 		60C597492812F73A0058D45B /* NSObject+Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Calculator.h"; sourceTree = "<group>"; };
 		60C5974A2812F73A0058D45B /* NSObject+Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Calculator.m"; sourceTree = "<group>"; };
+		60C5974D281398CC0058D45B /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		60C5974E281398CC0058D45B /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		62F7A74E7E978E02B13C06C1 /* libPods-Swift_Play.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Swift_Play.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77534D472783F3DD007DAC63 /* RAC_Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77534D492783F3DD007DAC63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -373,9 +376,19 @@
 			path = "链式编程";
 			sourceTree = "<group>";
 		};
+		60C5974C281398A40058D45B /* 函数式编程 */ = {
+			isa = PBXGroup;
+			children = (
+				60C5974D281398CC0058D45B /* Calculator.h */,
+				60C5974E281398CC0058D45B /* Calculator.m */,
+			);
+			path = "函数式编程";
+			sourceTree = "<group>";
+		};
 		77534D482783F3DD007DAC63 /* RAC_Play */ = {
 			isa = PBXGroup;
 			children = (
+				60C5974C281398A40058D45B /* 函数式编程 */,
 				60C597422812F6070058D45B /* 链式编程 */,
 				77534D492783F3DD007DAC63 /* AppDelegate.h */,
 				77534D4A2783F3DD007DAC63 /* AppDelegate.m */,
@@ -1016,6 +1029,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77534D512783F3DD007DAC63 /* ViewController.m in Sources */,
+				60C5974F281398CC0058D45B /* Calculator.m in Sources */,
 				77534D4B2783F3DD007DAC63 /* AppDelegate.m in Sources */,
 				77534D6C2787EE61007DAC63 /* TestView.m in Sources */,
 				60C597482812F7220058D45B /* CalculateMaker.m in Sources */,

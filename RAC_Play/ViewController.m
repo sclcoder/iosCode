@@ -13,6 +13,7 @@
 #import "NSObject+RACKVOWrapper.h"
 
 #import "NSObject+Calculator.h"
+#import "Calculator.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) NSObject<RACSubscriber> *subscriber;
@@ -40,6 +41,8 @@
     [super viewDidLoad];
     
     [self testChianPR];
+    
+    [self testFunctionPR];
 
 //    [self test_subject];
     
@@ -65,6 +68,21 @@
     NSLog(@"%d",result);
 }
 
+- (void)testFunctionPR{
+    
+    Calculator *calculator = [[Calculator alloc] init];
+    BOOL isEqual = [[[calculator calculator:^int(int result) {
+                result += 10;
+                result *= 10;
+                result /= 4;
+                return result;
+        }] equal:^BOOL(int result) {
+            NSLog(@"result:%d",result);
+            return result == 25;
+        }] isEqual] ;
+    
+    NSLog(@"%d",isEqual);
+}
 
 
 /// https://juejin.cn/post/6844903574690856968 RAC使用总结
