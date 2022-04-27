@@ -3,23 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>xa</string>
+	<string>mas_make</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>ClassInterfaceMethods</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, assign) &lt;#ClassName#&gt; *&lt;#name#&gt;;</string>
+	<string>[&lt;#view#&gt; mas_makeConstraints:^(MASConstraintMaker *make){
+    &lt;#code#&gt;
+}];
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>DD109593-6117-4F77-A765-26D2676472A7</string>
+	<string>4A0A057B-8C17-43BB-BDBA-3A315A942EF8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
-	<key>IDECodeSnippetPlatformFamily</key>
-	<string>iphoneos</string>
-	<key>IDECodeSnippetSummary</key>
-	<string>assign属性</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>assign</string>
+	<string>Masonry Constraint Make</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
