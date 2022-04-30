@@ -10,6 +10,8 @@
 #import "SubPerson.h"
 #import "Father.h"
 #import "MoveClickButton.h"
+#import <SDWebImage/SDWebImage.h>
+
 @interface ViewController ()
 
 
@@ -39,9 +41,157 @@
     
 //    [self test1];
 //    [self test2];
-      [self test3];
+//      [self test3];
+    
+//    [self testGCD];
+    
+    [self testGCD2];
 }
 
+- (void)testGCD2{
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    /**
+     2022-04-28 23:19:26.668170+0800 Code_Interview[5721:60794] 1111
+     2022-04-28 23:19:26.668188+0800 Code_Interview[5721:60788] 2222
+     2022-04-28 23:19:26.668193+0800 Code_Interview[5721:60792] 3333
+     2022-04-28 23:19:26.668312+0800 Code_Interview[5721:60794] 6666
+     2022-04-28 23:19:26.668317+0800 Code_Interview[5721:60788] 7777
+     2022-04-28 23:19:26.668325+0800 Code_Interview[5721:60792] 5555
+     2022-04-28 23:19:26.668329+0800 Code_Interview[5721:60790] 4444
+     */
+//    dispatch_queue_t queue = dispatch_get_main_queue();
+    /**
+     2022-04-28 23:18:45.290316+0800 Code_Interview[5696:59882] 1111
+     2022-04-28 23:18:45.290443+0800 Code_Interview[5696:59882] 6666
+     2022-04-28 23:18:45.290547+0800 Code_Interview[5696:59882] 2222
+     2022-04-28 23:18:45.290650+0800 Code_Interview[5696:59882] 7777
+     2022-04-28 23:18:45.290758+0800 Code_Interview[5696:59882] 3333
+     2022-04-28 23:18:45.292901+0800 Code_Interview[5696:59882] 4444
+     2022-04-28 23:18:45.293084+0800 Code_Interview[5696:59882] 5555
+
+     */
+
+    /// 队列 FIFO  4 3 2 1   -> 1 2 3
+    
+    
+    NSLog(@"currtenThread: %@",[NSThread currentThread]);
+
+    
+    ///  5 4 3 2  1   ... end
+    dispatch_async(queue, ^{ /// 1
+    
+        NSLog(@"1111 %@",[NSThread currentThread]);
+        
+        dispatch_async(queue, ^{ /// 4
+            NSLog(@"4444 %@",[NSThread currentThread]);
+        });
+        
+        NSLog(@"6666");
+
+    });
+    
+//    sleep(5);
+    
+    NSLog(@"------");
+    
+    dispatch_async(queue, ^{ /// 2
+        
+        NSLog(@"2222 %@",[NSThread currentThread]);
+        
+        dispatch_async(queue, ^{ /// 5
+            NSLog(@"5555 %@",[NSThread currentThread]);
+        });
+        
+        NSLog(@"7777");
+
+    });
+
+//    sleep(2);
+
+    NSLog(@"+++++++");
+
+    dispatch_async(queue, ^{ /// 3
+        NSLog(@"3333");
+    });
+    
+//    sleep(2);
+
+    NSLog(@"end");
+    
+}
+
+
+- (void)testGCD{
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+
+    dispatch_group_t group = dispatch_group_create();
+    
+//    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    NSURL *url1 = [NSURL URLWithString:@"https://cdn.pixabay.com/photo/2022/04/04/14/17/milk-7111433_1280.jpg"];
+    NSURL *url2 = [NSURL URLWithString:@"https://cdn.pixabay.com/photo/2020/03/18/08/06/envelope-4943161_1280.jpg"];
+    NSURL *url3 = [NSURL URLWithString:@"https://cdn.pixabay.com/photo/2022/04/15/11/23/dog-7134183_1280.jpg"];
+
+    
+    dispatch_async(queue, ^{
+        
+        dispatch_group_enter(group);
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url1 completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            
+            dispatch_group_leave(group);
+        }];
+        
+        dispatch_group_enter(group);
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url2 completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            
+            dispatch_group_leave(group);
+        }];
+        
+        
+        dispatch_group_enter(group);
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:url3 completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+            
+            dispatch_group_leave(group);
+        }];
+        
+        dispatch_group_notify(group, queue, ^{
+            NSLog(@"success!!!");
+        });
+    });
+    
+
+   
+    
+//    dispatch_group_enter(group);
+//    dispatch_async(queue, ^{
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            NSLog(@"1111");
+//            dispatch_group_leave(group);
+//        });
+//    });
+//
+//    dispatch_group_enter(group);
+//    dispatch_async(queue, ^{
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            NSLog(@"2222");
+//            dispatch_group_leave(group);
+//        });
+//    });
+//
+//
+//    dispatch_group_enter(group);
+//    dispatch_async(queue, ^{
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            NSLog(@"3333");
+//            dispatch_group_leave(group);
+//        });
+//    });
+
+    
+    
+}
 
 - (void)test3{
     [UIView animateWithDuration:5 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{

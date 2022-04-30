@@ -102,6 +102,15 @@ target 'CodeTest' do
 end
 
 
+
+target 'Code_Interview' do
+  
+  pod 'SDWebImage'
+  
+  
+end
+
+
 target 'Swift_Play' do
   
 end

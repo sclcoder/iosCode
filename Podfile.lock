@@ -39,6 +39,9 @@ PODS:
   - LEEAlert (1.5.2)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
   - SJBaseVideoPlayer (3.6.7):
     - Masonry
     - SJBaseVideoPlayer/AVPlayer (= 3.6.7)
@@ -133,6 +136,7 @@ DEPENDENCIES:
   - LEEAlert
   - Masonry
   - ReactiveObjC (from `./read_pods/ReactiveObjC`)
+  - SDWebImage
   - SJVideoPlayer
   - Toast
   - TYPagerController
@@ -158,6 +162,7 @@ SPEC REPOS:
     - GCDWebServer
     - LEEAlert
     - Masonry
+    - SDWebImage
     - SJBaseVideoPlayer
     - SJUIKit
     - SJVideoPlayer
@@ -200,6 +205,7 @@ SPEC CHECKSUMS:
   LEEAlert: 7b37640c01d8ba582b45c423ca475329c935e1db
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   SJBaseVideoPlayer: 52ab45c54521c9988cb5a4d9abad444152248800
   SJUIKit: 86d5b16f8b8b17274ef8805acf965e4014629e15
   SJVideoPlayer: bc8aa86a2922dc7416822f88bdb39d6baf4d9bd5
@@ -219,6 +225,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 4e26cf0d1ea36529efb6d0fbb30ba239d8a4811d
+PODFILE CHECKSUM: 51b80634a71a5f5bf844c966ea77f1f728d7c136
 
 COCOAPODS: 1.10.2
