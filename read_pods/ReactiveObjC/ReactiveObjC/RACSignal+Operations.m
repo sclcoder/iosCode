@@ -737,7 +737,8 @@ static RACDisposable *subscribeForever (RACSignal *signal, void (^next)(id), voi
 			[disposable dispose];
 			[subscriber sendCompleted];
 		};
-
+        
+        /// 当signalTrigger sendNext or sendCompleted时, 触发triggerCompletion()
 		RACDisposable *triggerDisposable = [signalTrigger subscribeNext:^(id _) {
 			triggerCompletion();
 		} completed:^{
@@ -800,8 +801,13 @@ static RACDisposable *subscribeForever (RACSignal *signal, void (^next)(id), voi
 				NSCAssert(x == nil || [x isKindOfClass:RACSignal.class], @"-switchToLatest requires that the source signal (%@) send signals. Instead we got: %@", self, x);
 
 				// -concat:[RACSignal never] prevents completion of the receiver from
-				// prematurely terminating the inner signal.
+				// prematurely terminating the inner signal. 防止完成接收器过早终止内部信号。
+                // x 就是初始信号发送的值
+            // flattenMap:变换中x也是一个信号，对x进行takeUntil:变换，效果就是下一个信号到来之前，x会一直发送信号，
+            // 一旦下一个信号到来，x就会被取消订阅，开始订阅新的信号。
 				return [x takeUntil:[connection.signal concat:[RACSignal never]]];
+            /// never : Returns a signal that never completes.
+
 			}]
 			subscribe:subscriber];
 
