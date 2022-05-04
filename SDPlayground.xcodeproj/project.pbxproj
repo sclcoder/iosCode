@@ -26,9 +26,21 @@
 		2AF9164127C3E3F400C31734 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9164027C3E3F400C31734 /* YYFPSLabel.m */; };
 		2AF9164427C3E48F00C31734 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9164227C3E48F00C31734 /* YYWeakProxy.m */; };
 		2AF9164727C3E9F500C31734 /* ChatTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF9164627C3E9F500C31734 /* ChatTextCell.m */; };
+		600CB6E7282143670046D903 /* RRSearchApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6E6282143670046D903 /* RRSearchApi.m */; };
+		600CB6ED28214C400046D903 /* RRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6E928214C400046D903 /* RRNavigationController.m */; };
+		600CB6EE28214C400046D903 /* RRTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6EC28214C400046D903 /* RRTabbarController.m */; };
+		600CB6F128214DB00046D903 /* RRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6F028214DB00046D903 /* RRSettingsViewController.m */; };
+		600CB6F5282176C90046D903 /* RRSongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6F4282176C90046D903 /* RRSongModel.m */; };
+		600CB6F828223A0C0046D903 /* RRSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6F728223A0C0046D903 /* RRSearchViewModel.m */; };
+		6084B46728213311000442FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084B46628213311000442FE /* AppDelegate.m */; };
+		6084B46D28213311000442FE /* RRSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084B46C28213311000442FE /* RRSearchViewController.m */; };
+		6084B47228213313000442FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6084B47128213313000442FE /* Assets.xcassets */; };
+		6084B47528213313000442FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6084B47328213313000442FE /* LaunchScreen.storyboard */; };
+		6084B47828213313000442FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084B47728213313000442FE /* main.m */; };
 		60C597482812F7220058D45B /* CalculateMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C597472812F7220058D45B /* CalculateMaker.m */; };
 		60C5974B2812F73A0058D45B /* NSObject+Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C5974A2812F73A0058D45B /* NSObject+Calculator.m */; };
 		60C5974F281398CC0058D45B /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C5974E281398CC0058D45B /* Calculator.m */; };
+		690F8ADE83DCAC00641E5044 /* libPods-MVVM+RAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93A3638893D7EDDCC862A493 /* libPods-MVVM+RAC.a */; };
 		77534D4B2783F3DD007DAC63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4A2783F3DD007DAC63 /* AppDelegate.m */; };
 		77534D4E2783F3DD007DAC63 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D4D2783F3DD007DAC63 /* SceneDelegate.m */; };
 		77534D512783F3DD007DAC63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77534D502783F3DD007DAC63 /* ViewController.m */; };
@@ -133,6 +145,29 @@
 		2E5336FA597F17073BD773E3 /* Pods-CodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeTest.release.xcconfig"; path = "Target Support Files/Pods-CodeTest/Pods-CodeTest.release.xcconfig"; sourceTree = "<group>"; };
 		2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC_Play.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCF9D35F9E4AE21C43607CA /* Pods-MVVM+RAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+RAC.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+RAC/Pods-MVVM+RAC.debug.xcconfig"; sourceTree = "<group>"; };
+		600CB6E5282143670046D903 /* RRSearchApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSearchApi.h; sourceTree = "<group>"; };
+		600CB6E6282143670046D903 /* RRSearchApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSearchApi.m; sourceTree = "<group>"; };
+		600CB6E928214C400046D903 /* RRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRNavigationController.m; sourceTree = "<group>"; };
+		600CB6EA28214C400046D903 /* RRTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRTabbarController.h; sourceTree = "<group>"; };
+		600CB6EB28214C400046D903 /* RRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRNavigationController.h; sourceTree = "<group>"; };
+		600CB6EC28214C400046D903 /* RRTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRTabbarController.m; sourceTree = "<group>"; };
+		600CB6EF28214DB00046D903 /* RRSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSettingsViewController.h; sourceTree = "<group>"; };
+		600CB6F028214DB00046D903 /* RRSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSettingsViewController.m; sourceTree = "<group>"; };
+		600CB6F2282175060046D903 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		600CB6F3282176C90046D903 /* RRSongModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSongModel.h; sourceTree = "<group>"; };
+		600CB6F4282176C90046D903 /* RRSongModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSongModel.m; sourceTree = "<group>"; };
+		600CB6F628223A0C0046D903 /* RRSearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSearchViewModel.h; sourceTree = "<group>"; };
+		600CB6F728223A0C0046D903 /* RRSearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSearchViewModel.m; sourceTree = "<group>"; };
+		6084B46328213311000442FE /* MVVM+RAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM+RAC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6084B46528213311000442FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6084B46628213311000442FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6084B46B28213311000442FE /* RRSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSearchViewController.h; sourceTree = "<group>"; };
+		6084B46C28213311000442FE /* RRSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSearchViewController.m; sourceTree = "<group>"; };
+		6084B47128213313000442FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6084B47428213313000442FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6084B47628213313000442FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6084B47728213313000442FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60C597462812F7220058D45B /* CalculateMaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculateMaker.h; sourceTree = "<group>"; };
 		60C597472812F7220058D45B /* CalculateMaker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculateMaker.m; sourceTree = "<group>"; };
 		60C597492812F73A0058D45B /* NSObject+Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Calculator.h"; sourceTree = "<group>"; };
@@ -243,6 +278,8 @@
 		77F47E5226F5F48600FF1359 /* SDOverlyPresentionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDOverlyPresentionController.h; sourceTree = "<group>"; };
 		77F47E5326F5F48600FF1359 /* SDOverlyPresentionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDOverlyPresentionController.m; sourceTree = "<group>"; };
 		79D60551F6E6B3230BB70B68 /* Pods-SDPlayground.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.release.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.release.xcconfig"; sourceTree = "<group>"; };
+		8625AB61F52BB5D07FDF6B6F /* Pods-MVVM+RAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+RAC.release.xcconfig"; path = "Target Support Files/Pods-MVVM+RAC/Pods-MVVM+RAC.release.xcconfig"; sourceTree = "<group>"; };
+		93A3638893D7EDDCC862A493 /* libPods-MVVM+RAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVM+RAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD66984320A9A02276F27C6 /* Pods-RAC_Play.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Play.release.xcconfig"; path = "Target Support Files/Pods-RAC_Play/Pods-RAC_Play.release.xcconfig"; sourceTree = "<group>"; };
 		AD667EEFE85DB91C419CEE86 /* Pods-RAC_Play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC_Play.debug.xcconfig"; path = "Target Support Files/Pods-RAC_Play/Pods-RAC_Play.debug.xcconfig"; sourceTree = "<group>"; };
 		B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDPlayground.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +292,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6084B46028213311000442FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				690F8ADE83DCAC00641E5044 /* libPods-MVVM+RAC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +410,42 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		600CB6E828214C400046D903 /* RootVc */ = {
+			isa = PBXGroup;
+			children = (
+				600CB6EB28214C400046D903 /* RRNavigationController.h */,
+				600CB6E928214C400046D903 /* RRNavigationController.m */,
+				600CB6EA28214C400046D903 /* RRTabbarController.h */,
+				600CB6EC28214C400046D903 /* RRTabbarController.m */,
+			);
+			path = RootVc;
+			sourceTree = "<group>";
+		};
+		6084B46428213311000442FE /* MVVM+RAC */ = {
+			isa = PBXGroup;
+			children = (
+				600CB6E828214C400046D903 /* RootVc */,
+				6084B46528213311000442FE /* AppDelegate.h */,
+				6084B46628213311000442FE /* AppDelegate.m */,
+				6084B46B28213311000442FE /* RRSearchViewController.h */,
+				6084B46C28213311000442FE /* RRSearchViewController.m */,
+				600CB6F628223A0C0046D903 /* RRSearchViewModel.h */,
+				600CB6F728223A0C0046D903 /* RRSearchViewModel.m */,
+				600CB6EF28214DB00046D903 /* RRSettingsViewController.h */,
+				600CB6F028214DB00046D903 /* RRSettingsViewController.m */,
+				600CB6E5282143670046D903 /* RRSearchApi.h */,
+				600CB6E6282143670046D903 /* RRSearchApi.m */,
+				600CB6F3282176C90046D903 /* RRSongModel.h */,
+				600CB6F4282176C90046D903 /* RRSongModel.m */,
+				600CB6F2282175060046D903 /* PrefixHeader.pch */,
+				6084B47128213313000442FE /* Assets.xcassets */,
+				6084B47328213313000442FE /* LaunchScreen.storyboard */,
+				6084B47628213313000442FE /* Info.plist */,
+				6084B47728213313000442FE /* main.m */,
+			);
+			path = "MVVM+RAC";
+			sourceTree = "<group>";
+		};
 		60C597422812F6070058D45B /* 链式编程 */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +540,7 @@
 				77DFF81227BBAEC000C1E60E /* CodeTest */,
 				77DFF85927BDEC5200C1E60E /* Swift_Play */,
 				2A68C6AD27C7C949000EA47F /* Code_Interview */,
+				6084B46428213311000442FE /* MVVM+RAC */,
 				776E83142655135600A3CE78 /* Products */,
 				AE4A0172ACA858B2722929A0 /* Pods */,
 				F876EA44AE1DC6989AAD6788 /* Frameworks */,
@@ -473,6 +555,7 @@
 				77DFF81127BBAEC000C1E60E /* CodeTest.app */,
 				77DFF85827BDEC5200C1E60E /* Swift_Play.app */,
 				2A68C6AC27C7C949000EA47F /* Code_Interview.app */,
+				6084B46328213311000442FE /* MVVM+RAC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -646,6 +729,8 @@
 				2E5336FA597F17073BD773E3 /* Pods-CodeTest.release.xcconfig */,
 				0F05211A81AF6C44852C2E71 /* Pods-Swift_Play.debug.xcconfig */,
 				C5F4C4D547DB621D7237DC6D /* Pods-Swift_Play.release.xcconfig */,
+				4CCF9D35F9E4AE21C43607CA /* Pods-MVVM+RAC.debug.xcconfig */,
+				8625AB61F52BB5D07FDF6B6F /* Pods-MVVM+RAC.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -658,6 +743,7 @@
 				2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */,
 				331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */,
 				62F7A74E7E978E02B13C06C1 /* libPods-Swift_Play.a */,
+				93A3638893D7EDDCC862A493 /* libPods-MVVM+RAC.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -680,6 +766,24 @@
 			name = Code_Interview;
 			productName = Code_Interview;
 			productReference = 2A68C6AC27C7C949000EA47F /* Code_Interview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6084B46228213311000442FE /* MVVM+RAC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6084B47B28213313000442FE /* Build configuration list for PBXNativeTarget "MVVM+RAC" */;
+			buildPhases = (
+				F2F9E4F00A9849E103FA350D /* [CP] Check Pods Manifest.lock */,
+				6084B45F28213311000442FE /* Sources */,
+				6084B46028213311000442FE /* Frameworks */,
+				6084B46128213311000442FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MVVM+RAC";
+			productName = "MVVM+RAC";
+			productReference = 6084B46328213311000442FE /* MVVM+RAC.app */;
 			productType = "com.apple.product-type.application";
 		};
 		77534D462783F3DD007DAC63 /* RAC_Play */ = {
@@ -769,6 +873,9 @@
 					2A68C6AB27C7C949000EA47F = {
 						CreatedOnToolsVersion = 13.1;
 					};
+					6084B46228213311000442FE = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					77534D462783F3DD007DAC63 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -801,6 +908,7 @@
 				77DFF81027BBAEC000C1E60E /* CodeTest */,
 				77DFF85727BDEC5200C1E60E /* Swift_Play */,
 				2A68C6AB27C7C949000EA47F /* Code_Interview */,
+				6084B46228213311000442FE /* MVVM+RAC */,
 			);
 		};
 /* End PBXProject section */
@@ -813,6 +921,15 @@
 				2A68C6BE27C7C94A000EA47F /* LaunchScreen.storyboard in Resources */,
 				2A68C6BB27C7C94A000EA47F /* Assets.xcassets in Resources */,
 				2A68C6B927C7C949000EA47F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6084B46128213311000442FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6084B47528213313000442FE /* LaunchScreen.storyboard in Resources */,
+				6084B47228213313000442FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,6 +1121,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeTest/Pods-CodeTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F2F9E4F00A9849E103FA350D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVM+RAC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1021,6 +1160,22 @@
 				2A68C6C127C7C94A000EA47F /* main.m in Sources */,
 				2A68C6D527C7C985000EA47F /* Person+B.m in Sources */,
 				2A68C6B327C7C949000EA47F /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6084B45F28213311000442FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6084B46D28213311000442FE /* RRSearchViewController.m in Sources */,
+				600CB6F828223A0C0046D903 /* RRSearchViewModel.m in Sources */,
+				600CB6F128214DB00046D903 /* RRSettingsViewController.m in Sources */,
+				600CB6E7282143670046D903 /* RRSearchApi.m in Sources */,
+				6084B46728213311000442FE /* AppDelegate.m in Sources */,
+				600CB6F5282176C90046D903 /* RRSongModel.m in Sources */,
+				6084B47828213313000442FE /* main.m in Sources */,
+				600CB6ED28214C400046D903 /* RRNavigationController.m in Sources */,
+				600CB6EE28214C400046D903 /* RRTabbarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,6 +1270,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				2A68C6BD27C7C94A000EA47F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6084B47328213313000442FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6084B47428213313000442FE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1238,6 +1401,68 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sclcoder.Code-Interview";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6084B47928213313000442FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CCF9D35F9E4AE21C43607CA /* Pods-MVVM+RAC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MYDTTEQ9YB;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MVVM+RAC/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MVVM+RAC/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coder.MVVM-RAC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6084B47A28213313000442FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8625AB61F52BB5D07FDF6B6F /* Pods-MVVM+RAC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MYDTTEQ9YB;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MVVM+RAC/PrefixHeader.pch";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MVVM+RAC/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coder.MVVM-RAC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1606,6 +1831,15 @@
 			buildConfigurations = (
 				2A68C6C227C7C94A000EA47F /* Debug */,
 				2A68C6C327C7C94A000EA47F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6084B47B28213313000442FE /* Build configuration list for PBXNativeTarget "MVVM+RAC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6084B47928213313000442FE /* Debug */,
+				6084B47A28213313000442FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

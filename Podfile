@@ -107,4 +107,17 @@ target 'Swift_Play' do
 end
 
 
+target 'MVVM+RAC' do
+  pod 'ReactiveObjC', :path => './read_pods/ReactiveObjC'
+  pod 'YYModel', :path => './read_pods/YYModel'
+  # layout
+  pod 'Masonry'
+  # UI
+  pod 'Toast'
+  # container
+  pod 'TYPagerController'
+  # Tool
+  pod 'YTKNetwork'
+end
+
 
