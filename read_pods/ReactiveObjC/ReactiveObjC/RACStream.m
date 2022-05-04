@@ -205,7 +205,7 @@
 
 			continue;
 		}
-
+        /// 最终结果:  [current2 [current1 stream] ...]
 		current = block(current, stream);
 	}
 

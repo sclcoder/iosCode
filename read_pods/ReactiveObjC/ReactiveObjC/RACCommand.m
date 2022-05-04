@@ -112,6 +112,8 @@ NSString * const RACUnderlyingCommandErrorKey = @"RACUnderlyingCommandErrorKey";
 	_errors = [errorsConnection.signal setNameWithFormat:@"%@ -errors", self];
 	[errorsConnection connect];
 
+    
+    // 表示当前有操作执行的信号  flattenMap会降阶
 	RACSignal *immediateExecuting = [[[[self.addedExecutionSignalsSubject
 		flattenMap:^(RACSignal *signal) {
 			return [[[signal
@@ -137,6 +139,7 @@ NSString * const RACUnderlyingCommandErrorKey = @"RACUnderlyingCommandErrorKey";
 		replayLast]
 		setNameWithFormat:@"%@ -executing", self];
 	
+    // 表示是否允许更多操作执行的信号
 	RACSignal *moreExecutionsAllowed = [RACSignal
 		if:[self.allowsConcurrentExecutionSubject startWith:@NO]
 		then:[RACSignal return:@YES]
@@ -166,6 +169,7 @@ NSString * const RACUnderlyingCommandErrorKey = @"RACUnderlyingCommandErrorKey";
 
 #pragma mark Execution
 
+/// 分析RACCommand的着手点
 - (RACSignal *)execute:(id)input {
 	// `immediateEnabled` is guaranteed to send a value upon subscription, so
 	// -first is acceptable here.

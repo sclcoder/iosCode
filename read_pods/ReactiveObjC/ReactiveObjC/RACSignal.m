@@ -105,6 +105,18 @@
 	 * If any signal sends an error at any point, send that to the subscriber.
 	 */
 
+    
+/**
+ 
+ 当bind变换之后的信号被订阅，就开始执行bind函数中return的block闭包。
+
+ 在bind闭包中，先订阅原先的信号A。
+ 在订阅原信号A的didSubscribe闭包中进行信号变换，变换中用到的block闭包是外部传递进来的，也就是bind函数的入参。变换结束，得到新的信号B
+ 订阅新的信号B，拿到bind变化之后的信号的订阅者subscriber，对其发送新的信号值。
+ 
+ bind函数中进行了2次订阅的操作，第一次订阅是为了拿到signalA的值，第二次订阅是为了把signalB的新值发给bind变换之后得到的signalB的订阅者。
+ */
+
 	return [[RACSignal createSignal:^(id<RACSubscriber> subscriber) {
 		RACSignalBindBlock bindingBlock = block();
 
