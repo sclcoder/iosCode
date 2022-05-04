@@ -9,7 +9,14 @@
 #import "RRSearchApi.h"
 #import "RRSongModel.h"
 
+
+
 @implementation RRSearchViewModel
+
+
+- (void)dealloc{
+    NSLog(@"%s",__func__);
+}
 
 - (instancetype)init
 {
@@ -29,42 +36,49 @@
     [[[RACObserve(self,searchText) filter:^BOOL(NSString * _Nullable value) {
         return value.length > 0;
     }] throttle:0.5] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"%@",x);
-        
-        [self.executeSearch execute:x];
+        NSLog(@"throttle:%@",x);
+        [self.searchCommand execute:x];
     }];
 }
 
-
-- (RACCommand *)executeSearch{
+# pragma mark - lazy add
+/// 注意: Command 一定要一致， 所有这里使用懒加载
+- (RACCommand *)searchCommand{
     
-    return [[RACCommand alloc] initWithEnabled:nil signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+    if (_searchCommand == nil) {
         
-        NSLog(@"RACCommand Input: %@",input);
-        
-        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        RACCommand *searchCommand = [[RACCommand alloc] initWithEnabled:nil signalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
             
-            RRSearchApi *searchApi = [[RRSearchApi alloc] init];
-            searchApi.keywords = input;
-            
-            [searchApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-                
-                NSArray *songs = [NSArray array];
-                
-                songs = [NSArray yy_modelArrayWithClass:[RRSongModel class] json:request.responseObject[@"result"][@"songs"]];
-                
-                [subscriber sendNext:songs];
-                
-                [subscriber sendCompleted];
+            return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                RRSearchApi *searchApi = [[RRSearchApi alloc] init];
+                searchApi.keywords = input;
 
-            } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-                NSLog(@"%@",request.error);
-                [subscriber sendNext:request.error];
+                [searchApi startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+
+                    NSArray *songs = [NSArray array];
+
+                    songs = [NSArray yy_modelArrayWithClass:[RRSongModel class] json:request.responseObject[@"result"][@"songs"]];
+
+                    [subscriber sendNext:songs];
+
+                    [subscriber sendCompleted];
+
+                } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+                    
+                    [subscriber sendNext:request.error];
+                    
+                    [subscriber sendCompleted];
+
+                }];
+                
+                return nil;
             }];
-            
-            return nil;
         }];
-    }];
+        
+        _searchCommand = searchCommand;
+        
+    }
+    return _searchCommand;
 }
 
 @end

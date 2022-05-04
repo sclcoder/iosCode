@@ -101,6 +101,7 @@
 		77F47E5126F5D94900FF1359 /* SDModalTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E5026F5D94900FF1359 /* SDModalTransitionDelegate.m */; };
 		77F47E5426F5F48600FF1359 /* SDOverlyPresentionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F47E5326F5F48600FF1359 /* SDOverlyPresentionController.m */; };
 		7C9945EEAE41CC94770F0239 /* Pods_CodeTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */; };
+		7D57B985566EEB15C1297826 /* libPods-Code_Interview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 369549DF2461B59D5047917A /* libPods-Code_Interview.a */; };
 		D3FBA7155F7D8D39AA380E43 /* Pods_SDPlayground.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0AD54D458CE408A9BC8173D /* Pods_SDPlayground.framework */; };
 		FA439E2466ADB9F7D38866D3 /* libPods-Swift_Play.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F7A74E7E978E02B13C06C1 /* libPods-Swift_Play.a */; };
 /* End PBXBuildFile section */
@@ -146,6 +147,7 @@
 		2E5336FA597F17073BD773E3 /* Pods-CodeTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeTest.release.xcconfig"; path = "Target Support Files/Pods-CodeTest/Pods-CodeTest.release.xcconfig"; sourceTree = "<group>"; };
 		2FDD04166E52281981742FDE /* Pods_RAC_Play.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RAC_Play.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		369549DF2461B59D5047917A /* libPods-Code_Interview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Code_Interview.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CCF9D35F9E4AE21C43607CA /* Pods-MVVM+RAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM+RAC.debug.xcconfig"; path = "Target Support Files/Pods-MVVM+RAC/Pods-MVVM+RAC.debug.xcconfig"; sourceTree = "<group>"; };
 		600CB6E5282143670046D903 /* RRSearchApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSearchApi.h; sourceTree = "<group>"; };
 		600CB6E6282143670046D903 /* RRSearchApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSearchApi.m; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		600CB6F4282176C90046D903 /* RRSongModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSongModel.m; sourceTree = "<group>"; };
 		600CB6F628223A0C0046D903 /* RRSearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSearchViewModel.h; sourceTree = "<group>"; };
 		600CB6F728223A0C0046D903 /* RRSearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSearchViewModel.m; sourceTree = "<group>"; };
+		605D941F23080270A15212B3 /* Pods-Code_Interview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_Interview.debug.xcconfig"; path = "Target Support Files/Pods-Code_Interview/Pods-Code_Interview.debug.xcconfig"; sourceTree = "<group>"; };
 		6084B46328213311000442FE /* MVVM+RAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM+RAC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6084B46528213311000442FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6084B46628213311000442FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 		60C5974D281398CC0058D45B /* Calculator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		60C5974E281398CC0058D45B /* Calculator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		62F7A74E7E978E02B13C06C1 /* libPods-Swift_Play.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Swift_Play.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C30E2307C8A2218D9A275F /* Pods-Code_Interview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_Interview.release.xcconfig"; path = "Target Support Files/Pods-Code_Interview/Pods-Code_Interview.release.xcconfig"; sourceTree = "<group>"; };
 		77534D472783F3DD007DAC63 /* RAC_Play.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAC_Play.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77534D492783F3DD007DAC63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		77534D4A2783F3DD007DAC63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25526FE75E5C0240C1E7F5C0 /* libPods-Code_Interview.a in Frameworks */,
+				7D57B985566EEB15C1297826 /* libPods-Code_Interview.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +739,8 @@
 				C5F4C4D547DB621D7237DC6D /* Pods-Swift_Play.release.xcconfig */,
 				4CCF9D35F9E4AE21C43607CA /* Pods-MVVM+RAC.debug.xcconfig */,
 				8625AB61F52BB5D07FDF6B6F /* Pods-MVVM+RAC.release.xcconfig */,
+				605D941F23080270A15212B3 /* Pods-Code_Interview.debug.xcconfig */,
+				63C30E2307C8A2218D9A275F /* Pods-Code_Interview.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -747,6 +754,7 @@
 				331A98BE205D1607A75A33CF /* Pods_CodeTest.framework */,
 				62F7A74E7E978E02B13C06C1 /* libPods-Swift_Play.a */,
 				93A3638893D7EDDCC862A493 /* libPods-MVVM+RAC.a */,
+				369549DF2461B59D5047917A /* libPods-Code_Interview.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1377,7 +1385,7 @@
 /* Begin XCBuildConfiguration section */
 		2A68C6C227C7C94A000EA47F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983240E66C152A5CAECD0FAF /* Pods-Code_Interview.debug.xcconfig */;
+			baseConfigurationReference = 605D941F23080270A15212B3 /* Pods-Code_Interview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1407,7 +1415,7 @@
 		};
 		2A68C6C327C7C94A000EA47F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47A09E95CA890D6064E6FAD6 /* Pods-Code_Interview.release.xcconfig */;
+			baseConfigurationReference = 63C30E2307C8A2218D9A275F /* Pods-Code_Interview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

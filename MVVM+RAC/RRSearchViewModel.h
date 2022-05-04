@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *searchText;
 
-@property (nonatomic, strong) RACCommand *executeSearch;
+@property (nonatomic, strong) RACCommand *searchCommand;
 
 
 @end

@@ -25,6 +25,9 @@
 @property (nonatomic, strong) UISearchController *searchVC;
 
 
+@property (nonatomic, strong) RACCommand *searchCommand;
+
+
 
 @end
 
@@ -53,23 +56,16 @@
 
 
 - (void)bindVM{
+    
     self.navigationItem.title = self.searchVM.title;
     self.searchVC.searchBar.text = self.searchVM.searchText;
     
-//    [[self.searchVM.executeSearch.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
-//        self.results = x;
-//        [self.tableView reloadData];
-//    }];
-    
-    
-    NSLog(@"%@",self.searchVM.executeSearch);
-    [self.searchVM.executeSearch.executionSignals subscribeNext:^(id  _Nullable x) {
-        NSLog(@"%@",x);
+    self.searchCommand = self.searchVM.searchCommand;
+    [self.searchCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        self.results = x;
+        [self.tableView reloadData];
     }];
-    
 }
-
-
 
 #pragma mark - searchVC
 
@@ -91,11 +87,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     
     RRSongModel *songModel = self.results[indexPath.row];
-    
-    cell.textLabel.text = songModel.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"song id: %@",songModel.ID];
-
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ song id: %@",songModel.name,songModel.ID];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.navigationController pushViewController:[RRSettingsViewController new] animated:YES];
 }
 
 
