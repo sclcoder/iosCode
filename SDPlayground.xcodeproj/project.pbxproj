@@ -33,6 +33,8 @@
 		600CB6F128214DB00046D903 /* RRSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6F028214DB00046D903 /* RRSettingsViewController.m */; };
 		600CB6F5282176C90046D903 /* RRSongModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6F4282176C90046D903 /* RRSongModel.m */; };
 		600CB6F828223A0C0046D903 /* RRSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 600CB6F728223A0C0046D903 /* RRSearchViewModel.m */; };
+		601C344B282F81D900094BD1 /* RRTestDeallocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C3449282F81D900094BD1 /* RRTestDeallocViewController.m */; };
+		601C344C282F81D900094BD1 /* RRTestDeallocViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C344A282F81D900094BD1 /* RRTestDeallocViewController.xib */; };
 		6084B46728213311000442FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084B46628213311000442FE /* AppDelegate.m */; };
 		6084B46D28213311000442FE /* RRSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084B46C28213311000442FE /* RRSearchViewController.m */; };
 		6084B47228213313000442FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6084B47128213313000442FE /* Assets.xcassets */; };
@@ -162,6 +164,9 @@
 		600CB6F4282176C90046D903 /* RRSongModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSongModel.m; sourceTree = "<group>"; };
 		600CB6F628223A0C0046D903 /* RRSearchViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRSearchViewModel.h; sourceTree = "<group>"; };
 		600CB6F728223A0C0046D903 /* RRSearchViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRSearchViewModel.m; sourceTree = "<group>"; };
+		601C3448282F81D900094BD1 /* RRTestDeallocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTestDeallocViewController.h; sourceTree = "<group>"; };
+		601C3449282F81D900094BD1 /* RRTestDeallocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTestDeallocViewController.m; sourceTree = "<group>"; };
+		601C344A282F81D900094BD1 /* RRTestDeallocViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRTestDeallocViewController.xib; sourceTree = "<group>"; };
 		605D941F23080270A15212B3 /* Pods-Code_Interview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_Interview.debug.xcconfig"; path = "Target Support Files/Pods-Code_Interview/Pods-Code_Interview.debug.xcconfig"; sourceTree = "<group>"; };
 		6084B46328213311000442FE /* MVVM+RAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM+RAC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6084B46528213311000442FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -429,12 +434,23 @@
 			path = RootVc;
 			sourceTree = "<group>";
 		};
+		601C3447282F7AA800094BD1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				D139A8933922B4C43D55F9A2 /* libPods-Code_Interview.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		6084B46428213311000442FE /* MVVM+RAC */ = {
 			isa = PBXGroup;
 			children = (
 				600CB6E828214C400046D903 /* RootVc */,
 				6084B46528213311000442FE /* AppDelegate.h */,
 				6084B46628213311000442FE /* AppDelegate.m */,
+				601C3448282F81D900094BD1 /* RRTestDeallocViewController.h */,
+				601C3449282F81D900094BD1 /* RRTestDeallocViewController.m */,
+				601C344A282F81D900094BD1 /* RRTestDeallocViewController.xib */,
 				6084B46B28213311000442FE /* RRSearchViewController.h */,
 				6084B46C28213311000442FE /* RRSearchViewController.m */,
 				600CB6F628223A0C0046D903 /* RRSearchViewModel.h */,
@@ -552,6 +568,7 @@
 				776E83142655135600A3CE78 /* Products */,
 				AE4A0172ACA858B2722929A0 /* Pods */,
 				F876EA44AE1DC6989AAD6788 /* Frameworks */,
+				601C3447282F7AA800094BD1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -941,6 +958,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6084B47528213313000442FE /* LaunchScreen.storyboard in Resources */,
+				601C344C282F81D900094BD1 /* RRTestDeallocViewController.xib in Resources */,
 				6084B47228213313000442FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1206,6 +1224,7 @@
 				600CB6F128214DB00046D903 /* RRSettingsViewController.m in Sources */,
 				600CB6E7282143670046D903 /* RRSearchApi.m in Sources */,
 				6084B46728213311000442FE /* AppDelegate.m in Sources */,
+				601C344B282F81D900094BD1 /* RRTestDeallocViewController.m in Sources */,
 				600CB6F5282176C90046D903 /* RRSongModel.m in Sources */,
 				6084B47828213313000442FE /* main.m in Sources */,
 				600CB6ED28214C400046D903 /* RRNavigationController.m in Sources */,

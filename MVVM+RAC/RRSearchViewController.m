@@ -33,6 +33,10 @@
 
 @implementation RRSearchViewController
 
+- (void)dealloc{
+    NSLog(@"%s",__func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -57,11 +61,14 @@
 
 - (void)bindVM{
     
+    @weakify(self)
     self.navigationItem.title = self.searchVM.title;
     self.searchVC.searchBar.text = self.searchVM.searchText;
     
     self.searchCommand = self.searchVM.searchCommand;
+    
     [self.searchCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
         self.results = x;
         [self.tableView reloadData];
     }];

@@ -9,6 +9,7 @@
 #import "RRNavigationController.h"
 #import "RRSearchViewController.h"
 #import "RRSettingsViewController.h"
+#import "RRTestDeallocViewController.h"
 @interface RRTabbarController ()
 
 
@@ -48,17 +49,23 @@
 
 
 - (void)setupChildrenVC{
+//
+//    RRSearchViewController *searchVC = [RRSearchViewController new];
+//    RRNavigationController *searchNav = [[RRNavigationController alloc] initWithRootViewController:searchVC];
+//    searchNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"search" image:[UIImage imageNamed:@"tab_chat"] selectedImage:[UIImage imageNamed:@"tab_chat"]];
     
-    RRSearchViewController *searchVC = [RRSearchViewController new];
-    RRNavigationController *searchNav = [[RRNavigationController alloc] initWithRootViewController:searchVC];
-    searchNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"search" image:[UIImage imageNamed:@"tab_chat"] selectedImage:[UIImage imageNamed:@"tab_chat"]];
+    
+    
+    RRTestDeallocViewController *testVC = [RRTestDeallocViewController new];
+    RRNavigationController *testVCNav = [[RRNavigationController alloc] initWithRootViewController:testVC];
+    testVCNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"search" image:[UIImage imageNamed:@"tab_chat"] selectedImage:[UIImage imageNamed:@"tab_chat"]];
     
     RRSettingsViewController *settingVC = [RRSettingsViewController new];
     RRNavigationController *settingNav = [[RRNavigationController alloc] initWithRootViewController:settingVC];
     settingNav.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"network" image:[UIImage imageNamed:@"tab_group"] selectedImage:[UIImage imageNamed:@"tab_group"]];
 
     
-    [self setViewControllers:@[searchNav,settingNav] animated:YES];
+    [self setViewControllers:@[testVCNav,settingNav] animated:YES];
 }
 
 
