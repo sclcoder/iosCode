@@ -1700,6 +1700,8 @@
     
     /// RACMulticastConnection这个类了，RACMulticastConnection其实是一个连接类，
     /// 连接类的意思就是当一个信号被多次订阅，他可以帮我们避免多次调用创建信号中的block
+    /// 可以使用RACMulticastConnection这个类了，RACMulticastConnection其实是一个连接类，当一个信号被多次订阅，他可以帮我们避免多次调用创建信号中的block。
+    /// RACMulticastConnection 内部返回一个RACSubject信号，外部的订阅者都订阅这个信号（可能被订阅多次）, 而RACSubject订阅RACSignal信号（只订阅一次），当RACSignal发送内容时，外部的订阅者都可以通过RACSubject收到内容
 
     /// connect 会创建一个RACSubject信号设置给signal RACSignal设置给sourceSignal
     RACMulticastConnection *connect = [signal publish];
