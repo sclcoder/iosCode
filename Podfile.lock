@@ -132,6 +132,7 @@ DEPENDENCIES:
   - DoraemonKit/Core (~> 3.1.0)
   - DoraemonKit/WithGPS (~> 3.1.0)
   - DoraemonKit/WithLoad (~> 3.1.0)
+  - FMDB
   - FWSideMenu
   - LEEAlert
   - Masonry
@@ -225,6 +226,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: b29c73ee33e4b3b3dc1821e4c7d0ae6c241b67ac
+PODFILE CHECKSUM: 0f7b1b2fd818aa1cea6470ffaf3c5feaf9275db0
 
 COCOAPODS: 1.10.2
