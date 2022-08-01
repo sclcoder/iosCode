@@ -99,9 +99,9 @@ target 'CodeTest' do
 #  pod 'DoraemonKit/WithDatabase', '~> 3.0.4', :configurations => ['Debug']  # 可选
 #  pod 'DoraemonKit/WithMLeaksFinder', '3.1.0', :configurations => ['Debug']  # 可选
 
+  pod 'GKPageScrollView'
+  pod 'GKPageSmoothView'
 end
-
-
 
 target 'Code_Interview' do
   

@@ -21,8 +21,21 @@
 //    [self ticketTest];
 //    [self moneyTest];
     
+    [self dateTest];
+}
+
+
+- (void)dateTest{
+    
+    
+    NSDate *threeDaysAgo        = [NSDate dateWithTimeIntervalSinceNow: -(60 * 60 * 24 * 3)];
+    NSDate *nowDate             = [NSDate now];
+    
+    NSComparisonResult result   = [nowDate compare:threeDaysAgo];
+    
     
 }
+
 
 /// 链表相交的变种
 - (UIView *)commonSuperView:(UIView *)oneView otherView:(UIView *)otherView{
