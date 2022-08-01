@@ -129,4 +129,7 @@ target 'MVVM+RAC' do
   pod 'YTKNetwork'
 end
 
+target 'FMDB_Play' do
+  pod 'FMDB'
 
+end
