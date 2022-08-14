@@ -26,6 +26,7 @@ target 'SDPlayground' do
 
   pod 'SJVideoPlayer'
 
+  pod 'JSBadgeView'
 
   
 #  pod 'YYKit'

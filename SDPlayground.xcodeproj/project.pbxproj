@@ -43,7 +43,6 @@
 		6073E57F289687D100F6DEC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6073E57D289687D100F6DEC6 /* LaunchScreen.storyboard */; };
 		6073E582289687D100F6DEC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073E581289687D100F6DEC6 /* main.m */; };
 		6073E58928968A0D00F6DEC6 /* RRPinedSessionDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073E58828968A0D00F6DEC6 /* RRPinedSessionDB.m */; };
-		6073E5912896BEC400F6DEC6 /* NTESCustomNotificationDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 6073E5902896BEC400F6DEC6 /* NTESCustomNotificationDB.m */; };
 		6084B46728213311000442FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084B46628213311000442FE /* AppDelegate.m */; };
 		6084B46D28213311000442FE /* RRSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084B46C28213311000442FE /* RRSearchViewController.m */; };
 		6084B47228213313000442FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6084B47128213313000442FE /* Assets.xcassets */; };
@@ -193,8 +192,6 @@
 		6073E581289687D100F6DEC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6073E58728968A0D00F6DEC6 /* RRPinedSessionDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRPinedSessionDB.h; sourceTree = "<group>"; };
 		6073E58828968A0D00F6DEC6 /* RRPinedSessionDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRPinedSessionDB.m; sourceTree = "<group>"; };
-		6073E58F2896BEC400F6DEC6 /* NTESCustomNotificationDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NTESCustomNotificationDB.h; path = ../NTESCustomNotificationDB.h; sourceTree = "<group>"; };
-		6073E5902896BEC400F6DEC6 /* NTESCustomNotificationDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NTESCustomNotificationDB.m; path = ../NTESCustomNotificationDB.m; sourceTree = "<group>"; };
 		6084B46328213311000442FE /* MVVM+RAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM+RAC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6084B46528213311000442FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6084B46628213311000442FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -501,21 +498,10 @@
 		6073E586289689F000F6DEC6 /* DBDesign */ = {
 			isa = PBXGroup;
 			children = (
-				6073E58E2896BEB100F6DEC6 /* NIMKitNotificationDB */,
 				6073E58728968A0D00F6DEC6 /* RRPinedSessionDB.h */,
 				6073E58828968A0D00F6DEC6 /* RRPinedSessionDB.m */,
 			);
 			path = DBDesign;
-			sourceTree = "<group>";
-		};
-		6073E58E2896BEB100F6DEC6 /* NIMKitNotificationDB */ = {
-			isa = PBXGroup;
-			children = (
-				6073E58F2896BEC400F6DEC6 /* NTESCustomNotificationDB.h */,
-				6073E5902896BEC400F6DEC6 /* NTESCustomNotificationDB.m */,
-			);
-			name = NIMKitNotificationDB;
-			path = ../../../../.Trash/NIMKitNotificationDB;
 			sourceTree = "<group>";
 		};
 		6084B46428213311000442FE /* MVVM+RAC */ = {
@@ -1355,7 +1341,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6073E577289687D000F6DEC6 /* ViewController.m in Sources */,
-				6073E5912896BEC400F6DEC6 /* NTESCustomNotificationDB.m in Sources */,
 				6073E58928968A0D00F6DEC6 /* RRPinedSessionDB.m in Sources */,
 				6073E571289687D000F6DEC6 /* AppDelegate.m in Sources */,
 				6073E582289687D100F6DEC6 /* main.m in Sources */,

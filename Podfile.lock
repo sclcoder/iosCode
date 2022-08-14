@@ -36,6 +36,7 @@ PODS:
     - GCDWebServer/Core
   - GCDWebServer/WebUploader (3.5.4):
     - GCDWebServer/Core
+  - JSBadgeView (2.0.0)
   - LEEAlert (1.5.2)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.1)
@@ -134,6 +135,7 @@ DEPENDENCIES:
   - DoraemonKit/WithLoad (~> 3.1.0)
   - FMDB
   - FWSideMenu
+  - JSBadgeView
   - LEEAlert
   - Masonry
   - ReactiveObjC (from `./read_pods/ReactiveObjC`)
@@ -161,6 +163,7 @@ SPEC REPOS:
     - FMDB
     - FWSideMenu
     - GCDWebServer
+    - JSBadgeView
     - LEEAlert
     - Masonry
     - SDWebImage
@@ -203,6 +206,7 @@ SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   FWSideMenu: 4e17ab517729e54b4462bb54747d5b0cd68263d8
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  JSBadgeView: 3f5691b7d1bfacfb0237d0eb3b8b1f9a10ecb3f7
   LEEAlert: 7b37640c01d8ba582b45c423ca475329c935e1db
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
@@ -226,6 +230,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 0f7b1b2fd818aa1cea6470ffaf3c5feaf9275db0
+PODFILE CHECKSUM: 5866fde0b8951d5e1dac6e235443fde9fd3bb671
 
 COCOAPODS: 1.10.2

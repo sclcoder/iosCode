@@ -8,11 +8,22 @@
 #import "SDPushViewController.h"
 #import "SDPopViewController.h"
 #import "SDPagerController.h"
+#import <JSBadgeView/JSBadgeView.h>
+
 @interface SDPushViewController ()
+@property (weak, nonatomic) IBOutlet UIView *testView;
 
 @end
 
 @implementation SDPushViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    JSBadgeView *badgeView = [[JSBadgeView alloc] initWithParentView:self.testView alignment:JSBadgeViewAlignmentTopRight];
+    badgeView.badgeText = @"123";
+}
 
 
 - (IBAction)onTapPushButton:(UIButton *)sender {
@@ -29,12 +40,6 @@
     SDPagerController *pageVc = [SDPagerController new];
     
     [self.navigationController pushViewController:pageVc animated:YES];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor redColor];
 }
 
 
