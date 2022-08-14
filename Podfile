@@ -102,8 +102,6 @@ target 'CodeTest' do
 
 end
 
-
-
 target 'Code_Interview' do
   
   pod 'SDWebImage'

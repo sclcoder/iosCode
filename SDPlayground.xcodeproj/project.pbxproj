@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25526FE75E5C0240C1E7F5C0 /* libPods-Code_Interview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D139A8933922B4C43D55F9A2 /* libPods-Code_Interview.a */; };
-		2A2A544727CFBE4000DD594A /* WCDBTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A544627CFBE4000DD594A /* WCDBTestViewController.m */; };
+		2A2A544727CFBE4000DD594A /* WCDBTestViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A544627CFBE4000DD594A /* WCDBTestViewController.mm */; };
 		2A68C6B027C7C949000EA47F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A68C6AF27C7C949000EA47F /* AppDelegate.m */; };
 		2A68C6B327C7C949000EA47F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A68C6B227C7C949000EA47F /* SceneDelegate.m */; };
 		2A68C6B627C7C949000EA47F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A68C6B527C7C949000EA47F /* ViewController.m */; };
@@ -121,7 +121,7 @@
 		0F05211A81AF6C44852C2E71 /* Pods-Swift_Play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Play.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Play/Pods-Swift_Play.debug.xcconfig"; sourceTree = "<group>"; };
 		152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
 		2A2A544527CFBE4000DD594A /* WCDBTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCDBTestViewController.h; sourceTree = "<group>"; };
-		2A2A544627CFBE4000DD594A /* WCDBTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCDBTestViewController.m; sourceTree = "<group>"; };
+		2A2A544627CFBE4000DD594A /* WCDBTestViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WCDBTestViewController.mm; sourceTree = "<group>"; };
 		2A49679627F9CAD400461CF2 /* studySwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = studySwift.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2A68C6AC27C7C949000EA47F /* Code_Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code_Interview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A68C6AE27C7C949000EA47F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -731,7 +731,7 @@
 				77DFF81427BBAEC000C1E60E /* AppDelegate.m */,
 				2A2A544827CFC1A500DD594A /* Database */,
 				2A2A544527CFBE4000DD594A /* WCDBTestViewController.h */,
-				2A2A544627CFBE4000DD594A /* WCDBTestViewController.m */,
+				2A2A544627CFBE4000DD594A /* WCDBTestViewController.mm */,
 				77DFF81927BBAEC000C1E60E /* CodeTestViewController.h */,
 				77DFF81A27BBAEC000C1E60E /* CodeTestViewController.m */,
 				77DFF86C27C37E5C00C1E60E /* ChatTableViewController.h */,
@@ -1426,7 +1426,7 @@
 				77DFF86E27C37E5C00C1E60E /* ChatTableViewController.m in Sources */,
 				2AF9164427C3E48F00C31734 /* YYWeakProxy.m in Sources */,
 				77DFF81527BBAEC000C1E60E /* AppDelegate.m in Sources */,
-				2A2A544727CFBE4000DD594A /* WCDBTestViewController.m in Sources */,
+				2A2A544727CFBE4000DD594A /* WCDBTestViewController.mm in Sources */,
 				77DFF82627BBAEC300C1E60E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
