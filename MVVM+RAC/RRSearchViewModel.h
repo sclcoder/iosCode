@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) RACCommand *searchCommand;
 
+@property (nonatomic, strong) RACCommand *testCommand;
 
 @end
 

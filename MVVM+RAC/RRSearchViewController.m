@@ -65,13 +65,28 @@
     self.navigationItem.title = self.searchVM.title;
     self.searchVC.searchBar.text = self.searchVM.searchText;
     
-    self.searchCommand = self.searchVM.searchCommand;
+//    self.searchCommand = self.searchVM.searchCommand;
+//
+//    [self.searchCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+//        @strongify(self)
+//        self.results = x;
+//        [self.tableView reloadData];
+//    }];
     
-    [self.searchCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
-        @strongify(self)
-        self.results = x;
-        [self.tableView reloadData];
+//    [self.searchCommand.errors subscribeNext:^(NSError * _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+    
+    
+    [self.searchVM.testCommand.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
     }];
+    
+    [self.searchVM.testCommand.errors subscribeNext:^(NSError * _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+
 }
 
 #pragma mark - searchVC
