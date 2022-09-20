@@ -15,6 +15,7 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - CWLateralSlide (1.6.5)
+  - DOPDropDownMenu-Enhanced (1.0.0)
   - DoraemonKit/Core (3.1.2):
     - AFNetworking
     - FMDB
@@ -130,6 +131,7 @@ PODS:
 
 DEPENDENCIES:
   - CWLateralSlide
+  - DOPDropDownMenu-Enhanced
   - DoraemonKit/Core (~> 3.1.0)
   - DoraemonKit/WithGPS (~> 3.1.0)
   - DoraemonKit/WithLoad (~> 3.1.0)
@@ -159,6 +161,7 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - CWLateralSlide
+    - DOPDropDownMenu-Enhanced
     - DoraemonKit
     - FMDB
     - FWSideMenu
@@ -202,6 +205,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   CWLateralSlide: 8939c8dea91a24e40d0793553118cb57cd67f64b
+  DOPDropDownMenu-Enhanced: 9ec473b16351b5b0b2d6ef87e7f666fe5ff54ad5
   DoraemonKit: 0a040ae24386654e2a2d2c8d029f5ff5837de3c3
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   FWSideMenu: 4e17ab517729e54b4462bb54747d5b0cd68263d8
@@ -230,6 +234,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 08e8b5c405182dbcc9348dcd3764425feb3dd366
+PODFILE CHECKSUM: 5c379d7fea80270c448162d6e691a593f81facd0
 
 COCOAPODS: 1.10.2

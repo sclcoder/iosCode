@@ -15,7 +15,8 @@ target 'SDPlayground' do
   pod 'TYPagerController'
   pod 'FWSideMenu'
   pod 'CWLateralSlide'
-  
+  pod 'DOPDropDownMenu-Enhanced'
+
   # Tool
   pod 'YTKNetwork'
 #  pod 'MJRefresh'
