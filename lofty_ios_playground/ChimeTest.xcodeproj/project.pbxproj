@@ -1,0 +1,460 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		601C8CDF2A9C8B0C007DB28D /* RRTestSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C8CDD2A9C8B0C007DB28D /* RRTestSecondViewController.m */; };
+		601C8CE02A9C8B0C007DB28D /* RRTestSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C8CDE2A9C8B0C007DB28D /* RRTestSecondViewController.xib */; };
+		601C8CE42A9D8D63007DB28D /* RROverlayPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C8CE32A9D8D63007DB28D /* RROverlayPresentationController.m */; };
+		77C575FE2A972F3F00831AC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C575FD2A972F3F00831AC2 /* AppDelegate.m */; };
+		77C576012A972F3F00831AC2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C576002A972F3F00831AC2 /* SceneDelegate.m */; };
+		77C576072A972F3F00831AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C576052A972F3F00831AC2 /* Main.storyboard */; };
+		77C576092A972F4200831AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C576082A972F4200831AC2 /* Assets.xcassets */; };
+		77C5760C2A972F4200831AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C5760A2A972F4200831AC2 /* LaunchScreen.storyboard */; };
+		77C5760F2A972F4200831AC2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C5760E2A972F4200831AC2 /* main.m */; };
+		77C576172A972FD400831AC2 /* RRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C576162A972FD400831AC2 /* RRTabBarController.m */; };
+		77C5761B2A9733B800831AC2 /* RRTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C5761A2A9733B800831AC2 /* RRTabBar.m */; };
+		77C5761F2A97366400831AC2 /* RRTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C5761E2A97366400831AC2 /* RRTestViewController.m */; };
+		77C576212A97532E00831AC2 /* RRTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C576202A97532E00831AC2 /* RRTestViewController.xib */; };
+		77C576242A97776B00831AC2 /* RRMoreReplaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C576232A97776B00831AC2 /* RRMoreReplaceViewController.m */; };
+		77C576272A985B9300831AC2 /* RRSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C576262A985B9300831AC2 /* RRSwiftViewController.swift */; };
+		77C5762A2A985D3F00831AC2 /* RRInsetLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C576292A985D3F00831AC2 /* RRInsetLabel.swift */; };
+		77C5762D2A985D5D00831AC2 /* RRSwift2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C5762B2A985D5D00831AC2 /* RRSwift2ViewController.swift */; };
+		77C5762E2A985D5D00831AC2 /* RRSwift2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C5762C2A985D5D00831AC2 /* RRSwift2ViewController.xib */; };
+		77C576302A9898A500831AC2 /* RRMoreReplaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C5762F2A9898A500831AC2 /* RRMoreReplaceViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		601C8CDC2A9C8B0C007DB28D /* RRTestSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTestSecondViewController.h; sourceTree = "<group>"; };
+		601C8CDD2A9C8B0C007DB28D /* RRTestSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTestSecondViewController.m; sourceTree = "<group>"; };
+		601C8CDE2A9C8B0C007DB28D /* RRTestSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRTestSecondViewController.xib; sourceTree = "<group>"; };
+		601C8CE22A9D8D63007DB28D /* RROverlayPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RROverlayPresentationController.h; sourceTree = "<group>"; };
+		601C8CE32A9D8D63007DB28D /* RROverlayPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RROverlayPresentationController.m; sourceTree = "<group>"; };
+		77C575F92A972F3F00831AC2 /* ChimeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChimeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77C575FC2A972F3F00831AC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		77C575FD2A972F3F00831AC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		77C575FF2A972F3F00831AC2 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		77C576002A972F3F00831AC2 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		77C576062A972F3F00831AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		77C576082A972F4200831AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77C5760B2A972F4200831AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		77C5760D2A972F4200831AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77C5760E2A972F4200831AC2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77C576152A972FD400831AC2 /* RRTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTabBarController.h; sourceTree = "<group>"; };
+		77C576162A972FD400831AC2 /* RRTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTabBarController.m; sourceTree = "<group>"; };
+		77C576192A9733B800831AC2 /* RRTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTabBar.h; sourceTree = "<group>"; };
+		77C5761A2A9733B800831AC2 /* RRTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTabBar.m; sourceTree = "<group>"; };
+		77C5761D2A97366400831AC2 /* RRTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTestViewController.h; sourceTree = "<group>"; };
+		77C5761E2A97366400831AC2 /* RRTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTestViewController.m; sourceTree = "<group>"; };
+		77C576202A97532E00831AC2 /* RRTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRTestViewController.xib; sourceTree = "<group>"; };
+		77C576222A97776B00831AC2 /* RRMoreReplaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRMoreReplaceViewController.h; sourceTree = "<group>"; };
+		77C576232A97776B00831AC2 /* RRMoreReplaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRMoreReplaceViewController.m; sourceTree = "<group>"; };
+		77C576252A985B9200831AC2 /* ChimeTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChimeTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		77C576262A985B9300831AC2 /* RRSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRSwiftViewController.swift; sourceTree = "<group>"; };
+		77C576292A985D3F00831AC2 /* RRInsetLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RRInsetLabel.swift; sourceTree = "<group>"; };
+		77C5762B2A985D5D00831AC2 /* RRSwift2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRSwift2ViewController.swift; sourceTree = "<group>"; };
+		77C5762C2A985D5D00831AC2 /* RRSwift2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRSwift2ViewController.xib; sourceTree = "<group>"; };
+		77C5762F2A9898A500831AC2 /* RRMoreReplaceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRMoreReplaceViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77C575F62A972F3F00831AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77C575F02A972F3F00831AC2 = {
+			isa = PBXGroup;
+			children = (
+				77C575FB2A972F3F00831AC2 /* ChimeTest */,
+				77C575FA2A972F3F00831AC2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77C575FA2A972F3F00831AC2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77C575F92A972F3F00831AC2 /* ChimeTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77C575FB2A972F3F00831AC2 /* ChimeTest */ = {
+			isa = PBXGroup;
+			children = (
+				77C576282A985D3000831AC2 /* Swift */,
+				77C5761C2A97362F00831AC2 /* VC */,
+				77C576182A972FF600831AC2 /* Tab */,
+				77C575FC2A972F3F00831AC2 /* AppDelegate.h */,
+				77C575FD2A972F3F00831AC2 /* AppDelegate.m */,
+				77C575FF2A972F3F00831AC2 /* SceneDelegate.h */,
+				77C576002A972F3F00831AC2 /* SceneDelegate.m */,
+				77C576052A972F3F00831AC2 /* Main.storyboard */,
+				77C576082A972F4200831AC2 /* Assets.xcassets */,
+				77C5760A2A972F4200831AC2 /* LaunchScreen.storyboard */,
+				77C5760D2A972F4200831AC2 /* Info.plist */,
+				77C5760E2A972F4200831AC2 /* main.m */,
+			);
+			path = ChimeTest;
+			sourceTree = "<group>";
+		};
+		77C576182A972FF600831AC2 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				77C576152A972FD400831AC2 /* RRTabBarController.h */,
+				77C576162A972FD400831AC2 /* RRTabBarController.m */,
+				77C576192A9733B800831AC2 /* RRTabBar.h */,
+				77C5761A2A9733B800831AC2 /* RRTabBar.m */,
+				601C8CE22A9D8D63007DB28D /* RROverlayPresentationController.h */,
+				601C8CE32A9D8D63007DB28D /* RROverlayPresentationController.m */,
+				77C576222A97776B00831AC2 /* RRMoreReplaceViewController.h */,
+				77C576232A97776B00831AC2 /* RRMoreReplaceViewController.m */,
+				77C5762F2A9898A500831AC2 /* RRMoreReplaceViewController.xib */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		77C5761C2A97362F00831AC2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				77C5761D2A97366400831AC2 /* RRTestViewController.h */,
+				77C5761E2A97366400831AC2 /* RRTestViewController.m */,
+				77C576202A97532E00831AC2 /* RRTestViewController.xib */,
+				601C8CDC2A9C8B0C007DB28D /* RRTestSecondViewController.h */,
+				601C8CDD2A9C8B0C007DB28D /* RRTestSecondViewController.m */,
+				601C8CDE2A9C8B0C007DB28D /* RRTestSecondViewController.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		77C576282A985D3000831AC2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				77C576252A985B9200831AC2 /* ChimeTest-Bridging-Header.h */,
+				77C576292A985D3F00831AC2 /* RRInsetLabel.swift */,
+				77C576262A985B9300831AC2 /* RRSwiftViewController.swift */,
+				77C5762B2A985D5D00831AC2 /* RRSwift2ViewController.swift */,
+				77C5762C2A985D5D00831AC2 /* RRSwift2ViewController.xib */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77C575F82A972F3F00831AC2 /* ChimeTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77C576122A972F4200831AC2 /* Build configuration list for PBXNativeTarget "ChimeTest" */;
+			buildPhases = (
+				77C575F52A972F3F00831AC2 /* Sources */,
+				77C575F62A972F3F00831AC2 /* Frameworks */,
+				77C575F72A972F3F00831AC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChimeTest;
+			productName = ChimeTest;
+			productReference = 77C575F92A972F3F00831AC2 /* ChimeTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77C575F12A972F3F00831AC2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					77C575F82A972F3F00831AC2 = {
+						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
+					};
+				};
+			};
+			buildConfigurationList = 77C575F42A972F3F00831AC2 /* Build configuration list for PBXProject "ChimeTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 77C575F02A972F3F00831AC2;
+			productRefGroup = 77C575FA2A972F3F00831AC2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77C575F82A972F3F00831AC2 /* ChimeTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77C575F72A972F3F00831AC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77C576212A97532E00831AC2 /* RRTestViewController.xib in Resources */,
+				77C5760C2A972F4200831AC2 /* LaunchScreen.storyboard in Resources */,
+				77C576092A972F4200831AC2 /* Assets.xcassets in Resources */,
+				77C576072A972F3F00831AC2 /* Main.storyboard in Resources */,
+				77C576302A9898A500831AC2 /* RRMoreReplaceViewController.xib in Resources */,
+				77C5762E2A985D5D00831AC2 /* RRSwift2ViewController.xib in Resources */,
+				601C8CE02A9C8B0C007DB28D /* RRTestSecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77C575F52A972F3F00831AC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				601C8CDF2A9C8B0C007DB28D /* RRTestSecondViewController.m in Sources */,
+				77C5761F2A97366400831AC2 /* RRTestViewController.m in Sources */,
+				77C5761B2A9733B800831AC2 /* RRTabBar.m in Sources */,
+				77C575FE2A972F3F00831AC2 /* AppDelegate.m in Sources */,
+				77C576172A972FD400831AC2 /* RRTabBarController.m in Sources */,
+				77C5760F2A972F4200831AC2 /* main.m in Sources */,
+				77C576242A97776B00831AC2 /* RRMoreReplaceViewController.m in Sources */,
+				77C576272A985B9300831AC2 /* RRSwiftViewController.swift in Sources */,
+				77C5762D2A985D5D00831AC2 /* RRSwift2ViewController.swift in Sources */,
+				77C576012A972F3F00831AC2 /* SceneDelegate.m in Sources */,
+				601C8CE42A9D8D63007DB28D /* RROverlayPresentationController.m in Sources */,
+				77C5762A2A985D3F00831AC2 /* RRInsetLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		77C576052A972F3F00831AC2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77C576062A972F3F00831AC2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		77C5760A2A972F4200831AC2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77C5760B2A972F4200831AC2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77C576102A972F4200831AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		77C576112A972F4200831AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77C576132A972F4200831AC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChimeTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renren.chime.tabbarVC.ChimeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChimeTest/Swift/ChimeTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77C576142A972F4200831AC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 687C4JR3J3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChimeTest/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.renren.chime.tabbarVC.ChimeTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ChimeTest/Swift/ChimeTest-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77C575F42A972F3F00831AC2 /* Build configuration list for PBXProject "ChimeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77C576102A972F4200831AC2 /* Debug */,
+				77C576112A972F4200831AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77C576122A972F4200831AC2 /* Build configuration list for PBXNativeTarget "ChimeTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77C576132A972F4200831AC2 /* Debug */,
+				77C576142A972F4200831AC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77C575F12A972F3F00831AC2 /* Project object */;
+}

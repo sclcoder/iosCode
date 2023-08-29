@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RRMoreReplaceViewController">
+            <connections>
+                <outlet property="cancelBtn" destination="T1h-UO-4ao" id="Odp-px-Lh5"/>
+                <outlet property="confirmBtn" destination="0CK-fk-gTJ" id="H1Q-uP-Fmj"/>
+                <outlet property="pushBtn" destination="3cj-pB-Gtb" id="V1T-Sn-Jwu"/>
+                <outlet property="view" destination="iN0-l3-epB" id="sAb-1C-7UK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0uz-ac-7cG">
+                    <rect key="frame" x="104.33333333333333" y="409" width="184.66666666666669" height="34.333333333333314"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CK-fk-gTJ">
+                            <rect key="frame" x="0.0" y="0.0" width="82.333333333333329" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="confirm"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1h-UO-4ao">
+                            <rect key="frame" x="102.33333333333334" y="0.0" width="82.333333333333343" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="cancle"/>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cj-pB-Gtb">
+                    <rect key="frame" x="165.66666666666666" y="331.66666666666669" width="62" height="34.333333333333314"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Push"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0uz-ac-7cG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DVn-gI-NF9"/>
+                <constraint firstItem="3cj-pB-Gtb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gzf-nP-bwD"/>
+                <constraint firstItem="0uz-ac-7cG" firstAttribute="top" secondItem="3cj-pB-Gtb" secondAttribute="bottom" constant="43" id="wkv-nO-0oM"/>
+                <constraint firstItem="0uz-ac-7cG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wvD-F6-jAp"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

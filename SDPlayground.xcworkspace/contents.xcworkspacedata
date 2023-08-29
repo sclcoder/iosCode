@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:lofty_ios_playground/ChimeTest.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Swift_ComminLine/Swift_ComminLine.xcodeproj">
    </FileRef>
    <FileRef
