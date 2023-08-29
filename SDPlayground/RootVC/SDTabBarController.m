@@ -43,8 +43,20 @@
 //    panGesture.delegate = self;
 //    [self.view addGestureRecognizer:panGesture];
     
+    [self setupUI];
     
     [self setupChildrenVC];
+}
+
+- (void)setupUI{
+    UITabBarAppearance *appearance = [UITabBarAppearance new];
+    appearance.backgroundColor = [UIColor systemBackgroundColor];
+
+    self.tabBar.standardAppearance = appearance;
+    if (@available(iOS 15.0, *)) {
+        self.tabBar.scrollEdgeAppearance = appearance;
+    }
+    self.tabBar.translucent = YES;
 }
 
 #pragma mark - action

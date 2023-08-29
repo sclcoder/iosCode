@@ -10,7 +10,7 @@
 @interface SDPresentedViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (weak, nonatomic) IBOutlet UIButton *dismissButton;
-@property (nonatomic, weak) __block NSLayoutConstraint *widthConstraint;
+@property (nonatomic, weak) __block  NSLayoutConstraint *widthConstraint;
 @end
 
 @implementation SDPresentedViewController

@@ -48,8 +48,16 @@
 }
 
 - (void)presentationTransitionWillBegin{
+    /// MARK: 调整containerView的层次
+    UITabBarController *tabVC = (UITabBarController *)self.presentingViewController;
+    [tabVC.view insertSubview:self.containerView belowSubview:tabVC.tabBar];
+    
+//    self.presentingViewController.definesPresentationContext;
+    
+    [self.presentingViewController.view window];
     
     [self.containerView addSubview:self.dimmingView];
+    
     self.dimmingView.bounds = CGRectMake(0, 0,self.containerView.bounds.size.width * 2 / 3, self.containerView.bounds.size.height * 2 / 3);
     self.dimmingView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     self.dimmingView.center = self.containerView.center;

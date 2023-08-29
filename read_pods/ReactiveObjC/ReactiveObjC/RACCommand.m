@@ -100,11 +100,12 @@ NSString * const RACUnderlyingCommandErrorKey = @"RACUnderlyingCommandErrorKey";
 	// has started, it should still receive any error from that execution.
 	RACMulticastConnection *errorsConnection = [[[self.addedExecutionSignalsSubject
 		flattenMap:^(RACSignal *signal) {
-			return [[signal
-				ignoreValues]
-				catch:^(NSError *error) {
-					return [RACSignal return:error];
-				}];
+        RACSignal *extractedExpr = [[signal
+                                     ignoreValues]
+                                    catch:^(NSError *error) {
+            return [RACSignal return:error];
+                }];
+        return extractedExpr;
 		}]
 		deliverOn:RACScheduler.mainThreadScheduler]
 		publish];

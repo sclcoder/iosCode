@@ -32,10 +32,12 @@
 */
 
 - (IBAction)onTapPresentButton:(UIButton *)sender {
-//    SDPresentedViewController *toVC = [SDPresentedViewController new];
-//    toVC.transitioningDelegate = self.strongReferanceDelegate;
-//    toVC.modalPresentationStyle = UIModalPresentationCustom;
-//    [self presentViewController:toVC animated:YES completion:nil];
+    SDPresentedViewController *toVC = [SDPresentedViewController new];
+    toVC.transitioningDelegate = self.strongReferanceDelegate;
+    toVC.modalPresentationStyle = UIModalPresentationCustom;
+//    toVC.modalPresentationStyle = UIModalPresentationOverCurrentContext; /// 不会走SDModalTransitionDelegate代理
+
+    [self presentViewController:toVC animated:YES completion:nil];
     
     
     /// Modal一个NavigationVC
@@ -48,10 +50,10 @@
 //    [self presentViewController:toVC animated:YES completion:nil];
     
     /// Modal一个TabVC
-    SDTabBarController *toVC = [SDTabBarController new];
-    toVC.transitioningDelegate = self.strongReferanceDelegate;
-    toVC.modalPresentationStyle = UIModalPresentationCustom;
-    [self presentViewController:toVC animated:YES completion:nil];
+//    SDTabBarController *toVC = [SDTabBarController new];
+//    toVC.transitioningDelegate = self.strongReferanceDelegate;
+//    toVC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+//    [self presentViewController:toVC animated:YES completion:nil];
 }
 
 

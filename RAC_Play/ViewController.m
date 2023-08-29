@@ -116,13 +116,14 @@
 //    [self test_zipWith];
     
     
-//    [self testSwitchToLatest];
+    [self testSwitchToLatest];
     
-    [self testCommand1];
-    [self testCommand2];
+//    [self testCommand];
+//    [self testCommand1];
+//    [self testCommand2];
     
     
-    [self testThrottle];
+//    [self testThrottle];
 
 }
 
