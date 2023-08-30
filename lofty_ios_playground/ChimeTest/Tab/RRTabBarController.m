@@ -18,7 +18,7 @@
 
 #define  KMoreTabBarItemTag 10000
 
-@interface RRTabBarController ()<UITabBarControllerDelegate,UITabBarDelegate,UIViewControllerTransitioningDelegate>
+@interface RRTabBarController ()<UITabBarControllerDelegate,UITabBarDelegate,UIViewControllerTransitioningDelegate,RRTabBarMoreReplaceDelegate>
 
 @property (nonatomic, strong) NSMutableArray *displayViewControllers;
 
@@ -36,20 +36,16 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.delegate = self;
-
+    
     [self setupUI];
     [self setupChildrenVC];
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
 }
 
 
 - (void)setupUI{
     UITabBarAppearance *appearance = [UITabBarAppearance new];
     appearance.backgroundColor = [UIColor systemBackgroundColor];
-
+    
     self.tabBar.standardAppearance = appearance;
     if (@available(iOS 15.0, *)) {
         self.tabBar.scrollEdgeAppearance = appearance;
@@ -71,10 +67,10 @@
     VC2.tabBarItem                  = item2;
     UINavigationController  *nav2   = [[UINavigationController alloc] initWithRootViewController:VC2];
     
-
+    
     RRTestViewController    *VC3    = [RRTestViewController new];
     VC3.tagName                     = @"VC3";
-
+    
     UITabBarItem            *item3  = [self configTabBarItemWithTitle:@"VC3" imageName:@"fishpond_normal" selectedImageName:@"fishpond_highlight"];
     VC3.tabBarItem                  = item3;
     UINavigationController  *nav3   = [[UINavigationController alloc] initWithRootViewController:VC3];
@@ -86,7 +82,7 @@
     VC4.tabBarItem                  = item4;
     UINavigationController  *nav4   = [[UINavigationController alloc] initWithRootViewController:VC4];
     
-
+    
     
     RRTestViewController    *VC5    = [RRTestViewController new];
     VC5.tagName                     = @"VC5";
@@ -94,14 +90,14 @@
     item5.tag                       =  KMoreTabBarItemTag; /// More tag
     VC5.tabBarItem                  = item5;
     UINavigationController  *nav5   = [[UINavigationController alloc] initWithRootViewController:VC5];
- 
+    
     RRTestViewController    *VC6    = [RRTestViewController new];
     VC6.tagName                     = @"VC6";
     UITabBarItem            *item6  = [self configTabBarItemWithTitle:@"VC6" imageName:@"more_normal" selectedImageName:@"more_highlight"];
     VC6.tabBarItem                  = item6;
     UINavigationController  *nav6   = [[UINavigationController alloc] initWithRootViewController:VC6];
-
-
+    
+    
     RRTestViewController    *VC7    = [RRTestViewController new];
     VC7.tagName                     = @"VC7";
     UITabBarItem            *item7  = [self configTabBarItemWithTitle:@"VC7" imageName:@"account_normal" selectedImageName:@"account_highlight"];
@@ -109,22 +105,22 @@
     UINavigationController  *nav7   = [[UINavigationController alloc] initWithRootViewController:VC7];
     
     
-//    [self setViewControllers:@[nav1,nav2,nav3,nav4,nav5]];
+    //    [self setViewControllers:@[nav1,nav2,nav3,nav4,nav5]];
     
     [self addChildViewController:nav1];
     [self addChildViewController:nav5];
     [self addChildViewController:nav2];
-
+    
     
     self.displayViewControllers = @[].mutableCopy;
     [self.displayViewControllers addObjectsFromArray:self.childViewControllers];
-
+    
     
     self.exchangedViewControllers = @[].mutableCopy;
     self.moreViewControllers = @[].mutableCopy;
     
-
-
+    
+    
     /// FIXME: 不应该此刻就初始化了VC,应该展示时创建。这里只是为了快速测试，暂时这么做
     [self.moreViewControllers addObject:nav3];
     [self.moreViewControllers addObject:nav4];
@@ -144,7 +140,7 @@
 #pragma mark - UITabBarControllerDelegate
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     BOOL isTapMore = viewController.tabBarItem.tag == KMoreTabBarItemTag;
-   
+    
     if(isTapMore){
         if(self.moreReplaceViewController == nil){
             if(self.selectedViewController != viewController){
@@ -174,29 +170,37 @@
     return YES;
 }
 
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-//    NSLog(@"%s",__func__);
-}
 
-
-#pragma mark - UITabBarDelegate
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-//    NSLog(@"%s",__func__);
-}
-
-
-#pragma mark - UIViewControllerTransitioningDelegate
-- (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented
-                                                      presentingViewController:(UIViewController *)presenting
-                                                          sourceViewController:(UIViewController *)source{
+#pragma mark - MoreReplace Method
+- (void)showMoreReplaceViewControllerAnimation:(BOOL)animation{
     
-    return [[RROverlayPresentationController alloc]
-            initWithPresentedViewController:presented
-            presentingViewController:source];
+    RRMoreReplaceViewController *moreReplaceVC = [[RRMoreReplaceViewController alloc] init];
+    self.moreReplaceViewController = moreReplaceVC;
+    
+    self.moreReplaceViewController.delegate = self;
+    
+    [self presentViewController:self.moreReplaceViewController animated:YES completion:^{
+        
+    }];
+    
+    /// 其他方案
+    //    [self addVC];
+}
+
+- (void)removeMoreReplaceViewControllerAnimation:(BOOL)animation{
+    [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 
-- (void)onConfirm{
+#pragma mark - RRTabBarMoreReplaceDelegate
+- (void)moreItemDidCancel:(RRMoreReplaceViewController *)moreVC{
+    [self removeMoreReplaceViewControllerAnimation:YES];
+    [self revertViewControllerForTabBarContoller];
+}
+
+- (void)moreItem:(RRMoreReplaceViewController *)moreVC didSelectedItemAtIndex:(NSInteger)index{
     
     [self removeMoreReplaceViewControllerAnimation:YES];
     
@@ -222,93 +226,15 @@
     self.viewControllers = self.displayViewControllers.copy;
     
     self.selectedViewController = vc;
-    
 }
 
 
-- (void)onCancel{
-    [self removeMoreReplaceViewControllerAnimation:YES];
-    [self revertViewControllerForTabBarContoller];
-}
-
-- (void)onPush{
-    [self removeMoreReplaceViewControllerAnimation:YES];
-    [self revertViewControllerForTabBarContoller];
-    
-    [self.selectedViewController pushViewController:[RRTestViewController new] animated:YES];
-}
-
-
-
-
-#pragma mark - MoreReplace Method
-- (void)showMoreReplaceViewControllerAnimation:(BOOL)animation{
-    RRMoreReplaceViewController *moreReplaceVC = [[RRMoreReplaceViewController alloc] init];
-    
-    self.moreReplaceViewController = moreReplaceVC;
+//- (void)onPush{
+//    [self removeMoreReplaceViewControllerAnimation:YES];
+//    [self revertViewControllerForTabBarContoller];
 //
-//    /// 注意, 直接在UITabbarController 添加子控制器，不会直接触发生命周期函数。作为 iOS 原生的 container controller，对 child controller 的添加/移除有内部的实现，从而导致 appear 相关的函数没有执。
-//    /**
-//     Discussion
-//     If you are implementing a custom container controller, use this method to tell the child that its views are about to appear or disappear. Do not invoke viewWillAppear(_:), viewWillDisappear(_:), viewDidAppear(_:), or viewDidDisappear(_:) directly.
-//
-//     func beginAppearanceTransition(_ isAppearing: Bool, animated: Bool)
-//     */
-//
-//    /// 手动控制生命周期
-//    [self.moreReplaceViewController beginAppearanceTransition:YES animated:YES];
-//    [self addChildViewController:self.moreReplaceViewController];
-//    [self.view insertSubview:self.moreReplaceViewController.view belowSubview:self.tabBar];
-//
-//
-//    CGFloat height = 660;
-//    CGFloat containerH = self.view.bounds.size.height;
-//    CGFloat containerW = self.view.bounds.size.width;
-//
-//    self.moreReplaceViewController.view.frame = CGRectMake(0, containerH, containerW, height);
-//
-//    [UIView animateWithDuration:0.25 animations:^{
-//        self.moreReplaceViewController.view.frame = CGRectMake(0, containerH - height, containerW, height);
-//    } completion:^(BOOL finished) {
-//        [self.moreReplaceViewController endAppearanceTransition];
-//        [self.moreReplaceViewController didMoveToParentViewController:self];
-//
-//        [self.moreReplaceViewController.confirmBtn addTarget:self action:@selector(onConfirm) forControlEvents:UIControlEventTouchUpInside];
-//        [self.moreReplaceViewController.cancelBtn addTarget:self action:@selector(onCancel) forControlEvents:UIControlEventTouchUpInside];
-//    }];
-    
-    self.moreReplaceViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    self.moreReplaceViewController.modalTransitionStyle   = UIModalTransitionStyleCoverVertical;
-    
-    self.moreReplaceViewController.modalPresentationStyle = UIModalPresentationCustom;
-    self.moreReplaceViewController.transitioningDelegate  = self;
-    
-
-    [self presentViewController:self.moreReplaceViewController animated:YES completion:^{
-        
-        [self.moreReplaceViewController.pushBtn addTarget:self action:@selector(onPush) forControlEvents:UIControlEventTouchUpInside];
-        
-        [self.moreReplaceViewController.confirmBtn addTarget:self action:@selector(onConfirm) forControlEvents:UIControlEventTouchUpInside];
-        
-        [self.moreReplaceViewController.cancelBtn addTarget:self action:@selector(onCancel) forControlEvents:UIControlEventTouchUpInside];
-        
-    }];
-}
-
-- (void)removeMoreReplaceViewControllerAnimation:(BOOL)animation{
-    /// 手动控制生命周期
-//    [self.moreReplaceViewController beginAppearanceTransition:NO animated:YES];
-//    [self.moreReplaceViewController willMoveToParentViewController:nil];
-//    [self.moreReplaceViewController.view removeFromSuperview];
-//    [self.moreReplaceViewController removeFromParentViewController];
-//    [self.moreReplaceViewController endAppearanceTransition];
-//
-//    self.moreReplaceViewController = nil;
-    
-    [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
+//    [self.selectedViewController pushViewController:[RRTestViewController new] animated:YES];
+//}
 
 
 
@@ -320,7 +246,7 @@
     
     UIViewController *firstVC = self.exchangedViewControllers.firstObject;
     UIViewController *lastVC  = self.exchangedViewControllers.lastObject;
-
+    
     NSInteger fromIndex = [self.displayViewControllers indexOfObject:firstVC];
     NSInteger toIndex   = [self.displayViewControllers indexOfObject:lastVC];
     
@@ -338,7 +264,7 @@
     
     UIViewController *firstVC = self.exchangedViewControllers.firstObject;
     UIViewController *lastVC  = self.exchangedViewControllers.lastObject;
-
+    
     NSInteger fromIndex = [self.displayViewControllers indexOfObject:firstVC];
     NSInteger toIndex   = [self.displayViewControllers indexOfObject:lastVC];
     
@@ -352,4 +278,51 @@
     
     [self.exchangedViewControllers removeAllObjects];
 }
+
+
+
+- (void)addVC{
+    //  以下方案是直接添加ChildViewController
+    //    /// 注意, 直接在UITabbarController 添加子控制器，不会直接触发生命周期函数。作为 iOS 原生的 container controller，对 child controller 的添加/移除有内部的实现，从而导致 appear 相关的函数没有执。
+    //    /**
+    //     Discussion
+    //     If you are implementing a custom container controller, use this method to tell the child that its views are about to appear or disappear. Do not invoke viewWillAppear(_:), viewWillDisappear(_:), viewDidAppear(_:), or viewDidDisappear(_:) directly.
+    //
+    //     func beginAppearanceTransition(_ isAppearing: Bool, animated: Bool)
+    //     */
+    //
+    //    /// 手动控制生命周期
+    //    [self.moreReplaceViewController beginAppearanceTransition:YES animated:YES];
+    //    [self addChildViewController:self.moreReplaceViewController];
+    //    [self.view insertSubview:self.moreReplaceViewController.view belowSubview:self.tabBar];
+    //
+    //
+    //    CGFloat height = 660;
+    //    CGFloat containerH = self.view.bounds.size.height;
+    //    CGFloat containerW = self.view.bounds.size.width;
+    //
+    //    self.moreReplaceViewController.view.frame = CGRectMake(0, containerH, containerW, height);
+    //
+    //    [UIView animateWithDuration:0.25 animations:^{
+    //        self.moreReplaceViewController.view.frame = CGRectMake(0, containerH - height, containerW, height);
+    //    } completion:^(BOOL finished) {
+    //        [self.moreReplaceViewController endAppearanceTransition];
+    //        [self.moreReplaceViewController didMoveToParentViewController:self];
+    //
+    //        [self.moreReplaceViewController.confirmBtn addTarget:self action:@selector(onConfirm) forControlEvents:UIControlEventTouchUpInside];
+    //        [self.moreReplaceViewController.cancelBtn addTarget:self action:@selector(onCancel) forControlEvents:UIControlEventTouchUpInside];
+    //    }];
+}
+
+- (void)removeVC{
+    /// 手动控制生命周期
+    //    [self.moreReplaceViewController beginAppearanceTransition:NO animated:YES];
+    //    [self.moreReplaceViewController willMoveToParentViewController:nil];
+    //    [self.moreReplaceViewController.view removeFromSuperview];
+    //    [self.moreReplaceViewController removeFromParentViewController];
+    //    [self.moreReplaceViewController endAppearanceTransition];
+    //
+    //    self.moreReplaceViewController = nil;
+}
+
 @end

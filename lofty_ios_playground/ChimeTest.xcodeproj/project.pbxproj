@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6015DAFE2A9F1D8400B70CC2 /* RRPresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015DAFD2A9F1D8400B70CC2 /* RRPresentAnimationController.m */; };
+		6015DB012A9F355000B70CC2 /* RRBasePresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015DB002A9F355000B70CC2 /* RRBasePresentedViewController.m */; };
 		601C8CDF2A9C8B0C007DB28D /* RRTestSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C8CDD2A9C8B0C007DB28D /* RRTestSecondViewController.m */; };
 		601C8CE02A9C8B0C007DB28D /* RRTestSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 601C8CDE2A9C8B0C007DB28D /* RRTestSecondViewController.xib */; };
 		601C8CE42A9D8D63007DB28D /* RROverlayPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C8CE32A9D8D63007DB28D /* RROverlayPresentationController.m */; };
@@ -29,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6015DAFC2A9F1D8400B70CC2 /* RRPresentAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRPresentAnimationController.h; sourceTree = "<group>"; };
+		6015DAFD2A9F1D8400B70CC2 /* RRPresentAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRPresentAnimationController.m; sourceTree = "<group>"; };
+		6015DAFF2A9F355000B70CC2 /* RRBasePresentedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRBasePresentedViewController.h; sourceTree = "<group>"; };
+		6015DB002A9F355000B70CC2 /* RRBasePresentedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRBasePresentedViewController.m; sourceTree = "<group>"; };
 		601C8CDC2A9C8B0C007DB28D /* RRTestSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTestSecondViewController.h; sourceTree = "<group>"; };
 		601C8CDD2A9C8B0C007DB28D /* RRTestSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTestSecondViewController.m; sourceTree = "<group>"; };
 		601C8CDE2A9C8B0C007DB28D /* RRTestSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRTestSecondViewController.xib; sourceTree = "<group>"; };
@@ -72,6 +78,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6015DAFB2A9F137900B70CC2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				601C8CE22A9D8D63007DB28D /* RROverlayPresentationController.h */,
+				601C8CE32A9D8D63007DB28D /* RROverlayPresentationController.m */,
+				6015DAFC2A9F1D8400B70CC2 /* RRPresentAnimationController.h */,
+				6015DAFD2A9F1D8400B70CC2 /* RRPresentAnimationController.m */,
+				6015DAFF2A9F355000B70CC2 /* RRBasePresentedViewController.h */,
+				6015DB002A9F355000B70CC2 /* RRBasePresentedViewController.m */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		77C575F02A972F3F00831AC2 = {
 			isa = PBXGroup;
 			children = (
@@ -110,12 +129,11 @@
 		77C576182A972FF600831AC2 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
+				6015DAFB2A9F137900B70CC2 /* Presentation */,
 				77C576152A972FD400831AC2 /* RRTabBarController.h */,
 				77C576162A972FD400831AC2 /* RRTabBarController.m */,
 				77C576192A9733B800831AC2 /* RRTabBar.h */,
 				77C5761A2A9733B800831AC2 /* RRTabBar.m */,
-				601C8CE22A9D8D63007DB28D /* RROverlayPresentationController.h */,
-				601C8CE32A9D8D63007DB28D /* RROverlayPresentationController.m */,
 				77C576222A97776B00831AC2 /* RRMoreReplaceViewController.h */,
 				77C576232A97776B00831AC2 /* RRMoreReplaceViewController.m */,
 				77C5762F2A9898A500831AC2 /* RRMoreReplaceViewController.xib */,
@@ -224,9 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				601C8CDF2A9C8B0C007DB28D /* RRTestSecondViewController.m in Sources */,
+				6015DB012A9F355000B70CC2 /* RRBasePresentedViewController.m in Sources */,
 				77C5761F2A97366400831AC2 /* RRTestViewController.m in Sources */,
 				77C5761B2A9733B800831AC2 /* RRTabBar.m in Sources */,
 				77C575FE2A972F3F00831AC2 /* AppDelegate.m in Sources */,
+				6015DAFE2A9F1D8400B70CC2 /* RRPresentAnimationController.m in Sources */,
 				77C576172A972FD400831AC2 /* RRTabBarController.m in Sources */,
 				77C5760F2A972F4200831AC2 /* main.m in Sources */,
 				77C576242A97776B00831AC2 /* RRMoreReplaceViewController.m in Sources */,
