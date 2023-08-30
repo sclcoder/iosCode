@@ -149,16 +149,17 @@
             [self showMoreReplaceViewControllerAnimation:YES];
             
         } else {
-            [self removeMoreReplaceViewControllerAnimation:YES];
             [self revertViewControllerForTabBarContoller];
+            [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:nil];
         }
         return  NO;
     }
     
     
     if (self.selectedViewController.tabBarItem.tag  == KMoreTabBarItemTag){
-        [self removeMoreReplaceViewControllerAnimation:YES];
         
+        [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:nil];
+
         if([self.exchangedViewControllers containsObject:viewController]){
             [self revertViewControllerForTabBarContoller];
             return  NO;
@@ -166,6 +167,7 @@
             [self revertViewControllerForTabBarContoller];
             return YES;
         }
+        
     }
     return YES;
 }
@@ -187,23 +189,23 @@
     //    [self addVC];
 }
 
-- (void)removeMoreReplaceViewControllerAnimation:(BOOL)animation{
-    [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
-
+//- (void)removeMoreReplaceViewControllerAnimation:(BOOL)animation{
+//    [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:^{
+//
+//    }];
+//}
 
 #pragma mark - RRTabBarMoreReplaceDelegate
 - (void)moreItemDidCancel:(RRMoreReplaceViewController *)moreVC{
-    [self removeMoreReplaceViewControllerAnimation:YES];
-    [self revertViewControllerForTabBarContoller];
+    [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:^{
+        [self revertViewControllerForTabBarContoller];
+    }];
 }
 
 - (void)moreItem:(RRMoreReplaceViewController *)moreVC didSelectedItemAtIndex:(NSInteger)index{
     
-    [self removeMoreReplaceViewControllerAnimation:YES];
-    
+    [self.moreReplaceViewController dismissViewControllerAnimated:YES completion:nil];
+
     [self revertViewControllerForTabBarContoller];
     
     __block NSUInteger moreItemIndex = self.displayViewControllers.count - 1;

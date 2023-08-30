@@ -28,6 +28,8 @@
     [super viewDidLoad];
     NSLog(@"%s",__func__);
     
+    
+    
     [self.view addSubview:self.tableView];
     
     [self.pushBtn addTarget:self action:@selector(onPush) forControlEvents:UIControlEventTouchUpInside];
@@ -81,11 +83,18 @@
     if(self.delegate && [self.delegate respondsToSelector:@selector(moreItemDidCancel:)]){
         [self.delegate moreItemDidCancel:self];
     }
-    
 }
 
 - (void)onPush{
     
+}
+
+
+
+- (void)interactiveFinishedDismiss{
+    if(self.delegate && [self.delegate respondsToSelector:@selector(moreItemDidCancel:)]){
+        [self.delegate moreItemDidCancel:self];
+    }
 }
 
 #pragma mark - RROverlayPresentationControllerDelegate

@@ -52,6 +52,12 @@
 }
 
 
+
+- (void)interactiveFinishedDismiss{
+    
+}
+
+
 #pragma mark - Gesture Event
 - (void)onPan:(UIPanGestureRecognizer *)panGesture{
     CGPoint translation = [panGesture translationInView:panGesture.view];
@@ -62,7 +68,12 @@
         case UIGestureRecognizerStateBegan:{
             self.interactiveTransition = [UIPercentDrivenInteractiveTransition new];
             self.interactionInProgress = YES;
-            [self dismissViewControllerAnimated:YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:^{
+                if(self.shouldCompleteTransition){
+                    NSLog(@"---------------");
+                    [self interactiveFinishedDismiss];
+                }
+            }];
         }
             break;
         case UIGestureRecognizerStateChanged:{

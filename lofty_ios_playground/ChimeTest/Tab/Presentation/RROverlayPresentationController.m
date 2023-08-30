@@ -119,8 +119,9 @@
 
 - (void)presentationTransitionDidEnd:(BOOL)completed {
     // If the presentation was canceled, remove the dimming view.
-    if (!completed)
+    if (!completed){
         [self.dimmingView removeFromSuperview];
+    }
 }
 
 
@@ -140,8 +141,9 @@
  
 - (void)dismissalTransitionDidEnd:(BOOL)completed {
     // If the dismissal was successful, remove the dimming view.
-    if (completed)
+    if (completed){
         [self.dimmingView removeFromSuperview];
+    }
 }
 
 
@@ -151,6 +153,10 @@
     if(self.eventDelegate && [self.eventDelegate respondsToSelector:@selector(onTapDimmingView)]){
         [self.eventDelegate onTapDimmingView];
     }
+    
+//    [self.presentedViewController dismissViewControllerAnimated:YES completion:^{
+//
+//    }];
 }
 
 
