@@ -78,6 +78,7 @@
 		776E835E2655150700A3CE78 /* RRSlidableProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E835D2655150700A3CE78 /* RRSlidableProgressView.m */; };
 		776E836F265519A400A3CE78 /* SDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E836E265519A400A3CE78 /* SDTabBarController.m */; };
 		776E837526551E3500A3CE78 /* SDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E837426551E3500A3CE78 /* SDNavigationController.m */; };
+		7774C11A2B0380BC00BE298D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7774C1192B0380BC00BE298D /* TestViewController.m */; };
 		7776F81B2754C77C00E3DF13 /* SDSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7776F81A2754C77C00E3DF13 /* SDSettingViewController.m */; };
 		77C728E226FDE6950072322D /* SDAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C728E026FDE6950072322D /* SDAlertViewController.m */; };
 		77C728E326FDE6950072322D /* SDAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C728E126FDE6950072322D /* SDAlertViewController.xib */; };
@@ -257,6 +258,8 @@
 		776E836E265519A400A3CE78 /* SDTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDTabBarController.m; sourceTree = "<group>"; };
 		776E837326551E3500A3CE78 /* SDNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNavigationController.h; sourceTree = "<group>"; };
 		776E837426551E3500A3CE78 /* SDNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNavigationController.m; sourceTree = "<group>"; };
+		7774C1182B0380BC00BE298D /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		7774C1192B0380BC00BE298D /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		7776F8192754C77C00E3DF13 /* SDSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDSettingViewController.h; sourceTree = "<group>"; };
 		7776F81A2754C77C00E3DF13 /* SDSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSettingViewController.m; sourceTree = "<group>"; };
 		77C728DF26FDE6950072322D /* SDAlertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAlertViewController.h; sourceTree = "<group>"; };
@@ -707,6 +710,15 @@
 			path = CommonViews;
 			sourceTree = "<group>";
 		};
+		7774C1172B03809E00BE298D /* TestVC */ = {
+			isa = PBXGroup;
+			children = (
+				7774C1182B0380BC00BE298D /* TestViewController.h */,
+				7774C1192B0380BC00BE298D /* TestViewController.m */,
+			);
+			path = TestVC;
+			sourceTree = "<group>";
+		};
 		7776F8182754C75600E3DF13 /* SettingVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +738,7 @@
 		77DFF81227BBAEC000C1E60E /* CodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				7774C1172B03809E00BE298D /* TestVC */,
 				2AF9163E27C3E3DA00C31734 /* Tools */,
 				77DFF81327BBAEC000C1E60E /* AppDelegate.h */,
 				77DFF81427BBAEC000C1E60E /* AppDelegate.m */,
@@ -1425,6 +1438,7 @@
 				2AF9164727C3E9F500C31734 /* ChatTextCell.m in Sources */,
 				77DFF86E27C37E5C00C1E60E /* ChatTableViewController.m in Sources */,
 				2AF9164427C3E48F00C31734 /* YYWeakProxy.m in Sources */,
+				7774C11A2B0380BC00BE298D /* TestViewController.m in Sources */,
 				77DFF81527BBAEC000C1E60E /* AppDelegate.m in Sources */,
 				2A2A544727CFBE4000DD594A /* WCDBTestViewController.mm in Sources */,
 				77DFF82627BBAEC300C1E60E /* main.m in Sources */,
