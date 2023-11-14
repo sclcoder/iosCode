@@ -28,7 +28,7 @@
      */
     dispatch_async(dispatch_get_main_queue(), ^{
         UITextPosition *position = [_textField endOfDocument];
-        textField.selectedTextRange = [_textField textRangeFromPosition:position toPosition:position];
+        _textField.selectedTextRange = [_textField textRangeFromPosition:position toPosition:position];
     });
     
 }
