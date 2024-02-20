@@ -1,0 +1,16 @@
+PODS:
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - YYText (from `../read_pods/YYText`)
+
+EXTERNAL SOURCES:
+  YYText:
+    :path: "../read_pods/YYText"
+
+SPEC CHECKSUMS:
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 73bf70e8384a3890ff6b809ad567c7f38b58fc55
+
+COCOAPODS: 1.10.2

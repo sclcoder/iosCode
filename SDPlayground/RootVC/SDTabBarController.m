@@ -25,6 +25,10 @@
 /// transition
 #import "SDTabBarVCDelegate.h"
 
+#import "RRPostListViewController.h"
+
+
+
 @interface SDTabBarController ()<UIGestureRecognizerDelegate>
 
 @property(nonatomic,strong) SDTabBarVCDelegate<UITabBarControllerDelegate> *strongReferenceDelegate;
@@ -159,7 +163,14 @@
     sideVC.leftMenuWidth = UIScreen.mainScreen.bounds.size.width * 0.7;
     sideVC.title = @"side";
     
-    [self setViewControllers:@[modalNav,alertVCNav,pushNav,pageNav,sideVC]];
+    
+    
+    
+    RRPostListViewController *postVc = [RRPostListViewController new];
+    postVc.title = @"postVc";
+    SDNavigationController *postNav = [[SDNavigationController alloc] initWithRootViewController:postVc];
+    
+    [self setViewControllers:@[postVc,modalNav,alertVCNav,pageNav,sideVC]];
 }
 
 

@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1842C83F2B84928F00422E8C /* RRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842C83D2B84928F00422E8C /* RRPostTableViewCell.m */; };
+		1842C8402B84928F00422E8C /* RRPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1842C83E2B84928F00422E8C /* RRPostTableViewCell.xib */; };
+		18CBD9462B848E93004E663A /* RRPostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CBD9452B848E93004E663A /* RRPostListViewController.m */; };
+		18CBD9492B848EF4004E663A /* RRPostListLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CBD9482B848EF4004E663A /* RRPostListLayout.m */; };
 		25526FE75E5C0240C1E7F5C0 /* libPods-Code_Interview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D139A8933922B4C43D55F9A2 /* libPods-Code_Interview.a */; };
 		2A2A544727CFBE4000DD594A /* WCDBTestViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A544627CFBE4000DD594A /* WCDBTestViewController.mm */; };
 		2A68C6B027C7C949000EA47F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A68C6AF27C7C949000EA47F /* AppDelegate.m */; };
@@ -121,6 +125,13 @@
 /* Begin PBXFileReference section */
 		0F05211A81AF6C44852C2E71 /* Pods-Swift_Play.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Play.debug.xcconfig"; path = "Target Support Files/Pods-Swift_Play/Pods-Swift_Play.debug.xcconfig"; sourceTree = "<group>"; };
 		152B8E566FC49531A03B21D1 /* Pods-SDPlayground.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDPlayground.debug.xcconfig"; path = "Target Support Files/Pods-SDPlayground/Pods-SDPlayground.debug.xcconfig"; sourceTree = "<group>"; };
+		1842C83C2B84928F00422E8C /* RRPostTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRPostTableViewCell.h; sourceTree = "<group>"; };
+		1842C83D2B84928F00422E8C /* RRPostTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRPostTableViewCell.m; sourceTree = "<group>"; };
+		1842C83E2B84928F00422E8C /* RRPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRPostTableViewCell.xib; sourceTree = "<group>"; };
+		18CBD9442B848E93004E663A /* RRPostListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRPostListViewController.h; sourceTree = "<group>"; };
+		18CBD9452B848E93004E663A /* RRPostListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRPostListViewController.m; sourceTree = "<group>"; };
+		18CBD9472B848EF4004E663A /* RRPostListLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRPostListLayout.h; sourceTree = "<group>"; };
+		18CBD9482B848EF4004E663A /* RRPostListLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRPostListLayout.m; sourceTree = "<group>"; };
 		2A2A544527CFBE4000DD594A /* WCDBTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCDBTestViewController.h; sourceTree = "<group>"; };
 		2A2A544627CFBE4000DD594A /* WCDBTestViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WCDBTestViewController.mm; sourceTree = "<group>"; };
 		2A49679627F9CAD400461CF2 /* studySwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = studySwift.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -388,6 +399,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1842C8412B8498C200422E8C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				18CBD9472B848EF4004E663A /* RRPostListLayout.h */,
+				18CBD9482B848EF4004E663A /* RRPostListLayout.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		18CFB9122B848BBE00204780 /* LayoutVC */ = {
+			isa = PBXGroup;
+			children = (
+				1842C8412B8498C200422E8C /* CollectionView */,
+				18CBD9442B848E93004E663A /* RRPostListViewController.h */,
+				18CBD9452B848E93004E663A /* RRPostListViewController.m */,
+				1842C83C2B84928F00422E8C /* RRPostTableViewCell.h */,
+				1842C83D2B84928F00422E8C /* RRPostTableViewCell.m */,
+				1842C83E2B84928F00422E8C /* RRPostTableViewCell.xib */,
+			);
+			path = LayoutVC;
+			sourceTree = "<group>";
+		};
 		2A2A544827CFC1A500DD594A /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +688,7 @@
 		776E83152655135600A3CE78 /* SDPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				18CFB9122B848BBE00204780 /* LayoutVC */,
 				7776F8182754C75600E3DF13 /* SettingVC */,
 				77F47E2A26F4455F00FF1359 /* TransitionVC */,
 				776E8366265518CF00A3CE78 /* App */,
@@ -1092,6 +1126,7 @@
 				77C728E326FDE6950072322D /* SDAlertViewController.xib in Resources */,
 				77F47E3726F44A0D00FF1359 /* SDPopViewController.xib in Resources */,
 				776E83262655135800A3CE78 /* LaunchScreen.storyboard in Resources */,
+				1842C8402B84928F00422E8C /* RRPostTableViewCell.xib in Resources */,
 				776E83232655135800A3CE78 /* Assets.xcassets in Resources */,
 				776E83212655135600A3CE78 /* Main.storyboard in Resources */,
 				77F47E4E26F5D81200FF1359 /* SDPresentedViewController.xib in Resources */,
@@ -1404,6 +1439,7 @@
 				77F47E4826F5D80200FF1359 /* SDPresentingViewController.m in Sources */,
 				77F47E3126F4497000FF1359 /* SDPushViewController.m in Sources */,
 				77F47E3B26F58B8C00FF1359 /* SDSlideAnimationController.m in Sources */,
+				1842C83F2B84928F00422E8C /* RRPostTableViewCell.m in Sources */,
 				776E837526551E3500A3CE78 /* SDNavigationController.m in Sources */,
 				776E835E2655150700A3CE78 /* RRSlidableProgressView.m in Sources */,
 				7776F81B2754C77C00E3DF13 /* SDSettingViewController.m in Sources */,
@@ -1411,6 +1447,7 @@
 				77F47E5126F5D94900FF1359 /* SDModalTransitionDelegate.m in Sources */,
 				7761F7D9267C37BC00066CFF /* RRTestViewController.m in Sources */,
 				77C728E226FDE6950072322D /* SDAlertViewController.m in Sources */,
+				18CBD9462B848E93004E663A /* RRPostListViewController.m in Sources */,
 				77F47E5426F5F48600FF1359 /* SDOverlyPresentionController.m in Sources */,
 				77F47E4126F5BA1100FF1359 /* SDCardAnimationController.m in Sources */,
 				2A83376526F73FB3007C5828 /* SDTabBarVCDelegate.m in Sources */,
@@ -1424,6 +1461,7 @@
 				7761F7EA267C38E200066CFF /* MenuViewController.m in Sources */,
 				7761F7DA267C37BC00066CFF /* RRNewWebViewController.m in Sources */,
 				7761F7E7267C380600066CFF /* SDSideViewController.m in Sources */,
+				18CBD9492B848EF4004E663A /* RRPostListLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

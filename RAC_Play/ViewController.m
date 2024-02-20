@@ -96,7 +96,7 @@
     
 //    [self test_selector];
     
-//    [self demo6];
+    [self demo7];
     
     
     
@@ -116,7 +116,7 @@
 //    [self test_zipWith];
     
     
-    [self testSwitchToLatest];
+//    [self testSwitchToLatest];
     
 //    [self testCommand];
 //    [self testCommand1];
