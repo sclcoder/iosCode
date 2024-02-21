@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="708" id="KGk-i7-Jjw" customClass="RRPostTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="413" height="708"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="557" id="KGk-i7-Jjw" customClass="RRPostTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="413" height="557"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="413" height="708"/>
+                <rect key="frame" x="0.0" y="0.0" width="413" height="557"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd3-RF-eZe">
-                        <rect key="frame" x="0.0" y="0.0" width="413" height="708"/>
+                        <rect key="frame" x="0.0" y="0.0" width="413" height="557"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JtF-5l-esa">
                                 <rect key="frame" x="0.0" y="0.0" width="413" height="80"/>
@@ -36,11 +36,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Czo-38-ngT">
-                                <rect key="frame" x="0.0" y="171" width="413" height="400"/>
+                                <rect key="frame" x="0.0" y="171" width="413" height="366"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="isV-0R-D4Z"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -50,7 +47,7 @@
                             <constraint firstItem="Czo-38-ngT" firstAttribute="leading" secondItem="bd3-RF-eZe" secondAttribute="leading" id="DdV-Me-YTV"/>
                             <constraint firstAttribute="trailing" secondItem="Czo-38-ngT" secondAttribute="trailing" id="TIG-w8-Cs7"/>
                             <constraint firstItem="XeA-aj-fqz" firstAttribute="top" secondItem="JtF-5l-esa" secondAttribute="bottom" constant="10" id="Ugw-eI-ZIa"/>
-                            <constraint firstAttribute="bottom" secondItem="Czo-38-ngT" secondAttribute="bottom" priority="250" constant="20" id="cxN-X3-xId"/>
+                            <constraint firstAttribute="bottom" secondItem="Czo-38-ngT" secondAttribute="bottom" priority="750" constant="20" id="cxN-X3-xId"/>
                             <constraint firstItem="Czo-38-ngT" firstAttribute="top" secondItem="XeA-aj-fqz" secondAttribute="bottom" constant="20" id="e1t-QD-D4H"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XeA-aj-fqz" secondAttribute="trailing" constant="10" id="f2A-dF-IAd"/>
                             <constraint firstAttribute="trailing" secondItem="JtF-5l-esa" secondAttribute="trailing" id="gjy-pk-4V3"/>
@@ -69,7 +66,7 @@
             <connections>
                 <outlet property="layoutView" destination="Czo-38-ngT" id="ZYl-o2-B8j"/>
             </connections>
-            <point key="canvasLocation" x="93.89312977099236" y="108.45070422535211"/>
+            <point key="canvasLocation" x="93.89312977099236" y="55.281690140845072"/>
         </tableViewCell>
     </objects>
     <resources>

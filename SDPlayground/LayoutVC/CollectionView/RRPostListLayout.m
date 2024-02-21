@@ -21,6 +21,7 @@
     [super prepareLayout];
     self.cellCount = [self.collectionView numberOfItemsInSection:0];
     self.cellCount = (self.cellCount > 5) ? 5 : self.cellCount;
+    self.contentHeight = 0;
 }
 
 

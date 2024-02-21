@@ -39,8 +39,20 @@
 
 - (void)setItemCount:(NSUInteger)itemCount{
     _itemCount = itemCount;
-    
     [self.collectionView reloadData];
+    [self.collectionView layoutIfNeeded];
+}
+
+
+- (CGSize)systemLayoutSizeFittingSize:(CGSize)targetSize withHorizontalFittingPriority:(UILayoutPriority)horizontalFittingPriority verticalFittingPriority:(UILayoutPriority)verticalFittingPriority{
+    
+    CGSize size = [super systemLayoutSizeFittingSize:targetSize withHorizontalFittingPriority:horizontalFittingPriority verticalFittingPriority:verticalFittingPriority];
+    
+//    [self.collectionView layoutIfNeeded];
+    CGFloat collectionH = self.collectionView.collectionViewLayout.collectionViewContentSize.height;
+    CGFloat height = size.height + collectionH;
+    
+    return CGSizeMake(size.width, height);
 }
 
 #pragma mark - UICollection dataSource 、delegate
@@ -72,8 +84,7 @@
         flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
         flowLayout.minimumLineSpacing = 5;
         flowLayout.minimumInteritemSpacing = 5;
-        
-        flowLayout.itemSize = CGSizeMake(80, 40);
+        flowLayout.itemSize = CGSizeMake(0, 0);
         
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:flowLayout];
 

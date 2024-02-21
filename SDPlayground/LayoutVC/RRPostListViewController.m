@@ -60,6 +60,8 @@
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
+        _tableView.estimatedRowHeight = 100;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
         
         [_tableView registerNib:[UINib nibWithNibName:@"RRPostTableViewCell" bundle:nil] forCellReuseIdentifier:@"RRPostTableViewCell"];
     }
