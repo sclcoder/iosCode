@@ -29,13 +29,25 @@
     }];
 }
 
+//- (void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//    /// 为了处理初始布局时RRPostListLayout中self.collectionView.frame 不准确，这里重新刷新一下
+//    [self.tableView reloadData];
+//}
+//
+//- (void)viewDidLayoutSubviews{
+//    [super viewDidLayoutSubviews];
+//    /// 为了处理初始布局时RRPostListLayout中self.collectionView.frame 不准确，这里重新刷新一下
+//    [self.tableView reloadData];
+//}
+
 #pragma mark - tableView delegate & datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1000;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -47,6 +59,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
 
 
 # pragma mark - lazy add

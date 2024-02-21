@@ -9,7 +9,7 @@
 #import "RRPostListLayout.h"
 
 
-@interface RRPostTableViewCell ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface RRPostTableViewCell ()<UICollectionViewDelegate,UICollectionViewDataSource,RRPostListLayoutDelegate>
 
 @property (strong, nonatomic) UICollectionView *collectionView;
 
@@ -74,6 +74,14 @@
     
 }
 
+
+#pragma mark - RRPostListLayoutDelegate
+- (CGFloat)collectionViewWidth:(RRPostListLayout *)layout{
+//    return self.bounds.size.width - 10;
+    return [UIScreen mainScreen].bounds.size.width - 10;
+
+}
+
 #pragma mark - collectionView
 - (UICollectionView *)collectionView{
     if (_collectionView == nil) {
@@ -85,6 +93,8 @@
         flowLayout.minimumLineSpacing = 5;
         flowLayout.minimumInteritemSpacing = 5;
         flowLayout.itemSize = CGSizeMake(0, 0);
+        
+        flowLayout.delegate = self;
         
         UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) collectionViewLayout:flowLayout];
 

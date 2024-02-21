@@ -51,10 +51,9 @@
 // 获取attributes的方法
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSLog(@"layoutAttributesForItemAtIndexPath");
     UICollectionViewLayoutAttributes *attribute = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     if(self.cellCount == 1){
-        CGFloat width  = ceil(self.collectionView.frame.size.width);
+        CGFloat width  = [self getCollectionViewWidth];
         CGFloat height = ceil(width * 0.625);
         attribute.frame = CGRectMake(0, 0, width, height);
         
@@ -63,7 +62,7 @@
     
     if(self.cellCount == 2){
         CGFloat space_h = self.minimumInteritemSpacing;
-        CGFloat width  = ceil((self.collectionView.frame.size.width - space_h) / 2);
+        CGFloat width  = ceil(([self getCollectionViewWidth] - space_h) / 2);
         CGFloat height = ceil(width * 0.625);
         switch (indexPath.item) {
             case 0:{
@@ -85,12 +84,12 @@
         CGFloat space_h          = self.minimumInteritemSpacing;
         CGFloat space_v          = self.minimumLineSpacing;
 
-        CGFloat container_width  = ceil(self.collectionView.frame.size.width);
+        CGFloat container_width  = [self getCollectionViewWidth];
         
         CGFloat first_row_width  = container_width;
         CGFloat first_row_height = ceil(container_width * 0.625);
                                         
-        CGFloat second_row_width   = ceil((self.collectionView.frame.size.width - space_h) / 2);
+        CGFloat second_row_width   = ceil((container_width - space_h) / 2);
         CGFloat second_row_height  = ceil(second_row_width * 0.625);
 
         switch (indexPath.item) {
@@ -119,7 +118,7 @@
         CGFloat space_h          = self.minimumInteritemSpacing;
         CGFloat space_v          = self.minimumLineSpacing;
 
-        CGFloat row_width  =  ceil(self.collectionView.frame.size.width / 2);
+        CGFloat row_width  =  ceil([self getCollectionViewWidth] / 2);
         CGFloat row_height =  ceil(row_width * 0.625);
         
         switch (indexPath.item) {
@@ -149,10 +148,10 @@
         CGFloat space_h          = self.minimumInteritemSpacing;
         CGFloat space_v          = self.minimumLineSpacing;
         
-        CGFloat first_row_width  =  ceil(self.collectionView.frame.size.width / 2);
+        CGFloat first_row_width  =  ceil([self getCollectionViewWidth] / 2);
         CGFloat first_row_height =  ceil(first_row_width * 0.625);
                                         
-        CGFloat second_row_width   = ceil((self.collectionView.frame.size.width - space_h) / 3);
+        CGFloat second_row_width   = ceil(([self getCollectionViewWidth] - space_h) / 3);
         CGFloat second_row_height  = ceil(second_row_width * 0.625);
         
         switch (indexPath.item) {
@@ -185,6 +184,16 @@
     }
 
     return attribute;
+}
+
+
+- (CGFloat)getCollectionViewWidth{
+    /// FIXME: 初始布局时self.collectionView.frame 不准确，因为第一次调用时collectionView没有布局好
+//    return [self collectionView].frame.size.width;
+    
+//    return ceil([UIScreen mainScreen].bounds.size.width - 10);
+    
+    return [self.delegate collectionViewWidth:self];
 }
 
 @end
