@@ -96,8 +96,14 @@
     
 //    [self test_selector];
     
-    [self demo7];
+//    [self demo6];
+
+//    [self demo7];
     
+//    [self demo8];
+    
+    [self demo9];
+
     
     
     
@@ -1205,7 +1211,7 @@
 
 /// https://juejin.cn/post/6844903574690856968 RAC使用总结
 
-/// concat
+/// concat  两个信号串联,两个管串联,一个管处理完自己的东西,下一个管才开始处理自己的东西
 - (void)demo6{
     
     //创建一个信号管A
@@ -1228,7 +1234,7 @@
         return nil;
     }];
     
-    //串联管A和管B
+    // 两个信号串联,两个管串联,一个管处理完自己的东西,下一个管才开始处理自己的东西
     RACSignal *concatSiganl = [siganlA concat:siganlB];
     //串联后的接收端处理 ,两个事件,走两次,第一个打印siggnalA的结果,第二次打印siganlB的结果
     [concatSiganl subscribeNext:^(id x) {
@@ -1236,7 +1242,7 @@
     }];
 }
 
-// merge
+// merge 并联,只要有一个管有东西,就可以打印
 - (void)demo7{
   //创建信号A
     RACSignal *siganlA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -1273,7 +1279,7 @@
     
 }
 
-/// combineLatest : 组合,只有两个信号都有值,才可以组合 ？？？？？
+/// combineLatest : 组合,只有两个信号都有值,才可以组合
 - (void)demo8{
     //定义2个自定义信号
     RACSubject *letters = [RACSubject subject];
