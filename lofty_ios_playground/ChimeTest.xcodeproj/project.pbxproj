@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18933F4A2C44D1BE007A5F41 /* RRTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18933F492C44D1BE007A5F41 /* RRTestVC.m */; };
+		18933F4E2C44D1DB007A5F41 /* RRTestVC01.m in Sources */ = {isa = PBXBuildFile; fileRef = 18933F4C2C44D1DB007A5F41 /* RRTestVC01.m */; };
+		18933F4F2C44D1DB007A5F41 /* RRTestVC01.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18933F4D2C44D1DB007A5F41 /* RRTestVC01.xib */; };
+		18933F532C44D4EF007A5F41 /* RRAutoGrowingTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18933F522C44D4EF007A5F41 /* RRAutoGrowingTextView.m */; };
 		6015DAFE2A9F1D8400B70CC2 /* RRPresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015DAFD2A9F1D8400B70CC2 /* RRPresentAnimationController.m */; };
 		6015DB012A9F355000B70CC2 /* RRBasePresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6015DB002A9F355000B70CC2 /* RRBasePresentedViewController.m */; };
 		601C8CDF2A9C8B0C007DB28D /* RRTestSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601C8CDD2A9C8B0C007DB28D /* RRTestSecondViewController.m */; };
@@ -32,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18933F482C44D1BE007A5F41 /* RRTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTestVC.h; sourceTree = "<group>"; };
+		18933F492C44D1BE007A5F41 /* RRTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTestVC.m; sourceTree = "<group>"; };
+		18933F4B2C44D1DB007A5F41 /* RRTestVC01.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRTestVC01.h; sourceTree = "<group>"; };
+		18933F4C2C44D1DB007A5F41 /* RRTestVC01.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRTestVC01.m; sourceTree = "<group>"; };
+		18933F4D2C44D1DB007A5F41 /* RRTestVC01.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RRTestVC01.xib; sourceTree = "<group>"; };
+		18933F512C44D4EF007A5F41 /* RRAutoGrowingTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRAutoGrowingTextView.h; sourceTree = "<group>"; };
+		18933F522C44D4EF007A5F41 /* RRAutoGrowingTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRAutoGrowingTextView.m; sourceTree = "<group>"; };
 		5D5ED1DCF6E95A050FC9CA43 /* Pods_ChimeTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChimeTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6015DAFC2A9F1D8400B70CC2 /* RRPresentAnimationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRPresentAnimationController.h; sourceTree = "<group>"; };
 		6015DAFD2A9F1D8400B70CC2 /* RRPresentAnimationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRPresentAnimationController.m; sourceTree = "<group>"; };
@@ -89,7 +100,6 @@
 				E38F9ACC1E688EBE71089143 /* Pods-ChimeTest.debug.xcconfig */,
 				6FFF91320865084702BB28B0 /* Pods-ChimeTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -99,6 +109,15 @@
 				5D5ED1DCF6E95A050FC9CA43 /* Pods_ChimeTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18933F502C44D4C3007A5F41 /* autoGrowingTextView */ = {
+			isa = PBXGroup;
+			children = (
+				18933F512C44D4EF007A5F41 /* RRAutoGrowingTextView.h */,
+				18933F522C44D4EF007A5F41 /* RRAutoGrowingTextView.m */,
+			);
+			path = autoGrowingTextView;
 			sourceTree = "<group>";
 		};
 		6015DAFB2A9F137900B70CC2 /* Presentation */ = {
@@ -169,12 +188,18 @@
 		77C5761C2A97362F00831AC2 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				18933F502C44D4C3007A5F41 /* autoGrowingTextView */,
 				77C5761D2A97366400831AC2 /* RRTestViewController.h */,
 				77C5761E2A97366400831AC2 /* RRTestViewController.m */,
 				77C576202A97532E00831AC2 /* RRTestViewController.xib */,
 				601C8CDC2A9C8B0C007DB28D /* RRTestSecondViewController.h */,
 				601C8CDD2A9C8B0C007DB28D /* RRTestSecondViewController.m */,
 				601C8CDE2A9C8B0C007DB28D /* RRTestSecondViewController.xib */,
+				18933F482C44D1BE007A5F41 /* RRTestVC.h */,
+				18933F492C44D1BE007A5F41 /* RRTestVC.m */,
+				18933F4B2C44D1DB007A5F41 /* RRTestVC01.h */,
+				18933F4C2C44D1DB007A5F41 /* RRTestVC01.m */,
+				18933F4D2C44D1DB007A5F41 /* RRTestVC01.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -256,6 +281,7 @@
 				77C576092A972F4200831AC2 /* Assets.xcassets in Resources */,
 				77C576072A972F3F00831AC2 /* Main.storyboard in Resources */,
 				77C576302A9898A500831AC2 /* RRMoreReplaceViewController.xib in Resources */,
+				18933F4F2C44D1DB007A5F41 /* RRTestVC01.xib in Resources */,
 				77C5762E2A985D5D00831AC2 /* RRSwift2ViewController.xib in Resources */,
 				601C8CE02A9C8B0C007DB28D /* RRTestSecondViewController.xib in Resources */,
 			);
@@ -313,13 +339,16 @@
 				601C8CDF2A9C8B0C007DB28D /* RRTestSecondViewController.m in Sources */,
 				6015DB012A9F355000B70CC2 /* RRBasePresentedViewController.m in Sources */,
 				77C5761F2A97366400831AC2 /* RRTestViewController.m in Sources */,
+				18933F532C44D4EF007A5F41 /* RRAutoGrowingTextView.m in Sources */,
 				77C5761B2A9733B800831AC2 /* RRTabBar.m in Sources */,
 				77C575FE2A972F3F00831AC2 /* AppDelegate.m in Sources */,
+				18933F4E2C44D1DB007A5F41 /* RRTestVC01.m in Sources */,
 				6015DAFE2A9F1D8400B70CC2 /* RRPresentAnimationController.m in Sources */,
 				77C576172A972FD400831AC2 /* RRTabBarController.m in Sources */,
 				77C5760F2A972F4200831AC2 /* main.m in Sources */,
 				77C576242A97776B00831AC2 /* RRMoreReplaceViewController.m in Sources */,
 				77C576272A985B9300831AC2 /* RRSwiftViewController.swift in Sources */,
+				18933F4A2C44D1BE007A5F41 /* RRTestVC.m in Sources */,
 				77C5762D2A985D5D00831AC2 /* RRSwift2ViewController.swift in Sources */,
 				77C576012A972F3F00831AC2 /* SceneDelegate.m in Sources */,
 				601C8CE42A9D8D63007DB28D /* RROverlayPresentationController.m in Sources */,

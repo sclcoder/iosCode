@@ -50,6 +50,7 @@ target 'SDPlayground' do
 #  pod 'YYImage'
 #  pod 'YYWebImage'
 #  pod 'YYText'
+  pod 'YYText', :path => './read_pods/YYText'
 #  pod 'YYKeyboardManager'
 #  pod 'YYDispatchQueuePool'
 #  pod 'YYAsyncLayer'

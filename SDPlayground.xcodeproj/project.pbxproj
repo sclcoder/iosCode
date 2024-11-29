@@ -421,13 +421,6 @@
 			path = LayoutVC;
 			sourceTree = "<group>";
 		};
-		2A2A544827CFC1A500DD594A /* Database */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		2A49679527F9C9D500461CF2 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,7 +769,6 @@
 				2AF9163E27C3E3DA00C31734 /* Tools */,
 				77DFF81327BBAEC000C1E60E /* AppDelegate.h */,
 				77DFF81427BBAEC000C1E60E /* AppDelegate.m */,
-				2A2A544827CFC1A500DD594A /* Database */,
 				2A2A544527CFBE4000DD594A /* WCDBTestViewController.h */,
 				2A2A544627CFBE4000DD594A /* WCDBTestViewController.mm */,
 				77DFF81927BBAEC000C1E60E /* CodeTestViewController.h */,
